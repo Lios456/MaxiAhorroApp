@@ -1,0 +1,5 @@
+C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.csproj.AssemblyReference.cache
+C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.Properties.Resources.resources
+C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.csproj.GenerateResource.cache
+C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.csproj.CoreCompileInputs.cache
