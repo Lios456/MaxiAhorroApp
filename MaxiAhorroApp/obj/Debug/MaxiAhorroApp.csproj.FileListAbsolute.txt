@@ -40,3 +40,4 @@ C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\System.Threading.
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.csproj.CopyComplete
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.exe
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.pdb
+C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.Vistas.Ver_Productos.resources

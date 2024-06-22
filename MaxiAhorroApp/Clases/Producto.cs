@@ -14,6 +14,7 @@ namespace MaxiAhorroApp.Clases
         public string Description { get; set;}
         public Proveedor Prov { get; set; }
         public Category Cat { get; set; }
+        public float Price { get; set; }
 
     }
 }

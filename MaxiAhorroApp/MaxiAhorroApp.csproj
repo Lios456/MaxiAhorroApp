@@ -102,6 +102,8 @@
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Proveedor.cs" />
     <Compile Include="Controladores\Connection.cs" />
+    <Compile Include="Controladores\Repositorio.cs" />
+    <Compile Include="Controladores\ServicioProducto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vistas\Agregar_Productos.cs">
@@ -125,6 +127,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\Ver_Productos.resx">
+      <DependentUpon>Ver_Productos.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
