@@ -39,10 +39,15 @@
             this.id_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prov_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cat_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cuan_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datein_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prov_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.barcode_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateex_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sign_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.location_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.productostb)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -60,10 +65,15 @@
             this.id_cl,
             this.nombre_cl,
             this.descripcion_cl,
-            this.prov_cl,
             this.cat_cl,
             this.price_cl,
-            this.cuan_cl});
+            this.cuan_cl,
+            this.datein_cl,
+            this.prov_cl,
+            this.barcode_cl,
+            this.dateex_cl,
+            this.sign_cl,
+            this.location_cl});
             this.productostb.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.productostb.Location = new System.Drawing.Point(20, 164);
             this.productostb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -144,6 +154,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Modificar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -176,13 +187,6 @@
             this.descripcion_cl.Name = "descripcion_cl";
             this.descripcion_cl.ReadOnly = true;
             // 
-            // prov_cl
-            // 
-            this.prov_cl.DataPropertyName = "Prov";
-            this.prov_cl.HeaderText = "Proveedor";
-            this.prov_cl.Name = "prov_cl";
-            this.prov_cl.ReadOnly = true;
-            // 
             // cat_cl
             // 
             this.cat_cl.DataPropertyName = "Cat.Name";
@@ -203,6 +207,47 @@
             this.cuan_cl.HeaderText = "Cantidad";
             this.cuan_cl.Name = "cuan_cl";
             this.cuan_cl.ReadOnly = true;
+            // 
+            // datein_cl
+            // 
+            this.datein_cl.HeaderText = "Fecha de Ingreso";
+            this.datein_cl.Name = "datein_cl";
+            this.datein_cl.ReadOnly = true;
+            // 
+            // prov_cl
+            // 
+            this.prov_cl.DataPropertyName = "Prov";
+            this.prov_cl.HeaderText = "Proveedor";
+            this.prov_cl.Name = "prov_cl";
+            this.prov_cl.ReadOnly = true;
+            // 
+            // barcode_cl
+            // 
+            this.barcode_cl.DataPropertyName = "Barcode";
+            this.barcode_cl.HeaderText = "Código de Barras";
+            this.barcode_cl.Name = "barcode_cl";
+            this.barcode_cl.ReadOnly = true;
+            // 
+            // dateex_cl
+            // 
+            this.dateex_cl.DataPropertyName = "Dateex";
+            this.dateex_cl.HeaderText = "Fecha de expiración";
+            this.dateex_cl.Name = "dateex_cl";
+            this.dateex_cl.ReadOnly = true;
+            // 
+            // sign_cl
+            // 
+            this.sign_cl.DataPropertyName = "Sign";
+            this.sign_cl.HeaderText = "Marca";
+            this.sign_cl.Name = "sign_cl";
+            this.sign_cl.ReadOnly = true;
+            // 
+            // location_cl
+            // 
+            this.location_cl.DataPropertyName = "Location";
+            this.location_cl.HeaderText = "Ubicación";
+            this.location_cl.Name = "location_cl";
+            this.location_cl.ReadOnly = true;
             // 
             // Ver_Productos
             // 
@@ -235,9 +280,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id_cl;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre_cl;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion_cl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prov_cl;
         private System.Windows.Forms.DataGridViewTextBoxColumn cat_cl;
         private System.Windows.Forms.DataGridViewTextBoxColumn price_cl;
         private System.Windows.Forms.DataGridViewTextBoxColumn cuan_cl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datein_cl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prov_cl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn barcode_cl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateex_cl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sign_cl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn location_cl;
     }
 }

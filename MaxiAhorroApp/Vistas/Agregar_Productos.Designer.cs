@@ -31,34 +31,34 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.locationtx = new System.Windows.Forms.TextBox();
+            this.signtx = new System.Windows.Forms.TextBox();
+            this.expiretx = new System.Windows.Forms.DateTimePicker();
+            this.barcodetx = new System.Windows.Forms.TextBox();
+            this.provetortx = new System.Windows.Forms.ComboBox();
+            this.cuantitytx = new System.Windows.Forms.NumericUpDown();
+            this.pricetx = new System.Windows.Forms.NumericUpDown();
             this.nombretx = new System.Windows.Forms.TextBox();
             this.descriptiontx = new System.Windows.Forms.RichTextBox();
-            this.pricetx = new System.Windows.Forms.NumericUpDown();
-            this.cuantitytx = new System.Windows.Forms.NumericUpDown();
-            this.provetortx = new System.Windows.Forms.ComboBox();
-            this.barcodetx = new System.Windows.Forms.TextBox();
-            this.expiretx = new System.Windows.Forms.DateTimePicker();
-            this.signtx = new System.Windows.Forms.TextBox();
-            this.locationtx = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.categorytx = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pricetx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cuantitytx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pricetx)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -100,6 +100,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(645, 473);
             this.panel1.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(181)))), ((int)(((byte)(64)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(506, 197);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(125, 30);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Limpiar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(164)))), ((int)(((byte)(55)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(506, 151);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 30);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Agregar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -166,60 +190,16 @@
             this.label3.Text = "Descripción:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // label10
             // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(3, 132);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 44);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Precio:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(3, 176);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 44);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Cantidad:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(3, 220);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 44);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Proveedor:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(3, 264);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(143, 44);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Código de Barras:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(3, 308);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(143, 44);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Vencimiento:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Location = new System.Drawing.Point(3, 396);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(143, 24);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Ubicación:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
@@ -232,35 +212,134 @@
             this.label9.Text = "Marca:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label10
+            // label8
             // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Location = new System.Drawing.Point(3, 396);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(143, 24);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Ubicación:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Location = new System.Drawing.Point(3, 308);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(143, 44);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Vencimiento:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // nombretx
+            // label7
             // 
-            this.nombretx.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.nombretx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nombretx.Location = new System.Drawing.Point(152, 12);
-            this.nombretx.Name = "nombretx";
-            this.nombretx.Size = new System.Drawing.Size(291, 19);
-            this.nombretx.TabIndex = 9;
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Location = new System.Drawing.Point(3, 264);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(143, 44);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Código de Barras:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // descriptiontx
+            // label6
             // 
-            this.descriptiontx.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.descriptiontx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.descriptiontx.Location = new System.Drawing.Point(152, 47);
-            this.descriptiontx.Name = "descriptiontx";
-            this.descriptiontx.Size = new System.Drawing.Size(291, 38);
-            this.descriptiontx.TabIndex = 10;
-            this.descriptiontx.Text = "";
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Location = new System.Drawing.Point(3, 220);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(143, 44);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Proveedor:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Location = new System.Drawing.Point(3, 176);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(143, 44);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Cantidad:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Location = new System.Drawing.Point(3, 132);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 44);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Precio:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // locationtx
+            // 
+            this.locationtx.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.locationtx.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.locationtx.Location = new System.Drawing.Point(152, 399);
+            this.locationtx.Name = "locationtx";
+            this.locationtx.Size = new System.Drawing.Size(291, 19);
+            this.locationtx.TabIndex = 17;
+            // 
+            // signtx
+            // 
+            this.signtx.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.signtx.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.signtx.Location = new System.Drawing.Point(152, 364);
+            this.signtx.Name = "signtx";
+            this.signtx.Size = new System.Drawing.Size(291, 19);
+            this.signtx.TabIndex = 16;
+            // 
+            // expiretx
+            // 
+            this.expiretx.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.expiretx.Location = new System.Drawing.Point(152, 317);
+            this.expiretx.MinDate = new System.DateTime(2024, 6, 22, 0, 0, 0, 0);
+            this.expiretx.Name = "expiretx";
+            this.expiretx.Size = new System.Drawing.Size(291, 26);
+            this.expiretx.TabIndex = 15;
+            // 
+            // barcodetx
+            // 
+            this.barcodetx.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.barcodetx.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.barcodetx.Location = new System.Drawing.Point(152, 276);
+            this.barcodetx.Name = "barcodetx";
+            this.barcodetx.Size = new System.Drawing.Size(291, 19);
+            this.barcodetx.TabIndex = 14;
+            // 
+            // provetortx
+            // 
+            this.provetortx.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.provetortx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.provetortx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.provetortx.FormattingEnabled = true;
+            this.provetortx.Items.AddRange(new object[] {
+            "Proveedor A",
+            "Proveedor B"});
+            this.provetortx.Location = new System.Drawing.Point(152, 231);
+            this.provetortx.Name = "provetortx";
+            this.provetortx.Size = new System.Drawing.Size(291, 26);
+            this.provetortx.TabIndex = 13;
+            // 
+            // cuantitytx
+            // 
+            this.cuantitytx.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cuantitytx.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cuantitytx.Location = new System.Drawing.Point(152, 187);
+            this.cuantitytx.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.cuantitytx.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.cuantitytx.Name = "cuantitytx";
+            this.cuantitytx.Size = new System.Drawing.Size(291, 22);
+            this.cuantitytx.TabIndex = 12;
+            this.cuantitytx.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // pricetx
             // 
@@ -292,103 +371,24 @@
             0,
             65536});
             // 
-            // cuantitytx
+            // nombretx
             // 
-            this.cuantitytx.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cuantitytx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cuantitytx.Location = new System.Drawing.Point(152, 187);
-            this.cuantitytx.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.cuantitytx.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.cuantitytx.Name = "cuantitytx";
-            this.cuantitytx.Size = new System.Drawing.Size(291, 22);
-            this.cuantitytx.TabIndex = 12;
-            this.cuantitytx.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.nombretx.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.nombretx.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nombretx.Location = new System.Drawing.Point(152, 12);
+            this.nombretx.Name = "nombretx";
+            this.nombretx.Size = new System.Drawing.Size(291, 19);
+            this.nombretx.TabIndex = 9;
             // 
-            // provetortx
+            // descriptiontx
             // 
-            this.provetortx.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.provetortx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.provetortx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.provetortx.FormattingEnabled = true;
-            this.provetortx.Items.AddRange(new object[] {
-            "Proveedor A",
-            "Proveedor B"});
-            this.provetortx.Location = new System.Drawing.Point(152, 229);
-            this.provetortx.Name = "provetortx";
-            this.provetortx.Size = new System.Drawing.Size(291, 26);
-            this.provetortx.TabIndex = 13;
-            // 
-            // barcodetx
-            // 
-            this.barcodetx.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.barcodetx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.barcodetx.Location = new System.Drawing.Point(152, 276);
-            this.barcodetx.Name = "barcodetx";
-            this.barcodetx.Size = new System.Drawing.Size(291, 19);
-            this.barcodetx.TabIndex = 14;
-            // 
-            // expiretx
-            // 
-            this.expiretx.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.expiretx.Location = new System.Drawing.Point(152, 317);
-            this.expiretx.MinDate = new System.DateTime(2024, 6, 22, 0, 0, 0, 0);
-            this.expiretx.Name = "expiretx";
-            this.expiretx.Size = new System.Drawing.Size(291, 26);
-            this.expiretx.TabIndex = 15;
-            // 
-            // signtx
-            // 
-            this.signtx.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.signtx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.signtx.Location = new System.Drawing.Point(152, 364);
-            this.signtx.Name = "signtx";
-            this.signtx.Size = new System.Drawing.Size(291, 19);
-            this.signtx.TabIndex = 16;
-            // 
-            // locationtx
-            // 
-            this.locationtx.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.locationtx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.locationtx.Location = new System.Drawing.Point(152, 399);
-            this.locationtx.Name = "locationtx";
-            this.locationtx.Size = new System.Drawing.Size(291, 19);
-            this.locationtx.TabIndex = 17;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(164)))), ((int)(((byte)(55)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(506, 151);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 30);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(181)))), ((int)(((byte)(64)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(506, 197);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 30);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Limpiar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.descriptiontx.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.descriptiontx.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.descriptiontx.Location = new System.Drawing.Point(152, 47);
+            this.descriptiontx.Name = "descriptiontx";
+            this.descriptiontx.Size = new System.Drawing.Size(291, 38);
+            this.descriptiontx.TabIndex = 10;
+            this.descriptiontx.Text = "";
             // 
             // label11
             // 
@@ -407,7 +407,7 @@
             this.categorytx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.categorytx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.categorytx.FormattingEnabled = true;
-            this.categorytx.Location = new System.Drawing.Point(152, 99);
+            this.categorytx.Location = new System.Drawing.Point(152, 97);
             this.categorytx.Name = "categorytx";
             this.categorytx.Size = new System.Drawing.Size(291, 26);
             this.categorytx.TabIndex = 19;
@@ -428,8 +428,8 @@
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pricetx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cuantitytx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pricetx)).EndInit();
             this.ResumeLayout(false);
 
         }

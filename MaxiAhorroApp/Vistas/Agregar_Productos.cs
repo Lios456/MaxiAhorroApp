@@ -20,9 +20,31 @@ namespace MaxiAhorroApp.Vistas
             InitializeComponent();
             ServicioCategoria servicio = new ServicioCategoria();
             List<Category> categories = (List<Category>)servicio.Consultar();
-            categories.ForEach(category => this.categorytx.Items.Add(category.Name));
+            categories.ForEach(category => this.categorytx.Items.Add(category));
             this.expiretx.MinDate = DateTime.Now;
             button2_Click(this, EventArgs.Empty);
+        }
+
+        public Agregar_Productos(Producto pe)
+        {
+            InitializeComponent();
+            ServicioCategoria servicio = new ServicioCategoria();
+            List<Category> categories = (List<Category>)servicio.Consultar();
+            categories.ForEach(category => this.categorytx.Items.Add(category));
+            this.expiretx.MinDate = DateTime.Now;
+            button2_Click(this, EventArgs.Empty);
+            this.p.Id = pe.Id;
+            this.nombretx.Text = pe.Name;
+            this.descriptiontx.Text = pe.Description;
+            this.categorytx.SelectedItem = pe.Cat.Name;
+            this.pricetx.Text = pe.Price.ToString();
+            this.cuantitytx.Text = pe.Cuantity.ToString();
+            this.provetortx.SelectedItem = pe.Prov.Name;
+            this.barcodetx.Text = pe.Barcode;
+            this.expiretx.Value = pe.Dateex;
+            this.signtx.Text = pe.Sign;
+            this.locationtx.Text = pe.Location;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,9 +53,18 @@ namespace MaxiAhorroApp.Vistas
             try
             {
                 this.SetProducto();
-                new ServicioProducto().Agregar(p);
-                MessageBox.Show($"El producto se ha agregado correctamente");
-                button2_Click(sender, e);
+                if(this.p.Id == 0)
+                {
+                    new ServicioProducto().Agregar(p);
+                    button2_Click(sender, e);
+                }
+                else
+                {
+                    new ServicioProducto().Modificar(p);
+                    this.Close();
+                }
+                
+                
             }catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -45,7 +76,7 @@ namespace MaxiAhorroApp.Vistas
         {
             p.Name = this.nombretx.Text;
             p.Description = this.descriptiontx.Text;
-            p.Cat = new Category { Name = this.categorytx.SelectedItem.ToString() };
+            p.Cat = (Category)categorytx.SelectedItem;
             p.Price = float.Parse(this.pricetx.Text);
             p.Cuantity = Convert.ToInt16(this.cuantitytx.Text);
             p.Prov = new Proveedor { Name = this.provetortx.SelectedItem.ToString() };
