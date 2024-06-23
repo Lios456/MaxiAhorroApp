@@ -65,9 +65,24 @@ namespace MaxiAhorroApp.Controladores
 
         public void Agregar(Producto item)
         {
-            base.cn.Open();
+            string sql = "INSERT INTO `minimarket`.`productos` " +
+            "(`nombre`, `descripcion`, `categoria`, `precio`, `cantidad`, `fecha_ingreso`, `proveedor`, `codigo_barra`, `fecha_vencimiento`, `marca`, `ubicacion`) " +
+            "VALUES (@nombre, @descripcion, @categoria, @precio, @cantidad, @fecha_ingreso, @proveedor, @codigo_barra, @fecha_vencimiento, @marca, @ubicacion);";
+
+            MySqlCommand command = new MySqlCommand(sql, base.cn);
+            command.Parameters.AddWithValue("@nombre", item.Name);
+            command.Parameters.AddWithValue("@descripcion", item.Description);
+            command.Parameters.AddWithValue("@categoria", item.Cat.Name);
+            command.Parameters.AddWithValue("@precio", item.Price);
+            command.Parameters.AddWithValue("@cantidad", item.Cuantity);
+            command.Parameters.AddWithValue("@fecha_ingreso", item.Datein);
+            command.Parameters.AddWithValue("@proveedor", item.Prov.Name);
+            command.Parameters.AddWithValue("@codigo_barra", item.Barcode);
+            command.Parameters.AddWithValue("@fecha_vencimiento", item.Dateex);
+            command.Parameters.AddWithValue("@marca", item.Sign);
+            command.Parameters.AddWithValue("@ubicacion", item.Location);
+            command.ExecuteNonQuery();
             base.cn.Close();
-            productos.Add(item);
         }
 
         public void Eliminar(Producto item)
