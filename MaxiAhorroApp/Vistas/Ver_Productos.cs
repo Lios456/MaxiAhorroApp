@@ -14,6 +14,7 @@ namespace MaxiAhorroApp.Vistas
 {
     public partial class Ver_Productos : Form
     {
+        private Producto p = new Producto();
         public Ver_Productos()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace MaxiAhorroApp.Vistas
         /*
          OBTENER LOS DATOS DE LOS ATRIBUTOS DE PRODCUTO QUE SON UNA CLASE
          */
+
         private void productostb_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (productostb.Columns[e.ColumnIndex].Name == "prov_cl")
@@ -42,6 +44,33 @@ namespace MaxiAhorroApp.Vistas
                     e.Value = producto.Cat.Name;
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            button1.Enabled = false;
+            new Agregar_Productos().ShowDialog();
+            productostb.DataSource = new ServicioProducto().Consultar();
+            button1.Enabled = true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            productostb.DataSource = new ServicioProducto().Consultar();
+        }
+
+        private void productostb_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var fila = e.RowIndex;
+            p.Id = Convert.ToInt16(productostb.Rows[fila].Cells[0].Value);
+            MessageBox.Show(p.Id.ToString());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            new ServicioProducto().Eliminar(p);
+            button4_Click(sender, e);
         }
     }
 }

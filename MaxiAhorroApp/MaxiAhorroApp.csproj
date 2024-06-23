@@ -105,6 +105,7 @@
     <Compile Include="Clases\Proveedor.cs" />
     <Compile Include="Controladores\Connection.cs" />
     <Compile Include="Controladores\Repositorio.cs" />
+    <Compile Include="Controladores\ServicioCategoria.cs" />
     <Compile Include="Controladores\ServicioProducto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

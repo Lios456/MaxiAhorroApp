@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.productostb = new System.Windows.Forms.DataGridView();
-            this.id_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prov_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cat_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -42,6 +36,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.id_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prov_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cat_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuan_cl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.productostb)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -61,7 +62,8 @@
             this.descripcion_cl,
             this.prov_cl,
             this.cat_cl,
-            this.price_cl});
+            this.price_cl,
+            this.cuan_cl});
             this.productostb.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.productostb.Location = new System.Drawing.Point(20, 164);
             this.productostb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -70,49 +72,8 @@
             this.productostb.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.productostb.Size = new System.Drawing.Size(1293, 268);
             this.productostb.TabIndex = 0;
+            this.productostb.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productostb_CellContentClick);
             this.productostb.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.productostb_CellFormatting);
-            // 
-            // id_cl
-            // 
-            this.id_cl.DataPropertyName = "Id";
-            this.id_cl.HeaderText = "ID";
-            this.id_cl.Name = "id_cl";
-            this.id_cl.ReadOnly = true;
-            // 
-            // nombre_cl
-            // 
-            this.nombre_cl.DataPropertyName = "Name";
-            this.nombre_cl.HeaderText = "Nombre";
-            this.nombre_cl.Name = "nombre_cl";
-            this.nombre_cl.ReadOnly = true;
-            // 
-            // descripcion_cl
-            // 
-            this.descripcion_cl.DataPropertyName = "Description";
-            this.descripcion_cl.HeaderText = "Descripción";
-            this.descripcion_cl.Name = "descripcion_cl";
-            this.descripcion_cl.ReadOnly = true;
-            // 
-            // prov_cl
-            // 
-            this.prov_cl.DataPropertyName = "Prov";
-            this.prov_cl.HeaderText = "Proveedor";
-            this.prov_cl.Name = "prov_cl";
-            this.prov_cl.ReadOnly = true;
-            // 
-            // cat_cl
-            // 
-            this.cat_cl.DataPropertyName = "Cat.Name";
-            this.cat_cl.HeaderText = "Categoría";
-            this.cat_cl.Name = "cat_cl";
-            this.cat_cl.ReadOnly = true;
-            // 
-            // price_cl
-            // 
-            this.price_cl.DataPropertyName = "Price";
-            this.price_cl.HeaderText = "Precio";
-            this.price_cl.Name = "price_cl";
-            this.price_cl.ReadOnly = true;
             // 
             // label1
             // 
@@ -163,6 +124,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -172,6 +134,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -190,6 +153,56 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Refrescar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // id_cl
+            // 
+            this.id_cl.DataPropertyName = "Id";
+            this.id_cl.HeaderText = "ID";
+            this.id_cl.Name = "id_cl";
+            this.id_cl.ReadOnly = true;
+            // 
+            // nombre_cl
+            // 
+            this.nombre_cl.DataPropertyName = "Name";
+            this.nombre_cl.HeaderText = "Nombre";
+            this.nombre_cl.Name = "nombre_cl";
+            this.nombre_cl.ReadOnly = true;
+            // 
+            // descripcion_cl
+            // 
+            this.descripcion_cl.DataPropertyName = "Description";
+            this.descripcion_cl.HeaderText = "Descripción";
+            this.descripcion_cl.Name = "descripcion_cl";
+            this.descripcion_cl.ReadOnly = true;
+            // 
+            // prov_cl
+            // 
+            this.prov_cl.DataPropertyName = "Prov";
+            this.prov_cl.HeaderText = "Proveedor";
+            this.prov_cl.Name = "prov_cl";
+            this.prov_cl.ReadOnly = true;
+            // 
+            // cat_cl
+            // 
+            this.cat_cl.DataPropertyName = "Cat.Name";
+            this.cat_cl.HeaderText = "Categoría";
+            this.cat_cl.Name = "cat_cl";
+            this.cat_cl.ReadOnly = true;
+            // 
+            // price_cl
+            // 
+            this.price_cl.DataPropertyName = "Price";
+            this.price_cl.HeaderText = "Precio";
+            this.price_cl.Name = "price_cl";
+            this.price_cl.ReadOnly = true;
+            // 
+            // cuan_cl
+            // 
+            this.cuan_cl.DataPropertyName = "Cuantity";
+            this.cuan_cl.HeaderText = "Cantidad";
+            this.cuan_cl.Name = "cuan_cl";
+            this.cuan_cl.ReadOnly = true;
             // 
             // Ver_Productos
             // 
@@ -212,12 +225,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView productostb;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_cl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_cl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion_cl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prov_cl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cat_cl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn price_cl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
@@ -225,5 +232,12 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_cl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_cl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion_cl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prov_cl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cat_cl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price_cl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cuan_cl;
     }
 }

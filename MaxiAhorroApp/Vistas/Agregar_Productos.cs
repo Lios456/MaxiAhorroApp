@@ -18,7 +18,11 @@ namespace MaxiAhorroApp.Vistas
         public Agregar_Productos()
         {
             InitializeComponent();
+            ServicioCategoria servicio = new ServicioCategoria();
+            List<Category> categories = (List<Category>)servicio.Consultar();
+            categories.ForEach(category => this.categorytx.Items.Add(category.Name));
             this.expiretx.MinDate = DateTime.Now;
+            button2_Click(this, EventArgs.Empty);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,6 +32,8 @@ namespace MaxiAhorroApp.Vistas
             {
                 this.SetProducto();
                 new ServicioProducto().Agregar(p);
+                MessageBox.Show($"El producto se ha agregado correctamente");
+                button2_Click(sender, e);
             }catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -47,6 +53,21 @@ namespace MaxiAhorroApp.Vistas
             p.Dateex = this.expiretx.Value;
             p.Sign = this.signtx.Text;
             p.Location = this.locationtx.Text;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.nombretx.Text = "";
+            this.descriptiontx.Text = "";
+            this.categorytx.SelectedIndex = 0;
+            this.pricetx.Value = 0.5m;
+            this.cuantitytx.Value = 1;
+            this.provetortx.SelectedIndex = 0;
+            this.barcodetx.Text = "";
+            this.expiretx.Value = DateTime.Now;
+            this.signtx.Text = "";
+            this.locationtx.Text = "";
+
         }
     }
 }

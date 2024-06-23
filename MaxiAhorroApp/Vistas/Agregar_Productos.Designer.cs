@@ -388,6 +388,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Limpiar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label11
             // 
@@ -406,11 +407,6 @@
             this.categorytx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.categorytx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.categorytx.FormattingEnabled = true;
-            this.categorytx.Items.AddRange(new object[] {
-            "Frutas",
-            "Verduras",
-            "Bebidas",
-            "Lácteos"});
             this.categorytx.Location = new System.Drawing.Point(152, 99);
             this.categorytx.Name = "categorytx";
             this.categorytx.Size = new System.Drawing.Size(291, 26);

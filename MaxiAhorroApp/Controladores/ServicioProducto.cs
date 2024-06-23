@@ -35,10 +35,13 @@ namespace MaxiAhorroApp.Controladores
 
                         });
                 }
-                base.cn.Close();
             }catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                base.cn.Close();
             }
             
             return productos;
@@ -46,14 +49,12 @@ namespace MaxiAhorroApp.Controladores
 
         public Producto ConsultarPorId(int id)
         {
-            base.cn.Open();
             base.cn.Close();
             return productos.Find(p => p.Id == id);
         }
 
         public void Modificar(Producto item)
-        {
-            base.cn.Open();
+        {   
             base.cn.Close();
             var producto = productos.Find(p => p.Id == item.Id);
             if (producto != null)
@@ -65,31 +66,52 @@ namespace MaxiAhorroApp.Controladores
 
         public void Agregar(Producto item)
         {
-            string sql = "INSERT INTO `minimarket`.`productos` " +
+            try
+            {
+                string sql = "INSERT INTO `minimarket`.`productos` " +
             "(`nombre`, `descripcion`, `categoria`, `precio`, `cantidad`, `fecha_ingreso`, `proveedor`, `codigo_barra`, `fecha_vencimiento`, `marca`, `ubicacion`) " +
             "VALUES (@nombre, @descripcion, @categoria, @precio, @cantidad, @fecha_ingreso, @proveedor, @codigo_barra, @fecha_vencimiento, @marca, @ubicacion);";
 
-            MySqlCommand command = new MySqlCommand(sql, base.cn);
-            command.Parameters.AddWithValue("@nombre", item.Name);
-            command.Parameters.AddWithValue("@descripcion", item.Description);
-            command.Parameters.AddWithValue("@categoria", item.Cat.Name);
-            command.Parameters.AddWithValue("@precio", item.Price);
-            command.Parameters.AddWithValue("@cantidad", item.Cuantity);
-            command.Parameters.AddWithValue("@fecha_ingreso", item.Datein);
-            command.Parameters.AddWithValue("@proveedor", item.Prov.Name);
-            command.Parameters.AddWithValue("@codigo_barra", item.Barcode);
-            command.Parameters.AddWithValue("@fecha_vencimiento", item.Dateex);
-            command.Parameters.AddWithValue("@marca", item.Sign);
-            command.Parameters.AddWithValue("@ubicacion", item.Location);
-            command.ExecuteNonQuery();
-            base.cn.Close();
+                MySqlCommand command = new MySqlCommand(sql, base.cn);
+                command.Parameters.AddWithValue("@nombre", item.Name);
+                command.Parameters.AddWithValue("@descripcion", item.Description);
+                command.Parameters.AddWithValue("@categoria", item.Cat.Name);
+                command.Parameters.AddWithValue("@precio", item.Price);
+                command.Parameters.AddWithValue("@cantidad", item.Cuantity);
+                command.Parameters.AddWithValue("@fecha_ingreso", item.Datein);
+                command.Parameters.AddWithValue("@proveedor", item.Prov.Name);
+                command.Parameters.AddWithValue("@codigo_barra", item.Barcode);
+                command.Parameters.AddWithValue("@fecha_vencimiento", item.Dateex);
+                command.Parameters.AddWithValue("@marca", item.Sign);
+                command.Parameters.AddWithValue("@ubicacion", item.Location);
+                command.ExecuteNonQuery();
+                
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                base.cn.Close();
+            }
+            
         }
 
         public void Eliminar(Producto item)
         {
-            base.cn.Open();
-            base.cn.Close();
-            productos.Remove(item);
+            try
+            {
+                var sql = "DELETE FROM productos WHERE id = @id";
+                var cmd = new MySqlCommand(sql, base.cn);
+                cmd.Parameters.AddWithValue("@id", item.Id);
+                cmd.ExecuteNonQuery();
+                base.cn.Close();
+                productos.Remove(item);
+            }catch(Exception ex )
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }
