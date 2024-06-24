@@ -103,10 +103,12 @@
     <Compile Include="Clases\Category.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Proveedor.cs" />
+    <Compile Include="Clases\Reporte.cs" />
     <Compile Include="Controladores\Connection.cs" />
     <Compile Include="Controladores\Repositorio.cs" />
     <Compile Include="Controladores\ServicioCategoria.cs" />
     <Compile Include="Controladores\ServicioProducto.cs" />
+    <Compile Include="Controladores\ServicioReporte.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vistas\Agregar_Productos.cs">

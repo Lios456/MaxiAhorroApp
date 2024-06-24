@@ -55,7 +55,6 @@
             // 
             // productostb
             // 
-            this.productostb.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.productostb.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.productostb.BackgroundColor = System.Drawing.Color.White;
             this.productostb.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -74,13 +73,14 @@
             this.dateex_cl,
             this.sign_cl,
             this.location_cl});
+            this.productostb.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productostb.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.productostb.Location = new System.Drawing.Point(181, 113);
+            this.productostb.Location = new System.Drawing.Point(4, 39);
             this.productostb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.productostb.Name = "productostb";
             this.productostb.ReadOnly = true;
             this.productostb.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.productostb.Size = new System.Drawing.Size(618, 202);
+            this.productostb.Size = new System.Drawing.Size(777, 265);
             this.productostb.TabIndex = 0;
             this.productostb.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productostb_CellContentClick);
             this.productostb.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.productostb_CellFormatting);
