@@ -74,7 +74,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.383627F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.61637F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(651, 517);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(643, 492);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -85,7 +85,7 @@
             this.label1.Location = new System.Drawing.Point(4, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(643, 38);
+            this.label1.Size = new System.Drawing.Size(635, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registor de productos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -96,9 +96,9 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 41);
+            this.panel1.Location = new System.Drawing.Point(3, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(645, 473);
+            this.panel1.Size = new System.Drawing.Size(637, 450);
             this.panel1.TabIndex = 1;
             // 
             // button2
@@ -151,7 +151,7 @@
             this.tableLayoutPanel2.Controls.Add(this.descriptiontx, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label11, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.categorytx, 1, 2);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(21, 27);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(21, 16);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 10;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
@@ -417,11 +417,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(197)))), ((int)(((byte)(167)))));
-            this.ClientSize = new System.Drawing.Size(651, 517);
+            this.ClientSize = new System.Drawing.Size(643, 492);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Agregar_Productos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar_Productos";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

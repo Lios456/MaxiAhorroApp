@@ -42,3 +42,5 @@ C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.exe
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.pdb
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.Vistas.Ver_Productos.resources
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.Vistas.Agregar_Productos.resources
+C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.Vistas.Dashboard.resources
+C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.Vistas.Main.resources
