@@ -22,9 +22,9 @@ namespace MaxiAhorroApp.Vistas
             foreach (var item in datos)
             {
                 total_pc.Series.Add(item.Label);
-                
+                total_pc.Series[item.Label].SetCustomProperty("PixelPointWidth", "100");
                 total_pc.Series[item.Label].Points.AddXY(item.X, item.Y);
-                total_pc.Series[item.Label].BorderWidth = 5;
+                
             }
             
         }
