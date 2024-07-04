@@ -51,5 +51,11 @@ namespace MaxiAhorroApp.Vistas
             this.mainpanel.Controls.Add(f);
             f.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            limpiarPanel();
+            poneForm(new ver_Cajeros());
+        }
     }
 }

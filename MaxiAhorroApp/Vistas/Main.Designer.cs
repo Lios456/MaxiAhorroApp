@@ -46,7 +46,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 72);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 75);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -57,8 +57,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.mainpanel);
-            this.splitContainer1.Size = new System.Drawing.Size(825, 412);
-            this.splitContainer1.SplitterDistance = 69;
+            this.splitContainer1.Size = new System.Drawing.Size(891, 429);
+            this.splitContainer1.SplitterDistance = 74;
             this.splitContainer1.SplitterWidth = 7;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -79,7 +79,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(69, 412);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(74, 429);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // mainpanel
@@ -88,7 +88,7 @@
             this.mainpanel.Location = new System.Drawing.Point(0, 0);
             this.mainpanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(749, 412);
+            this.mainpanel.Size = new System.Drawing.Size(810, 429);
             this.mainpanel.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -103,7 +103,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(825, 484);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(891, 504);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // button1
@@ -114,10 +114,10 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(5, 12);
+            this.button1.Location = new System.Drawing.Point(5, 13);
             this.button1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(59, 58);
+            this.button1.Size = new System.Drawing.Size(64, 58);
             this.button1.TabIndex = 0;
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
@@ -130,12 +130,13 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(5, 341);
+            this.button3.Location = new System.Drawing.Point(5, 355);
             this.button3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(59, 58);
+            this.button3.Size = new System.Drawing.Size(64, 58);
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -145,10 +146,10 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.Location = new System.Drawing.Point(5, 176);
+            this.button2.Location = new System.Drawing.Point(5, 183);
             this.button2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(59, 58);
+            this.button2.Size = new System.Drawing.Size(64, 58);
             this.button2.TabIndex = 1;
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
@@ -159,7 +160,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(140)))), ((int)(((byte)(182)))));
-            this.ClientSize = new System.Drawing.Size(825, 484);
+            this.ClientSize = new System.Drawing.Size(891, 504);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);

@@ -1,5 +1,4 @@
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.csproj.AssemblyReference.cache
-C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.csproj.SuggestedBindingRedirects.cache
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.Properties.Resources.resources
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.csproj.GenerateResource.cache
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.csproj.CoreCompileInputs.cache
@@ -37,10 +36,11 @@ C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\System.Memory.xml
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.csproj.CopyComplete
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.exe
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.pdb
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.Vistas.Ver_Productos.resources
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.Vistas.Agregar_Productos.resources
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.Vistas.Dashboard.resources
 C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.Vistas.Main.resources
+C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhor.95E7CF48.Up2Date
+C:\Users\Ferlu\Downloads\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.Vistas.ver_Cajeros.resources

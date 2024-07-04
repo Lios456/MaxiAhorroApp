@@ -75,12 +75,12 @@
             this.location_cl});
             this.productostb.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productostb.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.productostb.Location = new System.Drawing.Point(4, 39);
+            this.productostb.Location = new System.Drawing.Point(5, 49);
             this.productostb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.productostb.Name = "productostb";
             this.productostb.ReadOnly = true;
             this.productostb.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.productostb.Size = new System.Drawing.Size(777, 265);
+            this.productostb.Size = new System.Drawing.Size(971, 331);
             this.productostb.TabIndex = 0;
             this.productostb.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productostb_CellContentClick);
             this.productostb.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.productostb_CellFormatting);
