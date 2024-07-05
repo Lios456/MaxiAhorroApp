@@ -79,8 +79,11 @@ namespace MaxiAhorroApp.Vistas
         private void button2_Click(object sender, EventArgs e)
         {
             /*--------------------Eliminar productos------------------------*/
-            new ServicioProducto().Eliminar(p);
-            button4_Click(sender, e);
+            if (MessageBox.Show("¿De verdad quiere eliminar el producto?", "Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                new ServicioProducto().Eliminar(p);
+                button4_Click(sender, e);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
