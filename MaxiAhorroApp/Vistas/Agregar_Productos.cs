@@ -31,7 +31,7 @@ namespace MaxiAhorroApp.Vistas
             ServicioCategoria servicio = new ServicioCategoria();
             List<Category> categories = (List<Category>)servicio.Consultar();
             categories.ForEach(category => this.categorytx.Items.Add(category));
-            this.expiretx.MinDate = DateTime.Now;
+            this.expiretx.MinDate = pe.Dateex;
             button2_Click(this, EventArgs.Empty);
             this.p.Id = pe.Id;
             this.nombretx.Text = pe.Name;
@@ -53,33 +53,35 @@ namespace MaxiAhorroApp.Vistas
             try
             {
                 this.SetProducto();
-                if(this.p.Id == 0)
+                if (this.nombretx.Text != ""
+                       && this.descriptiontx.Text != ""
+                       && this.signtx.Text != ""
+                       && this.locationtx.Text != "")
                 {
-                    if (this.nombretx.Text != ""
-                        && this.descriptiontx.Text!=""
-                        && this.signtx.Text != ""
-                        && this.locationtx.Text != "") {
-                        if(this.barcodetx.Text != "")
-                        {
-                            MessageBox.Show("Código de barras no válido","Error",MessageBoxButtons.OK ,MessageBoxIcon.Error);
-                        }
-                        else
+                    if (this.barcodetx.Text == String.Empty)
+                    {
+                        MessageBox.Show("Código de barras no válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        if (this.p.Id == 0)
                         {
                             new ServicioProducto().Agregar(p);
                             button2_Click(sender, e);
                         }
-                        
+                        else
+                        {
+                            new ServicioProducto().Modificar(p);
+                            this.Close();
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Datos incorrectos, por favor vuelva a ingresar");
-                    }
+
                 }
                 else
                 {
-                    new ServicioProducto().Modificar(p);
-                    this.Close();
+                    MessageBox.Show("Datos incorrectos, por favor vuelva a ingresar");
                 }
+                
                 
                 
             }catch (Exception ex)
