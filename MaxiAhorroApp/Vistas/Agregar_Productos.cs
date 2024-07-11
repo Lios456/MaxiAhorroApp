@@ -55,13 +55,21 @@ namespace MaxiAhorroApp.Vistas
                 this.SetProducto();
                 if(this.p.Id == 0)
                 {
-                    if (this.nombretx.Text != "" && this.categorytx.Text != "" && provetortx.Text != "") {
-                        new ServicioProducto().Agregar(p);
-                        button2_Click(sender, e);
+                    if (this.nombretx.Text != "" && this.categorytx.Text != "" && provetortx.Text != "" ) {
+                        if(this.barcodetx.Text != "")
+                        {
+                            MessageBox.Show("Código de barras no válido","Error",MessageBoxButtons.OK ,MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            new ServicioProducto().Agregar(p);
+                            button2_Click(sender, e);
+                        }
+                        
                     }
                     else
                     {
-                        MessageBox.Show("No se puede registrar un producto vacío");
+                        MessageBox.Show("Datos incorrectos, por favor vuelva a ingresar");
                     }
                 }
                 else
