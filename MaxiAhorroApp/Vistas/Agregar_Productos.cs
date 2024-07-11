@@ -55,7 +55,10 @@ namespace MaxiAhorroApp.Vistas
                 this.SetProducto();
                 if(this.p.Id == 0)
                 {
-                    if (this.nombretx.Text != "" && this.categorytx.Text != "" && provetortx.Text != "" ) {
+                    if (this.nombretx.Text != ""
+                        && this.descriptiontx.Text!=""
+                        && this.signtx.Text != ""
+                        && this.locationtx.Text != "") {
                         if(this.barcodetx.Text != "")
                         {
                             MessageBox.Show("Código de barras no válido","Error",MessageBoxButtons.OK ,MessageBoxIcon.Error);
