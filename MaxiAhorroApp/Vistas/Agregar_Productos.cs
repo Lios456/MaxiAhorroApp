@@ -14,7 +14,7 @@ namespace MaxiAhorroApp.Vistas
 {
     public partial class Agregar_Productos : Form
     {
-        private Producto p = new Producto();
+        public Producto p = new Producto();
         public Agregar_Productos()
         {
             InitializeComponent();
@@ -58,7 +58,7 @@ namespace MaxiAhorroApp.Vistas
         /// <summary>
         /// Registra el nuevo producto en la bdd
         /// </summary>
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             
             try
@@ -102,7 +102,7 @@ namespace MaxiAhorroApp.Vistas
             
         }
 
-        private void SetProducto()
+        public void SetProducto()
         {
             p.Name = this.nombretx.Text;
             p.Description = this.descriptiontx.Text;

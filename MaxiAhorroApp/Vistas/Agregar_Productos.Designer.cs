@@ -312,7 +312,7 @@
             this.provetortx.Items.AddRange(new object[] {
             "Proveedor A",
             "Proveedor B"});
-            this.provetortx.Location = new System.Drawing.Point(152, 231);
+            this.provetortx.Location = new System.Drawing.Point(152, 229);
             this.provetortx.Name = "provetortx";
             this.provetortx.Size = new System.Drawing.Size(291, 26);
             this.provetortx.TabIndex = 13;
@@ -407,7 +407,7 @@
             this.categorytx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.categorytx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.categorytx.FormattingEnabled = true;
-            this.categorytx.Location = new System.Drawing.Point(152, 97);
+            this.categorytx.Location = new System.Drawing.Point(152, 99);
             this.categorytx.Name = "categorytx";
             this.categorytx.Size = new System.Drawing.Size(291, 26);
             this.categorytx.TabIndex = 19;
@@ -451,18 +451,18 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox nombretx;
-        private System.Windows.Forms.RichTextBox descriptiontx;
-        private System.Windows.Forms.NumericUpDown pricetx;
-        private System.Windows.Forms.NumericUpDown cuantitytx;
-        private System.Windows.Forms.ComboBox provetortx;
-        private System.Windows.Forms.TextBox barcodetx;
-        private System.Windows.Forms.DateTimePicker expiretx;
-        private System.Windows.Forms.TextBox signtx;
-        private System.Windows.Forms.TextBox locationtx;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox categorytx;
+        public System.Windows.Forms.TextBox nombretx;
+        public System.Windows.Forms.RichTextBox descriptiontx;
+        public System.Windows.Forms.NumericUpDown pricetx;
+        public System.Windows.Forms.NumericUpDown cuantitytx;
+        public System.Windows.Forms.ComboBox provetortx;
+        public System.Windows.Forms.TextBox barcodetx;
+        public System.Windows.Forms.DateTimePicker expiretx;
+        public System.Windows.Forms.TextBox signtx;
+        public System.Windows.Forms.TextBox locationtx;
+        public System.Windows.Forms.ComboBox categorytx;
     }
 }

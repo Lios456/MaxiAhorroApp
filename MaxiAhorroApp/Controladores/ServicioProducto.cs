@@ -16,7 +16,7 @@ namespace MaxiAhorroApp.Controladores
     {
         private List<Producto> productos = new List<Producto>();
 
-        public IList<Producto> Consultar()
+        public virtual IList<Producto> Consultar()
         {
             try
             {
@@ -138,7 +138,7 @@ namespace MaxiAhorroApp.Controladores
 
         }
 
-        public void Agregar(Producto item)
+        public virtual void Agregar(Producto item)
         {
             try
             {
