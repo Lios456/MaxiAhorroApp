@@ -82,8 +82,8 @@
             this.productostb.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.productostb.Size = new System.Drawing.Size(971, 331);
             this.productostb.TabIndex = 0;
-            this.productostb.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productostb_CellContentClick);
             this.productostb.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.productostb_CellFormatting);
+            this.productostb.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.productostb_CellMouseClick);
             // 
             // id_cl
             // 

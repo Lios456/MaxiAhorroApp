@@ -23,7 +23,7 @@ namespace MaxiAhorroApp.Vistas
         }
 
         /*
-         OBTENER LOS DATOS DE LOS ATRIBUTOS DE PRODCUTO QUE SON UNA CLASE
+         OBTENER LOS DATOS DE LOS ATRIBUTOS DE PRODUCTO QUE SON UNA CLASE
          */
 
         private void productostb_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -69,21 +69,20 @@ namespace MaxiAhorroApp.Vistas
             productostb.DataSource = new ServicioProducto().Consultar();
         }
 
-        private void productostb_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            /*--------------------Seleccionar un producto------------------------*/
-            var fila = e.RowIndex;
-            p.Id = Convert.ToInt16(productostb.Rows[fila].Cells[0].Value);
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             /*--------------------Eliminar productos------------------------*/
-            if (MessageBox.Show("¿De verdad quiere eliminar el producto?", "Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                new ServicioProducto().Eliminar(p);
-                button4_Click(sender, e);
+
+            if(p.Id!=0){
+                if (MessageBox.Show($"¿De verdad quiere eliminar el producto?\n{p.Name}", "Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    new ServicioProducto().Eliminar(p);
+                    button4_Click(sender, e);
+                    p.Id = 0;
+                }
             }
+            
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -97,6 +96,19 @@ namespace MaxiAhorroApp.Vistas
                 button3.Enabled = true;
                 button4_Click(sender, e);
             }
+        }
+
+        private void productostb_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            /*--------------------Seleccionar un producto------------------------*/
+            try
+            {
+                var fila = e.RowIndex;
+                p.Id = Convert.ToInt16(productostb.Rows[fila].Cells[0].Value);
+            }catch(Exception ex) {
+                
+            }
+
         }
     }
 }

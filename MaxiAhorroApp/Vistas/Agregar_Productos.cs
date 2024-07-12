@@ -25,14 +25,22 @@ namespace MaxiAhorroApp.Vistas
             button2_Click(this, EventArgs.Empty);
         }
 
+        /// <summary>
+        /// Se proporciona un producto al constructor del formulario
+        /// se establece como fecha mínima en expiración 
+        /// la expiración del producto enviado como parámetro
+        /// </summary>
+        /// <param name="pe"></param>
+        /// <returns></returns>
         public Agregar_Productos(Producto pe)
         {
+            
             InitializeComponent();
             ServicioCategoria servicio = new ServicioCategoria();
             List<Category> categories = (List<Category>)servicio.Consultar();
             categories.ForEach(category => this.categorytx.Items.Add(category));
             this.expiretx.MinDate = pe.Dateex;
-            button2_Click(this, EventArgs.Empty);
+            //button2_Click(this, EventArgs.Empty);
             this.p.Id = pe.Id;
             this.nombretx.Text = pe.Name;
             this.descriptiontx.Text = pe.Description;
@@ -47,6 +55,9 @@ namespace MaxiAhorroApp.Vistas
 
         }
 
+        /// <summary>
+        /// Registra el nuevo producto en la bdd
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             
