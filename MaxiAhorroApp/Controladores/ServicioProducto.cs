@@ -189,5 +189,48 @@ namespace MaxiAhorroApp.Controladores
             }
             
         }
+
+        public IList<Producto> Consultar(string campo)
+        {
+            try
+            {
+                var sql = "SELECT * FROM minimarket.productos where id like @campo or nombre like @campo or descripcion like @campo or " +
+                    "categoria like @campo or proveedor like @campo" +
+                    " or codigo_barra like @campo or marca like @campo or ubicacion like @campo";
+                var command = new MySqlCommand(sql, base.cn);
+                command.Parameters.AddWithValue("@campo", $"{campo}%");
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    productos.Add(
+                        new Producto
+                        {
+                            Id = reader.GetInt16("id"),
+                            Name = reader.GetString("nombre"),
+                            Description = reader.GetString("descripcion"),
+                            Cat = new Category { Name = reader.GetString("categoria") },
+                            Price = (float)reader.GetDecimal("precio"),
+                            Cuantity = reader.GetInt16("cantidad"),
+                            Datein = reader.GetDateTime("fecha_ingreso"),
+                            Prov = new Proveedor { Name = reader.GetString("proveedor") },
+                            Barcode = reader.GetString("codigo_barra"),
+                            Dateex = reader.GetDateTime("fecha_vencimiento"),
+                            Sign = reader.GetString("marca"),
+                            Location = reader.GetString("ubicacion")
+
+                        });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                base.cn.Close();
+            }
+
+            return productos;
+        }
     }
 }

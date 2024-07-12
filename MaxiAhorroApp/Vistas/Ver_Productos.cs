@@ -105,10 +105,15 @@ namespace MaxiAhorroApp.Vistas
             {
                 var fila = e.RowIndex;
                 p.Id = Convert.ToInt16(productostb.Rows[fila].Cells[0].Value);
-            }catch(Exception ex) {
+            }catch(Exception) {
                 
             }
 
+        }
+
+        private void tx_buscar_TextChanged(object sender, EventArgs e)
+        {
+            productostb.DataSource = new ServicioProducto().Consultar(this.tx_buscar.Text);
         }
     }
 }

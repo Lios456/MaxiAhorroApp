@@ -48,6 +48,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.tx_buscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.productostb)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -75,12 +76,12 @@
             this.location_cl});
             this.productostb.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productostb.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.productostb.Location = new System.Drawing.Point(5, 49);
+            this.productostb.Location = new System.Drawing.Point(5, 94);
             this.productostb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.productostb.Name = "productostb";
             this.productostb.ReadOnly = true;
             this.productostb.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.productostb.Size = new System.Drawing.Size(971, 331);
+            this.productostb.Size = new System.Drawing.Size(971, 309);
             this.productostb.TabIndex = 0;
             this.productostb.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.productostb_CellFormatting);
             this.productostb.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.productostb_CellMouseClick);
@@ -186,15 +187,17 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.productostb, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.productostb, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tx_buscar, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(981, 453);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
@@ -205,9 +208,9 @@
             this.flowLayoutPanel1.Controls.Add(this.button3);
             this.flowLayoutPanel1.Controls.Add(this.button4);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 387);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 410);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(975, 63);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(975, 40);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // button1
@@ -254,6 +257,16 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // tx_buscar
+            // 
+            this.tx_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tx_buscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tx_buscar.Location = new System.Drawing.Point(3, 54);
+            this.tx_buscar.Name = "tx_buscar";
+            this.tx_buscar.Size = new System.Drawing.Size(975, 27);
+            this.tx_buscar.TabIndex = 3;
+            this.tx_buscar.TextChanged += new System.EventHandler(this.tx_buscar_TextChanged);
+            // 
             // Ver_Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -297,5 +310,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateex_cl;
         private System.Windows.Forms.DataGridViewTextBoxColumn sign_cl;
         private System.Windows.Forms.DataGridViewTextBoxColumn location_cl;
+        private System.Windows.Forms.TextBox tx_buscar;
     }
 }
