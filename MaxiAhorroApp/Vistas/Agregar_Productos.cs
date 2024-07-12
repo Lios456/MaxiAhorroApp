@@ -44,7 +44,7 @@ namespace MaxiAhorroApp.Vistas
             this.p.Id = pe.Id;
             this.nombretx.Text = pe.Name;
             this.descriptiontx.Text = pe.Description;
-            this.categorytx.SelectedItem = pe.Cat.Name;
+            this.categorytx.SelectedIndex = Convert.ToInt16(pe.Cat.Name) -1;
             this.pricetx.Text = pe.Price.ToString();
             this.cuantitytx.Text = pe.Cuantity.ToString();
             this.provetortx.SelectedItem = pe.Prov.Name;
