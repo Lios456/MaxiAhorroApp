@@ -4,7 +4,7 @@ CREATE TABLE if not exists minimarket.categorias(
 id int auto_increment primary key,
 nombre varchar(100) not null
 );
-INSERT INTO `categorias` VALUES 
+INSERT IGNORE INTO `categorias` VALUES 
 (1,'Alimentos'),
 (2,'Bebidas'),
 (3,'Aseo y Limpieza'),
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS productos (
     ubicacion VARCHAR(100)
 );
 
-INSERT INTO `productos` VALUES 
+INSERT IGNORE INTO `productos` VALUES 
 (1,'Leche Entera','Leche de vaca pasteurizada','7',1.20,100,'2024-06-23','Proveedor A','1234567890123','2024-12-18','Marca A','Pasillo 1'),
 (2,'Pan Integral','Pan integral sin azúcar','1',1.50,50,'2024-06-23','Proveedor B','1234567890124','2024-07-18','Marca B','Pasillo 2'),
 (3,'Jugo de Naranja','Jugo natural sin conservantes','5',1.00,1000,'2024-06-23','Proveedor A','1234567890125','2024-09-18','Marca C','Pasillo 3'),
@@ -44,13 +44,12 @@ INSERT INTO `productos` VALUES
 (12,'Aceite','Aceite Vegetal 1 litro','9',3.00,1000,'2024-06-23','Proveedor A','ACEIGIRA1LT','2025-08-08','El Cocinero','Piso 2');
 
 
-delimiter //
+DROP PROCEDURE IF EXISTS sp_total_productos_por_categoria;
 create procedure sp_total_productos_por_categoria() 
 begin
 SELECT c.nombre, sum(cantidad) FROM productos p inner join
 categorias c on p.categoria = c.id group by categoria;
-end //
-delimiter ;
+end;
 
 CREATE TABLE if not exists Cajeros (
     id INT AUTO_INCREMENT PRIMARY KEY,
