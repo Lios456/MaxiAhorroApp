@@ -189,5 +189,10 @@
   <ItemGroup>
     <None Include="Resources\persona.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="scriptbdd.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

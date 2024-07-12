@@ -20,7 +20,7 @@ namespace MaxiAhorroApp.Controladores
         {
             try
             {
-                var sql = "SELECT * FROM productos;";
+                var sql = "SELECT * FROM minimarket.productos;";
                 var command = new MySqlCommand(sql,base.cn);
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
@@ -61,7 +61,7 @@ namespace MaxiAhorroApp.Controladores
 
             try
             {
-                var sql = "SELECT * FROM productos WHERE id = @id";
+                var sql = "SELECT * FROM minimarket.productos WHERE id = @id";
                 var command = new MySqlCommand(sql, base.cn);
                 command.Parameters.AddWithValue("@id", id);
                 MySqlDataReader reader = command.ExecuteReader();
