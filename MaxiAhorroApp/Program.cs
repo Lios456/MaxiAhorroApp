@@ -18,7 +18,7 @@ namespace MaxiAhorroApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Ver_Productos());
+            Application.Run(new Main());
         }
     }
 }

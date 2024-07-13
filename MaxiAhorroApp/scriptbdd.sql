@@ -70,6 +70,7 @@ CREATE TABLE IF NOT EXISTS minimarket.productos (
     fecha_vencimiento DATE,
     marca_id INT,
     ubicacion_id INT,
+    estado VARCHAR(50) DEFAULT 'Activo',
     FOREIGN KEY (categoria_id) REFERENCES categorias(id),
     FOREIGN KEY (proveedor_id) REFERENCES proveedores(id),
     FOREIGN KEY (marca_id) REFERENCES marcas(id),
@@ -88,23 +89,30 @@ INSERT IGNORE INTO minimarket.productos (id, nombre, descripcion, categoria_id, 
 (7, 'Leche', 'Leche Chocolatada', 7, 0.75, 150, '2024-06-23', 1, 'LECHECHOC', '2024-10-25', 7, 6),
 (8, 'Aceite', 'Aceite Vegetal 1 litro', 9, 3.00, 1000, '2024-06-23', 1, 'ACEIGIRA1LT', '2025-08-08', 8, 5);
 
-CREATE TABLE IF NOT EXISTS minimarket.cajeros (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(100) NOT NULL,
-    apellido VARCHAR(100) NOT NULL,
-    dni VARCHAR(20) UNIQUE NOT NULL,
-    direccion VARCHAR(255),
-    telefono VARCHAR(15),
-    email VARCHAR(100) UNIQUE,
-    fecha_nacimiento DATE,
-    fecha_contratacion DATE,
-    turno ENUM('Mañana', 'Tarde', 'Noche') NOT NULL,
-    salario DECIMAL(10, 2),
-    supervisor_id INT,
-    numero_caja INT NOT NULL,
-    estado ENUM('Activo', 'Inactivo', 'Suspendido') DEFAULT 'Activo',
-    comentarios TEXT,
-    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE IF NOT EXISTS minimarket.usuarios (
+    IDUsuario INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL,
+    Apellido VARCHAR(50) NOT NULL,
+    Email VARCHAR(100) UNIQUE NOT NULL,
+    Contraseña VARCHAR(100) NOT NULL,
+    Rol ENUM('Cajero', 'Administrador') NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS minimarket.empleados (
+    IDEmpleado INT AUTO_INCREMENT PRIMARY KEY,
+    IDUsuario INT,
+    FechaContratacion DATE NOT NULL,
+    Puesto ENUM('Cajero', 'Administrador') NOT NULL,
+    Salario DECIMAL(10, 2) NOT NULL,
+    Estado ENUM('Activo', 'Inactivo') NOT NULL,
+    FOREIGN KEY (IDUsuario) REFERENCES Usuarios(IDUsuario)
+);
+
+CREATE TABLE IF NOT EXISTS minimarket.administradores (
+    IDAdministrador INT AUTO_INCREMENT PRIMARY KEY,
+    IDEmpleado INT,
+    NivelAcceso INT CHECK (NivelAcceso BETWEEN 1 AND 3),
+    FOREIGN KEY (IDEmpleado) REFERENCES Empleados(IDEmpleado)
 );
 
 DROP PROCEDURE IF EXISTS sp_total_productos_por_categoria;

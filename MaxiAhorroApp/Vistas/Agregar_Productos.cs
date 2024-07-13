@@ -23,6 +23,10 @@ namespace MaxiAhorroApp.Vistas
             categories.ForEach(category => this.categorytx.Items.Add(category));
             List<Proveedor> proveedores = (List<Proveedor>)new ServicioProveedores().Consultar();
             proveedores.ForEach(proveedor => this.provetortx.Items.Add(proveedor));
+            List<Marca> marcas = (List<Marca>)new ServicioMarca().Consultar();
+            marcas.ForEach(marca => this.signtx.Items.Add(marca));
+            List<Ubicacion> ubicaciones = (List<Ubicacion>)new ServicioUbicacion().Consultar();
+            ubicaciones.ForEach(ubicacion => this.locationtx.Items.Add(ubicacion));
             this.expiretx.MinDate = DateTime.Now.AddMonths(5);
             button2_Click(this, EventArgs.Empty);
         }
@@ -36,24 +40,43 @@ namespace MaxiAhorroApp.Vistas
         /// <returns></returns>
         public Agregar_Productos(Producto pe)
         {
-            
+            this.p = pe;
             InitializeComponent();
             ServicioCategoria servicio = new ServicioCategoria();
             List<Category> categories = (List<Category>)servicio.Consultar();
             categories.ForEach(category => this.categorytx.Items.Add(category));
-            this.expiretx.MinDate = pe.fecha_vencimiento;
+            List<Proveedor> proveedores = (List<Proveedor>)new ServicioProveedores().Consultar();
+            proveedores.ForEach(proveedor => this.provetortx.Items.Add(proveedor));
+            List<Marca> marcas = (List<Marca>)new ServicioMarca().Consultar();
+            marcas.ForEach(marca => this.signtx.Items.Add(marca));
+            List<Ubicacion> ubicaciones = (List<Ubicacion>)new ServicioUbicacion().Consultar();
+            ubicaciones.ForEach(ubicacion => this.locationtx.Items.Add(ubicacion));
+            this.expiretx.MinDate = p.fecha_vencimiento;
+            this.expiretx.Value = p.fecha_vencimiento;
+            foreach (var item in this.categorytx.Items)
+            {
+                if (((Category)item).Id == p.categoria_id.Id)
+                {
+                    this.categorytx.SelectedItem = item;
+                    break;
+                }
+            }
+            foreach (var item in this.provetortx.Items)
+            {
+                if (((Proveedor)item).Id == p.proveedor_id.Id)
+                {
+                    this.provetortx.SelectedItem = item;
+                    break;
+                }
+            }
+            this.nombretx.Text = p.nombre;
+            this.descriptiontx.Text = p.descripcion;
+            this.pricetx.Value = (decimal)p.precio;
+            this.cuantitytx.Value = p.cantidad;
+            this.barcodetx.Text = p.codigo_barra;
+            this.signtx.Text = p.marca_id.ToString();
+            this.locationtx.Text = p.ubicacion_id.ToString();
             //button2_Click(this, EventArgs.Empty);
-            this.p.Id = pe.Id;
-            this.nombretx.Text = pe.nombre;
-            this.descriptiontx.Text = pe.descripcion;
-            this.categorytx.SelectedIndex = Convert.ToInt16(pe.categoria_id.Nombre) -1;
-            this.pricetx.Text = pe.proveedor_id.ToString();
-            this.cuantitytx.Text = pe.cantidad.ToString();
-            this.provetortx.SelectedItem = pe.proveedor_id.Nombre;
-            this.barcodetx.Text = pe.codigo_barra;
-            this.expiretx.Value = pe.fecha_ingreso;
-            //this.signtx.Text = pe.Sign;
-            //this.locationtx.Text = pe.Location;
 
         }
 
@@ -67,9 +90,7 @@ namespace MaxiAhorroApp.Vistas
             {
                 this.SetProducto();
                 if (this.nombretx.Text != ""
-                       && this.descriptiontx.Text != ""
-                       && this.signtx.Text != ""
-                       && this.locationtx.Text != "")
+                       && this.descriptiontx.Text != "")
                 {
                     if (this.barcodetx.Text == String.Empty)
                     {
@@ -85,7 +106,7 @@ namespace MaxiAhorroApp.Vistas
                         else
                         {
                             new ServicioProducto().Modificar(p);
-                            this.Close();
+                            
                         }
                     }
 
@@ -101,6 +122,10 @@ namespace MaxiAhorroApp.Vistas
             {
                 MessageBox.Show(ex.Message);
             }
+            finally
+            {
+                this.Close();
+            }
             
         }
 
@@ -113,23 +138,36 @@ namespace MaxiAhorroApp.Vistas
             p.cantidad = Convert.ToInt16(this.cuantitytx.Text);
             p.proveedor_id = (Proveedor)provetortx.SelectedItem;
             p.codigo_barra = this.barcodetx.Text;
-            p.fecha_ingreso = this.expiretx.Value;
-            p.marca_id = Convert.ToInt16(this.signtx.Text);
-            p.ubicacion_id = Convert.ToInt16(this.locationtx.Text);
+            p.fecha_vencimiento = this.expiretx.Value;
+            p.marca_id = (Marca)this.signtx.SelectedItem;
+            p.ubicacion_id = (Ubicacion)this.locationtx.SelectedItem;   
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.nombretx.Text = "";
-            this.descriptiontx.Text = "";
-            this.categorytx.SelectedIndex = 0;
-            this.pricetx.Value = 0.5m;
-            this.cuantitytx.Value = 1;
-            this.provetortx.SelectedIndex = 0;
-            this.barcodetx.Text = "";
-            this.expiretx.Value = DateTime.Now.AddMonths(5);
-            this.signtx.Text = "";
-            this.locationtx.Text = "";
+            try
+            {
+                
+                if (p.Id == 0)
+                {
+                    this.expiretx.Value = DateTime.Now.AddMonths(5);
+                    this.categorytx.SelectedIndex = 0;
+                    this.provetortx.SelectedIndex = 0;
+                    this.signtx.SelectedIndex = 0;
+                    this.locationtx.SelectedIndex = 0;
+                    this.nombretx.Text = "";
+                    this.descriptiontx.Text = "";
+                    this.pricetx.Value = 0.5m;
+                    this.cuantitytx.Value = 1;
+                    this.barcodetx.Text = "";
+                    this.signtx.Text = "";
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
     }

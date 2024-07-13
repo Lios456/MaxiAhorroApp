@@ -35,7 +35,7 @@ namespace MaxiAhorroApp.Controladores
             return categories;
         }
 
-        public Category ConsultarPorId(int id)
+        public Category ConsultarPorId(Category cat)
         {
             throw new NotImplementedException();
         }

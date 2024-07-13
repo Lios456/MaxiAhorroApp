@@ -124,20 +124,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Administrador.cs" />
     <Compile Include="Clases\Category.cs" />
+    <Compile Include="Clases\Empleado.cs" />
+    <Compile Include="Clases\Marca.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Proveedor.cs" />
     <Compile Include="Clases\Reporte.cs" />
+    <Compile Include="Clases\Ubicacion.cs" />
+    <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Controladores\Connection.cs" />
     <Compile Include="Controladores\Repositorio.cs" />
     <Compile Include="Controladores\ServicioCategoria.cs" />
+    <Compile Include="Controladores\ServicioEmpleado.cs" />
+    <Compile Include="Controladores\ServicioMarca.cs" />
     <Compile Include="Controladores\ServicioProducto.cs" />
     <Compile Include="Controladores\ServicioProveedores.cs" />
     <Compile Include="Controladores\ServicioReporte.cs" />
+    <Compile Include="Controladores\ServicioUbicacion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestAgregarProductos.cs" />
-    <Compile Include="TestListarProductos.cs" />
+    <Compile Include="Tests\TestAgregarEmpleado.cs" />
+    <Compile Include="Tests\TestAgregarProductos.cs" />
+    <Compile Include="Tests\TestListarProductos.cs" />
     <Compile Include="Vistas\Agregar_Productos.cs">
       <SubType>Form</SubType>
     </Compile>

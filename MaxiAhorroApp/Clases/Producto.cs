@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dapper;
 
 namespace MaxiAhorroApp.Clases
 {
@@ -19,8 +20,8 @@ namespace MaxiAhorroApp.Clases
         public Proveedor proveedor_id { get; set; }
         public string codigo_barra { get; set; }
         public DateTime fecha_vencimiento { get; set; }
-        public int marca_id { get; set; }
-        public int ubicacion_id { get; set; }
+        public Marca marca_id { get; set; }
+        public Ubicacion ubicacion_id { get; set; }
 
     }
 

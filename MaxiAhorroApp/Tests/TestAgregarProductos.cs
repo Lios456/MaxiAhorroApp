@@ -29,12 +29,12 @@ namespace MaxiAhorroApp
             _form.descriptiontx.Text = "Caja 5 sobres";
             _form.cuantitytx.Value = 100;
             _form.categorytx.SelectedIndex = 5;
-            _form.barcodetx.Text = "TEMAN";
+            _form.barcodetx.Text = "TEMANZA";
             _form.expiretx.Value = DateTime.Now.AddYears(2);
             _form.signtx.Text = "5";
             _form.pricetx.Value = 0.75m;
             _form.provetortx.SelectedIndex = 5;
-            _form.locationtx.Text = "1";
+            _form.locationtx.SelectedIndex = 2;
             // Act
             _form.SetProducto();
 

@@ -60,7 +60,7 @@ namespace MaxiAhorroApp.Vistas
             /*--------------------Agregar un nuevo producto------------------------*/
             button1.Enabled = false;
             new Agregar_Productos().ShowDialog();
-            button4_Click(sender, e);
+            productostb.DataSource = new ServicioProducto().Consultar();
             button1.Enabled = true;
         }
 
@@ -91,9 +91,9 @@ namespace MaxiAhorroApp.Vistas
             /*--------------------Actualizar productos------------------------*/
             if(p.Id != 0) 
             {
-                p = new ServicioProducto().ConsultarPorId(p.Id);
+                p = new ServicioProducto().ConsultarPorId(p);
                 button3.Enabled = false;
-                new Agregar_Productos(p).ShowDialog();
+                new Agregar_Productos(p).Show();
                 button3.Enabled = true;
                 button4_Click(sender, e);
             }
