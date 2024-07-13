@@ -8,7 +8,11 @@ namespace MaxiAhorroApp.Clases
 {
     public class Proveedor
     {
-        public String Name { get; set; }
-        public String City { get; set; }
+        public int Id {  get; set; }   
+        public String Nombre { get; set; }
+        public override string ToString()
+        {
+            return this.Nombre;
+        }
     }
 }

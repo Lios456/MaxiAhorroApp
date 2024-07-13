@@ -87,7 +87,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(635, 36);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Registor de productos";
+            this.label1.Text = "Registro de productos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -309,10 +309,7 @@
             this.provetortx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.provetortx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.provetortx.FormattingEnabled = true;
-            this.provetortx.Items.AddRange(new object[] {
-            "Proveedor A",
-            "Proveedor B"});
-            this.provetortx.Location = new System.Drawing.Point(152, 229);
+            this.provetortx.Location = new System.Drawing.Point(152, 231);
             this.provetortx.Name = "provetortx";
             this.provetortx.Size = new System.Drawing.Size(291, 26);
             this.provetortx.TabIndex = 13;
@@ -407,7 +404,7 @@
             this.categorytx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.categorytx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.categorytx.FormattingEnabled = true;
-            this.categorytx.Location = new System.Drawing.Point(152, 99);
+            this.categorytx.Location = new System.Drawing.Point(152, 97);
             this.categorytx.Name = "categorytx";
             this.categorytx.Size = new System.Drawing.Size(291, 26);
             this.categorytx.TabIndex = 19;

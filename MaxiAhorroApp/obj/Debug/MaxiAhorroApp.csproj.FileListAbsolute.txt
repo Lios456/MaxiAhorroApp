@@ -106,3 +106,8 @@ C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\bi
 C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\Moq.dll
 C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\Castle.Core.xml
 C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\Moq.xml
+C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\Dapper.dll
+C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\Dapper.xml
+C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.exe.config

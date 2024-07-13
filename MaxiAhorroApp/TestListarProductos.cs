@@ -15,7 +15,7 @@ namespace MaxiAhorroApp
     internal class TestListarProductos
     {
         private Mock<ServicioProducto> _mockServicioProducto;
-        private IList<Producto> _listarProductos;
+        private IEnumerable<Producto> _listarProductos;
 
         [SetUp]
         public void SetUp()

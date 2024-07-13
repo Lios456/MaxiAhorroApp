@@ -21,7 +21,9 @@ namespace MaxiAhorroApp.Vistas
             ServicioCategoria servicio = new ServicioCategoria();
             List<Category> categories = (List<Category>)servicio.Consultar();
             categories.ForEach(category => this.categorytx.Items.Add(category));
-            this.expiretx.MinDate = DateTime.Now;
+            List<Proveedor> proveedores = (List<Proveedor>)new ServicioProveedores().Consultar();
+            proveedores.ForEach(proveedor => this.provetortx.Items.Add(proveedor));
+            this.expiretx.MinDate = DateTime.Now.AddMonths(5);
             button2_Click(this, EventArgs.Empty);
         }
 
@@ -39,19 +41,19 @@ namespace MaxiAhorroApp.Vistas
             ServicioCategoria servicio = new ServicioCategoria();
             List<Category> categories = (List<Category>)servicio.Consultar();
             categories.ForEach(category => this.categorytx.Items.Add(category));
-            this.expiretx.MinDate = pe.Dateex;
+            this.expiretx.MinDate = pe.fecha_vencimiento;
             //button2_Click(this, EventArgs.Empty);
             this.p.Id = pe.Id;
-            this.nombretx.Text = pe.Name;
-            this.descriptiontx.Text = pe.Description;
-            this.categorytx.SelectedIndex = Convert.ToInt16(pe.Cat.Name) -1;
-            this.pricetx.Text = pe.Price.ToString();
-            this.cuantitytx.Text = pe.Cuantity.ToString();
-            this.provetortx.SelectedItem = pe.Prov.Name;
-            this.barcodetx.Text = pe.Barcode;
-            this.expiretx.Value = pe.Dateex;
-            this.signtx.Text = pe.Sign;
-            this.locationtx.Text = pe.Location;
+            this.nombretx.Text = pe.nombre;
+            this.descriptiontx.Text = pe.descripcion;
+            this.categorytx.SelectedIndex = Convert.ToInt16(pe.categoria_id.Nombre) -1;
+            this.pricetx.Text = pe.proveedor_id.ToString();
+            this.cuantitytx.Text = pe.cantidad.ToString();
+            this.provetortx.SelectedItem = pe.proveedor_id.Nombre;
+            this.barcodetx.Text = pe.codigo_barra;
+            this.expiretx.Value = pe.fecha_ingreso;
+            //this.signtx.Text = pe.Sign;
+            //this.locationtx.Text = pe.Location;
 
         }
 
@@ -78,7 +80,7 @@ namespace MaxiAhorroApp.Vistas
                         if (this.p.Id == 0)
                         {
                             new ServicioProducto().Agregar(p);
-                            button2_Click(sender, e);
+                            
                         }
                         else
                         {
@@ -104,16 +106,16 @@ namespace MaxiAhorroApp.Vistas
 
         public void SetProducto()
         {
-            p.Name = this.nombretx.Text;
-            p.Description = this.descriptiontx.Text;
-            p.Cat = (Category)categorytx.SelectedItem;
-            p.Price = float.Parse(this.pricetx.Text);
-            p.Cuantity = Convert.ToInt16(this.cuantitytx.Text);
-            p.Prov = new Proveedor { Name = this.provetortx.SelectedItem.ToString() };
-            p.Barcode = this.barcodetx.Text;
-            p.Dateex = this.expiretx.Value;
-            p.Sign = this.signtx.Text;
-            p.Location = this.locationtx.Text;
+            p.nombre = this.nombretx.Text;
+            p.descripcion = this.descriptiontx.Text;
+            p.categoria_id = (Category)categorytx.SelectedItem;
+            p.precio = float.Parse(this.pricetx.Text);
+            p.cantidad = Convert.ToInt16(this.cuantitytx.Text);
+            p.proveedor_id = (Proveedor)provetortx.SelectedItem;
+            p.codigo_barra = this.barcodetx.Text;
+            p.fecha_ingreso = this.expiretx.Value;
+            p.marca_id = Convert.ToInt16(this.signtx.Text);
+            p.ubicacion_id = Convert.ToInt16(this.locationtx.Text);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -125,7 +127,7 @@ namespace MaxiAhorroApp.Vistas
             this.cuantitytx.Value = 1;
             this.provetortx.SelectedIndex = 0;
             this.barcodetx.Text = "";
-            this.expiretx.Value = DateTime.Now;
+            this.expiretx.Value = DateTime.Now.AddMonths(5);
             this.signtx.Text = "";
             this.locationtx.Text = "";
 

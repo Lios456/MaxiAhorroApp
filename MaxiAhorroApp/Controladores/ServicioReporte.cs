@@ -9,10 +9,10 @@ using System.Windows.Forms;
 
 namespace MaxiAhorroApp.Controladores
 {
-    public class ServicioReporte : Connection, IRepositorio<Reporte>
+    public class ServicioReporte : Connection
     {
 
-        public IList<Reporte> Consultar()
+        public List<Reporte> Consultar()
         {
             List<Reporte> attrchart = new List<Reporte>();
             try
@@ -23,7 +23,7 @@ namespace MaxiAhorroApp.Controladores
                 var con = 1;
                 while(data.Read())
                 {
-                    attrchart.Add(new Reporte { Label = data.GetString("nombre"), X=con, Y = data.GetInt16("sum(cantidad)")});
+                    attrchart.Add(new Reporte { Label = data.GetString("nombre"), X=con, Y = data.GetInt16("sum(p.cantidad)")});
                     con++;
                 }
             }
@@ -39,24 +39,6 @@ namespace MaxiAhorroApp.Controladores
             return attrchart;
         }
 
-        void IRepositorio<Reporte>.Agregar(Reporte item)
-        {
-            throw new NotImplementedException();
-        }
-
-        Reporte IRepositorio<Reporte>.ConsultarPorId(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        void IRepositorio<Reporte>.Eliminar(Reporte item)
-        {
-            throw new NotImplementedException();
-        }
-
-        void IRepositorio<Reporte>.Modificar(Reporte item)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

@@ -1,4 +1,5 @@
-﻿using MaxiAhorroApp.Clases;
+﻿using Dapper;
+using MaxiAhorroApp.Clases;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -17,21 +18,11 @@ namespace MaxiAhorroApp.Controladores
             throw new NotImplementedException();
         }
 
-        public IList<Category> Consultar()
+        public IEnumerable<Category> Consultar()
         {
             try
             {
-                var sql = "SELECT * FROM minimarket.categorias";
-                var cmd = new MySqlCommand(sql, base.cn);
-                var data = cmd.ExecuteReader();
-                while (data.Read())
-                {
-                    categories.Add(new Category()
-                    {
-                        Id = data.GetInt32("id"),
-                        Name = data.GetString("nombre"),
-                    });
-                }
+                return cn.Query<Category>("Select * from categorias");
             }
             catch (Exception ex)
             {
@@ -58,5 +49,6 @@ namespace MaxiAhorroApp.Controladores
         {
             throw new NotImplementedException();
         }
+
     }
 }

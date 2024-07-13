@@ -19,40 +19,41 @@ namespace MaxiAhorroApp.Vistas
         {
             InitializeComponent();
             productostb.AutoGenerateColumns = false;
-            productostb.DataSource = new ServicioProducto().Consultar();
+            button4_Click(this, new EventArgs());
         }
 
         /*
          OBTENER LOS DATOS DE LOS ATRIBUTOS DE PRODUCTO QUE SON UNA CLASE
-         */
-
-        private void productostb_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+         private void productostb_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (productostb.Columns[e.ColumnIndex].Name == "prov_cl")
             {
                 var producto = productostb.Rows[e.RowIndex].DataBoundItem as Producto;
-                if (producto != null && producto.Prov != null)
+                if (producto != null && producto.proveedor_id != null)
                 {
-                    e.Value = producto.Prov.Name;
+                    e.Value = producto.proveedor_id.Name;
                 }
             }
             if (productostb.Columns[e.ColumnIndex].Name == "cat_cl")
             {
                 var producto = productostb.Rows[e.RowIndex].DataBoundItem as Producto;
-                if (producto != null && producto.Cat != null)
+                if (producto != null && producto.categoria_id != null)
                 {
-                    e.Value = producto.Cat.Name;
+                    e.Value = producto.categoria_id.Nombre;
                 }
             }
             if (productostb.Columns[e.ColumnIndex].Name == "datein_cl")
             {
                 var producto = productostb.Rows[e.RowIndex].DataBoundItem as Producto;
-                if (producto != null && producto.Cat != null)
+                if (producto != null && producto.categoria_id != null)
                 {
-                    e.Value = producto.Datein.ToString();
+                    e.Value = producto.fecha_ingreso.ToString();
                 }
             }
         }
+         */
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -74,7 +75,7 @@ namespace MaxiAhorroApp.Vistas
             /*--------------------Eliminar productos------------------------*/
 
             if(p.Id!=0){
-                if (MessageBox.Show($"¿De verdad quiere eliminar el producto?\n{p.Name}", "Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show($"¿De verdad quiere eliminar el producto?\n{p.nombre}", "Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     new ServicioProducto().Eliminar(p);
                     button4_Click(sender, e);

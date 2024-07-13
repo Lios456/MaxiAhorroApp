@@ -9,7 +9,7 @@ namespace MaxiAhorroApp.Controladores
 {
     internal interface IRepositorio<T>
     {
-        IList<T> Consultar();
+        IEnumerable<T> Consultar();
         T ConsultarPorId(int id);
         void Modificar(T item);
         void Agregar(T item);

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Google.Protobuf.Reflection.SourceCodeInfo.Types;
 using System.Xml.Linq;
+using Dapper;
 
 namespace MaxiAhorroApp.Controladores
 {
@@ -16,82 +17,66 @@ namespace MaxiAhorroApp.Controladores
     {
         private List<Producto> productos = new List<Producto>();
 
-        public virtual IList<Producto> Consultar()
+        public virtual IEnumerable<Producto> Consultar()
         {
             try
             {
-                var sql = "SELECT * FROM minimarket.productos;";
-                var command = new MySqlCommand(sql,base.cn);
-                MySqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    productos.Add(
-                        new Producto
-                        {
-                            Id = reader.GetInt16("id"),
-                            Name = reader.GetString("nombre"),
-                            Description = reader.GetString("descripcion"),
-                            Cat = new Category { Name = reader.GetString("categoria") },
-                            Price = (float)reader.GetDecimal("precio"),
-                            Cuantity = reader.GetInt16("cantidad"),
-                            Datein = reader.GetDateTime("fecha_ingreso"),
-                            Prov = new Proveedor { Name = reader.GetString("proveedor") },
-                            Barcode = reader.GetString("codigo_barra"),
-                            Dateex = reader.GetDateTime("fecha_vencimiento"),
-                            Sign = reader.GetString("marca"),
-                            Location = reader.GetString("ubicacion")
+                var sql = @"
+            SELECT 
+                p.Id, p.nombre, p.descripcion, p.precio, p.cantidad, p.fecha_ingreso, 
+                p.codigo_barra, p.fecha_vencimiento, p.marca_id, p.ubicacion_id,
+                c.Id as Id, c.Nombre as Nombre,
+                pr.Id as Id, pr.Nombre as Nombre
+            FROM minimarket.productos p
+            INNER JOIN minimarket.categorias c ON p.categoria_id = c.Id
+            INNER JOIN minimarket.proveedores pr ON p.proveedor_id = pr.Id;";
 
-                        });
-                }
-            }catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                base.cn.Close();
-            }
-            
-            return productos;
-        }
+                var productos = base.cn.Query<Producto, Category, Proveedor, Producto>(sql,
+                    (producto, categoria, proveedor) =>
+                    {
+                        producto.categoria_id = categoria;
+                        producto.proveedor_id = proveedor;
+                        return producto;
+                    },
+                    splitOn: "Id,Id"
+                );
 
-        public Producto ConsultarPorId(int id)
-        {
-            var p = new Producto();
-
-            try
-            {
-                var sql = "SELECT * FROM minimarket.productos WHERE id = @id";
-                var command = new MySqlCommand(sql, base.cn);
-                command.Parameters.AddWithValue("@id", id);
-                MySqlDataReader reader = command.ExecuteReader();
-                reader.Read();
-                p.Id = reader.GetInt16("id");
-                p.Name = reader.GetString("nombre");
-                p.Description = reader.GetString("descripcion");
-                p.Cat = new Category { Name = reader.GetString("categoria") };
-                p.Price = (float)reader.GetDecimal("precio");
-                p.Cuantity = reader.GetInt16("cantidad");
-                p.Datein = reader.GetDateTime("fecha_ingreso");
-                p.Prov = new Proveedor { Name = reader.GetString("proveedor") };
-                p.Barcode = reader.GetString("codigo_barra");
-                p.Dateex = reader.GetDateTime("fecha_vencimiento");
-                p.Sign = reader.GetString("marca");
-                p.Location = reader.GetString("ubicacion");
+                return productos;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return null;
             }
             finally
             {
                 base.cn.Close();
             }
-            return p;
+        }
+
+
+
+        public Producto ConsultarPorId(int id)
+        {
+            try
+            {
+                var sql = "SELECT * FROM minimarket.productos WHERE id = @Id";
+                return base.cn.Query<Producto>(sql, new { Id = id}).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            finally
+            {
+                base.cn.Close();
+            }
         }
 
         public void Modificar(Producto item)
         {
+
             if (item.Id != 0)
             {
                 try
@@ -110,20 +95,7 @@ namespace MaxiAhorroApp.Controladores
                               "ubicacion = @ubi " +
                               "WHERE id = @id";
 
-                    var cmd = new MySqlCommand(sql, base.cn);
-                    cmd.Parameters.AddWithValue("@id", item.Id);
-                    cmd.Parameters.AddWithValue("@nombre", item.Name);
-                    cmd.Parameters.AddWithValue("@description", item.Description);
-                    cmd.Parameters.AddWithValue("@categoria", item.Cat.Id);
-                    cmd.Parameters.AddWithValue("@precio", item.Price);
-                    cmd.Parameters.AddWithValue("@cantidad", item.Cuantity);
-                    cmd.Parameters.AddWithValue("@datein", item.Datein);
-                    cmd.Parameters.AddWithValue("@prov", item.Prov.Name);
-                    cmd.Parameters.AddWithValue("@barcode", item.Barcode);
-                    cmd.Parameters.AddWithValue("@dateex", item.Dateex);
-                    cmd.Parameters.AddWithValue("@marca", item.Sign);
-                    cmd.Parameters.AddWithValue("@ubi", item.Location);
-                    cmd.ExecuteNonQuery();
+                    base.cn.Execute(sql, item);
                     MessageBox.Show("El producto se ha actualizado correctamente");
                 }
                 catch (Exception ex)
@@ -142,83 +114,57 @@ namespace MaxiAhorroApp.Controladores
         {
             try
             {
-                string sql = "INSERT INTO `minimarket`.`productos` " +
-            "(`nombre`, `descripcion`, `categoria`, `precio`, `cantidad`, `fecha_ingreso`, `proveedor`, `codigo_barra`, `fecha_vencimiento`, `marca`, `ubicacion`) " +
-            "VALUES (@nombre, @descripcion, @categoria, @precio, @cantidad, @fecha_ingreso, @proveedor, @codigo_barra, @fecha_vencimiento, @marca, @ubicacion);";
+                var productoExistente = ObtenerProductoExistente(item);
 
-                MySqlCommand command = new MySqlCommand(sql, base.cn);
-                command.Parameters.AddWithValue("@nombre", item.Name);
-                command.Parameters.AddWithValue("@descripcion", item.Description);
-                command.Parameters.AddWithValue("@categoria", item.Cat.Name);
-                command.Parameters.AddWithValue("@precio", item.Price);
-                command.Parameters.AddWithValue("@cantidad", item.Cuantity);
-                command.Parameters.AddWithValue("@fecha_ingreso", item.Datein);
-                command.Parameters.AddWithValue("@proveedor", item.Prov.Name);
-                command.Parameters.AddWithValue("@codigo_barra", item.Barcode);
-                command.Parameters.AddWithValue("@fecha_vencimiento", item.Dateex);
-                command.Parameters.AddWithValue("@marca", item.Sign);
-                command.Parameters.AddWithValue("@ubicacion", item.Location);
-                command.ExecuteNonQuery();
-                MessageBox.Show($"El producto se ha guardado correctamente");
-
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                base.cn.Close();
-            }
-            
-        }
-
-        public void Eliminar(Producto item)
-        {
-            try
-            {
-                var sql = "DELETE FROM productos WHERE id = @id";
-                var cmd = new MySqlCommand(sql, base.cn);
-                cmd.Parameters.AddWithValue("@id", item.Id);
-                cmd.ExecuteNonQuery();
-                base.cn.Close();
-                productos.Remove(item);
-            }catch(Exception ex )
-            {
-                MessageBox.Show(ex.Message);
-            }
-            
-        }
-
-        public IList<Producto> Consultar(string campo)
-        {
-            try
-            {
-                var sql = "SELECT * FROM minimarket.productos where id like @campo or nombre like @campo or descripcion like @campo or " +
-                    "categoria like @campo or proveedor like @campo" +
-                    " or codigo_barra like @campo or marca like @campo or ubicacion like @campo";
-                var command = new MySqlCommand(sql, base.cn);
-                command.Parameters.AddWithValue("@campo", $"{campo}%");
-                MySqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
+                if (productoExistente != null)
                 {
-                    productos.Add(
-                        new Producto
-                        {
-                            Id = reader.GetInt16("id"),
-                            Name = reader.GetString("nombre"),
-                            Description = reader.GetString("descripcion"),
-                            Cat = new Category { Name = reader.GetString("categoria") },
-                            Price = (float)reader.GetDecimal("precio"),
-                            Cuantity = reader.GetInt16("cantidad"),
-                            Datein = reader.GetDateTime("fecha_ingreso"),
-                            Prov = new Proveedor { Name = reader.GetString("proveedor") },
-                            Barcode = reader.GetString("codigo_barra"),
-                            Dateex = reader.GetDateTime("fecha_vencimiento"),
-                            Sign = reader.GetString("marca"),
-                            Location = reader.GetString("ubicacion")
+                    // Actualizar el producto existente
+                    string sqlUpdate = @"
+                UPDATE minimarket.productos 
+                SET 
+                    cantidad = cantidad + @cantidad, 
+                    fecha_vencimiento = @fecha_vencimiento
+                WHERE Id = @Id";
 
-                        });
+                    base.cn.Execute(sqlUpdate, new
+                    {
+                        cantidad = item.cantidad,
+                        fecha_vencimiento = item.fecha_vencimiento,
+                        Id = productoExistente.Id
+                    });
+
+                    MessageBox.Show("El producto existente ha sido actualizado correctamente");
+                }
+                else
+                {
+                    string sqlInsert = @"
+                INSERT INTO minimarket.productos 
+                (
+                    nombre, descripcion, categoria_id, precio, cantidad, fecha_ingreso, 
+                    proveedor_id, codigo_barra, fecha_vencimiento, marca_id, ubicacion_id
+                ) 
+                VALUES 
+                (
+                    @nombre, @descripcion, @categoria_id, @precio, @cantidad, @fecha_ingreso, 
+                    @proveedor_id, @codigo_barra, @fecha_vencimiento, @marca_id, @ubicacion_id
+                );";
+
+                    base.cn.Execute(sqlInsert, new
+                    {
+                        item.nombre,
+                        item.descripcion,
+                        categoria_id = item.categoria_id?.Id,  
+                        item.precio,
+                        item.cantidad,
+                        fecha_ingreso = DateTime.Now,          
+                        proveedor_id = item.proveedor_id?.Id,  
+                        item.codigo_barra,
+                        item.fecha_vencimiento,
+                        item.marca_id,
+                        item.ubicacion_id
+                    });
+
+                    MessageBox.Show("El nuevo producto se ha guardado correctamente");
                 }
             }
             catch (Exception ex)
@@ -229,8 +175,106 @@ namespace MaxiAhorroApp.Controladores
             {
                 base.cn.Close();
             }
-
-            return productos;
         }
+
+
+        public void Eliminar(Producto item)
+        {
+            try
+            {
+                var sql = "UPDATE minimarket.productos set estado = 'Inactivo' WHERE id = @id";
+                base.cn.Execute(sql);
+            }catch(Exception ex )
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        public IEnumerable<Producto> Consultar(string campo)
+        {
+            try
+            {
+                var sql = @"
+            SELECT 
+                p.Id, p.nombre, p.descripcion, p.precio, p.cantidad, p.fecha_ingreso, 
+                p.codigo_barra, p.fecha_vencimiento, p.marca_id, p.ubicacion_id,
+                c.Id as Id, c.Nombre as Nombre,
+                pr.Id as proveedor_id, pr.Nombre as Nombre
+            FROM minimarket.productos p
+            LEFT JOIN minimarket.categorias c ON p.categoria_id = c.Id
+            LEFT JOIN minimarket.proveedores pr ON p.proveedor_id = pr.Id
+            LEFT JOIN minimarket.marcas m ON p.marca_id = m.Id
+            LEFT JOIN minimarket.ubicaciones u ON p.ubicacion_id = u.Id
+            WHERE 
+                p.id LIKE @campo OR 
+                p.nombre LIKE @campo OR 
+                p.descripcion LIKE @campo OR 
+                c.Nombre LIKE @campo OR
+                pr.Nombre LIKE @campo OR
+                p.codigo_barra LIKE @campo OR 
+                m.Nombre LIKE @campo OR
+                u.Nombre LIKE @campo";
+
+                var productos = base.cn.Query<Producto, Category, Proveedor, Producto>(
+                    sql,
+                    (producto, categoria, proveedor) =>
+                    {
+                        producto.categoria_id = categoria;
+                        producto.proveedor_id = proveedor;
+                        return producto;
+                    },
+                    new { campo = $"%{campo}%" },
+                    splitOn: "Id,proveedor_id"
+                );
+
+                return productos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            finally
+            {
+                base.cn.Close();
+            }
+        }
+
+        public Producto ObtenerProductoExistente(Producto item)
+        {
+            string sql = @"
+        SELECT 
+            p.Id, p.nombre, p.descripcion, p.precio, p.cantidad, p.fecha_ingreso, 
+            p.codigo_barra, p.fecha_vencimiento, p.marca_id, p.ubicacion_id,
+            c.Id as categoria_id, c.Nombre as categoria_nombre,
+            pr.Id as proveedor_id, pr.Nombre as proveedor_nombre
+        FROM minimarket.productos p
+        LEFT JOIN minimarket.categorias c ON p.categoria_id = c.Id
+        LEFT JOIN minimarket.proveedores pr ON p.proveedor_id = pr.Id
+        WHERE p.nombre = @nombre AND p.descripcion = @descripcion AND p.categoria_id = @categoria_id AND p.proveedor_id = @proveedor_id";
+
+            var productoExistente = base.cn.Query<Producto, Category, Proveedor, Producto>(
+                sql,
+                (producto, categoria, proveedor) =>
+                {
+                    producto.categoria_id = categoria;
+                    producto.proveedor_id = proveedor;
+                    return producto;
+                },
+                new
+                {
+                    nombre = item.nombre,
+                    descripcion = item.descripcion,
+                    categoria_id = item.categoria_id.Id,
+                    proveedor_id = item.proveedor_id.Id
+                },
+                splitOn: "categoria_id,proveedor_id"
+            ).FirstOrDefault();
+
+            return productoExistente;
+        }
+
+
     }
 }
