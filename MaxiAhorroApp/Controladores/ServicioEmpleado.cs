@@ -15,7 +15,7 @@ namespace MaxiAhorroApp.Controladores
         {
             if (e == null)
             {
-                MessageBox.Show("Empleado no válido");
+                MessageBox.Show("Empleado no válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -69,7 +69,7 @@ namespace MaxiAhorroApp.Controladores
         {
             try
             {
-                var sql = @"SELECT u.Nombre, u.Apellido, u.Email, u.Rol, e.FechaContratacion, e.Puesto, e.Salario FROM minimarket.usuarios u 
+                var sql = @"SELECT * FROM minimarket.usuarios u 
                         INNER JOIN minimarket.empleados e 
                         ON e.IDUsuario = u.IDUsuario
                         WHERE e.Estado = 'Activo'";
@@ -105,7 +105,8 @@ namespace MaxiAhorroApp.Controladores
             SET Puesto = @Puesto,
             Salario = @Salario,
             Estado = @Estado,
-            FechaContratacion = @FechaContratacion"
+            FechaContratacion = @FechaContratacion
+            WHERE IDEmpleado = @IDEmpleado"
             ;
 
                 base.cn.Execute(sql2, em);

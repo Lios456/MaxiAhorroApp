@@ -72,7 +72,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(420, 553);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(431, 553);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -83,7 +83,7 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(420, 55);
+            this.label1.Size = new System.Drawing.Size(431, 55);
             this.label1.TabIndex = 0;
             this.label1.Text = "Formulario de Empleados";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -97,7 +97,7 @@
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(420, 56);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(431, 56);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // button1
@@ -165,7 +165,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(414, 436);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(425, 436);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // label2
@@ -174,7 +174,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 18);
+            this.label2.Size = new System.Drawing.Size(206, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Nombre:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -185,7 +185,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 55);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(201, 18);
+            this.label3.Size = new System.Drawing.Size(206, 18);
             this.label3.TabIndex = 1;
             this.label3.Text = "Apellido:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -196,7 +196,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(3, 98);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(201, 18);
+            this.label4.Size = new System.Drawing.Size(206, 18);
             this.label4.TabIndex = 2;
             this.label4.Text = "Email:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -207,7 +207,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 141);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(201, 18);
+            this.label5.Size = new System.Drawing.Size(206, 18);
             this.label5.TabIndex = 3;
             this.label5.Text = "Contraseña:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -218,7 +218,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(3, 184);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(201, 18);
+            this.label6.Size = new System.Drawing.Size(206, 18);
             this.label6.TabIndex = 4;
             this.label6.Text = "Rol:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -229,7 +229,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(3, 227);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(201, 18);
+            this.label7.Size = new System.Drawing.Size(206, 18);
             this.label7.TabIndex = 5;
             this.label7.Text = "Fecha de Contratación:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -240,7 +240,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(3, 270);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(201, 18);
+            this.label8.Size = new System.Drawing.Size(206, 18);
             this.label8.TabIndex = 6;
             this.label8.Text = "Puesto:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -251,7 +251,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(3, 313);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(201, 18);
+            this.label9.Size = new System.Drawing.Size(206, 18);
             this.label9.TabIndex = 7;
             this.label9.Text = "Salario:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -262,7 +262,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(3, 356);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(201, 18);
+            this.label10.Size = new System.Drawing.Size(206, 18);
             this.label10.TabIndex = 8;
             this.label10.Text = "Estado:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -270,33 +270,33 @@
             // txnombre
             // 
             this.txnombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txnombre.Location = new System.Drawing.Point(210, 8);
+            this.txnombre.Location = new System.Drawing.Point(215, 8);
             this.txnombre.Name = "txnombre";
-            this.txnombre.Size = new System.Drawing.Size(201, 27);
+            this.txnombre.Size = new System.Drawing.Size(207, 27);
             this.txnombre.TabIndex = 9;
             // 
             // txapellido
             // 
             this.txapellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txapellido.Location = new System.Drawing.Point(210, 51);
+            this.txapellido.Location = new System.Drawing.Point(215, 51);
             this.txapellido.Name = "txapellido";
-            this.txapellido.Size = new System.Drawing.Size(201, 27);
+            this.txapellido.Size = new System.Drawing.Size(207, 27);
             this.txapellido.TabIndex = 10;
             // 
             // txemail
             // 
             this.txemail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txemail.Location = new System.Drawing.Point(210, 94);
+            this.txemail.Location = new System.Drawing.Point(215, 94);
             this.txemail.Name = "txemail";
-            this.txemail.Size = new System.Drawing.Size(201, 27);
+            this.txemail.Size = new System.Drawing.Size(207, 27);
             this.txemail.TabIndex = 11;
             // 
             // txcontrasenia
             // 
             this.txcontrasenia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txcontrasenia.Location = new System.Drawing.Point(210, 137);
+            this.txcontrasenia.Location = new System.Drawing.Point(215, 137);
             this.txcontrasenia.Name = "txcontrasenia";
-            this.txcontrasenia.Size = new System.Drawing.Size(201, 27);
+            this.txcontrasenia.Size = new System.Drawing.Size(207, 27);
             this.txcontrasenia.TabIndex = 12;
             // 
             // txrol
@@ -308,18 +308,18 @@
             this.txrol.Items.AddRange(new object[] {
             "Cajero",
             "Administrador"});
-            this.txrol.Location = new System.Drawing.Point(210, 183);
+            this.txrol.Location = new System.Drawing.Point(215, 180);
             this.txrol.Name = "txrol";
-            this.txrol.Size = new System.Drawing.Size(201, 26);
+            this.txrol.Size = new System.Drawing.Size(207, 26);
             this.txrol.TabIndex = 13;
             // 
             // txfechacontratacioin
             // 
             this.txfechacontratacioin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txfechacontratacioin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txfechacontratacioin.Location = new System.Drawing.Point(210, 226);
+            this.txfechacontratacioin.Location = new System.Drawing.Point(215, 223);
             this.txfechacontratacioin.Name = "txfechacontratacioin";
-            this.txfechacontratacioin.Size = new System.Drawing.Size(201, 27);
+            this.txfechacontratacioin.Size = new System.Drawing.Size(207, 27);
             this.txfechacontratacioin.TabIndex = 14;
             // 
             // txpuesto
@@ -331,9 +331,9 @@
             this.txpuesto.Items.AddRange(new object[] {
             "Cajero",
             "Administrador"});
-            this.txpuesto.Location = new System.Drawing.Point(210, 269);
+            this.txpuesto.Location = new System.Drawing.Point(215, 266);
             this.txpuesto.Name = "txpuesto";
-            this.txpuesto.Size = new System.Drawing.Size(201, 26);
+            this.txpuesto.Size = new System.Drawing.Size(207, 26);
             this.txpuesto.TabIndex = 15;
             // 
             // txsalario
@@ -344,7 +344,7 @@
             0,
             0,
             0});
-            this.txsalario.Location = new System.Drawing.Point(210, 312);
+            this.txsalario.Location = new System.Drawing.Point(215, 309);
             this.txsalario.Maximum = new decimal(new int[] {
             7000,
             0,
@@ -356,7 +356,7 @@
             0,
             0});
             this.txsalario.Name = "txsalario";
-            this.txsalario.Size = new System.Drawing.Size(201, 27);
+            this.txsalario.Size = new System.Drawing.Size(207, 27);
             this.txsalario.TabIndex = 16;
             this.txsalario.Value = new decimal(new int[] {
             10,
@@ -373,9 +373,9 @@
             this.txestado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.txestado.Location = new System.Drawing.Point(210, 355);
+            this.txestado.Location = new System.Drawing.Point(215, 352);
             this.txestado.Name = "txestado";
-            this.txestado.Size = new System.Drawing.Size(201, 26);
+            this.txestado.Size = new System.Drawing.Size(207, 26);
             this.txestado.TabIndex = 17;
             // 
             // Agregar_Empleado
@@ -383,7 +383,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(225)))), ((int)(((byte)(221)))));
-            this.ClientSize = new System.Drawing.Size(420, 553);
+            this.ClientSize = new System.Drawing.Size(431, 553);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

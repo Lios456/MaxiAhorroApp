@@ -202,6 +202,29 @@ CREATE TRIGGER Encriptar_contrasenia_actualizar_usuario
 BEFORE UPDATE ON minimarket.usuarios
 FOR EACH ROW
 BEGIN
-	SET new.Contraseña = MD5(new.Contraseña);
+    IF new.Contraseña <> old.Contraseña THEN
+	    SET new.Contraseña = MD5(new.Contraseña);
+    END IF;
 END;
+
+DROP TRIGGER IF EXISTS Poner_en_Mayusculas_Nombres_Insert;
+
+create trigger Poner_en_Mayusculas_Nombres_Insert
+BEFORE INSERT ON minimarket.usuarios
+for each row
+BEGIN
+	set new.Nombre = upper(new.Nombre);
+    set new.Apellido = upper(new.Apellido);
+END;
+
+DROP TRIGGER IF EXISTS Poner_en_Mayusculas_Nombres_Update;
+
+create trigger Poner_en_Mayusculas_Nombres_Update
+BEFORE UPDATE ON minimarket.usuarios
+for each row
+BEGIN
+	set new.Nombre = upper(new.Nombre);
+    set new.Apellido = upper(new.Apellido);
+END;
+
 
