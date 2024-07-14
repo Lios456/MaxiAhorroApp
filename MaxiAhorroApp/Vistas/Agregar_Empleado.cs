@@ -32,7 +32,7 @@ namespace MaxiAhorroApp.Vistas
             this.txpuesto.Text = em.Puesto;
             this.txfechacontratacioin.Value = em.FechaContratacion;
             this.txrol.Text = em.Rol;
-            this.txcontrasenia.Text = em.Contraseña;
+            //this.txcontrasenia.Text = em.Contraseña;
             this.txapellido.Text = em.Apellido;
             this.txnombre.Text = em.Nombre;
             this.txemail.Text = em.Email;

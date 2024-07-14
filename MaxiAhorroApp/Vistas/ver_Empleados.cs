@@ -19,7 +19,7 @@ namespace MaxiAhorroApp.Vistas
         {
             InitializeComponent();
             //this.TopLevel = false;
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
             this.gridview_empleados.AutoGenerateColumns = false;
             button4_Click(this, EventArgs.Empty);
         }
@@ -44,8 +44,21 @@ namespace MaxiAhorroApp.Vistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            new Agregar_Empleado(empleadoseleccionado).ShowDialog();
-            button4_Click(this, EventArgs.Empty);
+            if(empleadoseleccionado != null)
+            {
+                new Agregar_Empleado(empleadoseleccionado).ShowDialog();
+                button4_Click(this, EventArgs.Empty);
+            } 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Eliminar Empleados
+            if(empleadoseleccionado == null)
+            {
+                new ServicioEmpleado().Eliminar(empleadoseleccionado);
+                button4_Click(this, EventArgs.Empty);
+            }
         }
     }
 }

@@ -308,7 +308,7 @@
             this.txrol.Items.AddRange(new object[] {
             "Cajero",
             "Administrador"});
-            this.txrol.Location = new System.Drawing.Point(215, 180);
+            this.txrol.Location = new System.Drawing.Point(215, 183);
             this.txrol.Name = "txrol";
             this.txrol.Size = new System.Drawing.Size(207, 26);
             this.txrol.TabIndex = 13;
@@ -331,7 +331,7 @@
             this.txpuesto.Items.AddRange(new object[] {
             "Cajero",
             "Administrador"});
-            this.txpuesto.Location = new System.Drawing.Point(215, 266);
+            this.txpuesto.Location = new System.Drawing.Point(215, 269);
             this.txpuesto.Name = "txpuesto";
             this.txpuesto.Size = new System.Drawing.Size(207, 26);
             this.txpuesto.TabIndex = 15;
@@ -351,7 +351,7 @@
             0,
             0});
             this.txsalario.Minimum = new decimal(new int[] {
-            10,
+            100,
             0,
             0,
             0});
@@ -359,7 +359,7 @@
             this.txsalario.Size = new System.Drawing.Size(207, 27);
             this.txsalario.TabIndex = 16;
             this.txsalario.Value = new decimal(new int[] {
-            10,
+            100,
             0,
             0,
             0});
@@ -373,7 +373,7 @@
             this.txestado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.txestado.Location = new System.Drawing.Point(215, 352);
+            this.txestado.Location = new System.Drawing.Point(215, 355);
             this.txestado.Name = "txestado";
             this.txestado.Size = new System.Drawing.Size(207, 26);
             this.txestado.TabIndex = 17;
