@@ -60,7 +60,7 @@ namespace MaxiAhorroApp.Controladores
             {
                 try
                 {
-                    if (em.Nombre != String.Empty && em.Apellido != String.Empty && em.Email != String.Empty && em.Rol != String.Empty)
+                    if (em.Nombre != String.Empty || em.Apellido != String.Empty || em.Email != String.Empty || em.Rol != String.Empty)
                     {
                         var sql = @"SELECT * FROM minimarket.usuarios WHERE Nombre = @Nombre AND Apellido = @Apellido AND Email = @Email AND Rol = @Rol";
                         u = (Usuario)base.cn.Query<Usuario>(sql, em).First();

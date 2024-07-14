@@ -64,7 +64,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.productostb.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.productostb.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.productostb.BackgroundColor = System.Drawing.Color.White;
+            this.productostb.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(206)))), ((int)(((byte)(241)))));
             this.productostb.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -90,7 +90,7 @@
             this.Column9});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -98,15 +98,15 @@
             this.productostb.DefaultCellStyle = dataGridViewCellStyle3;
             this.productostb.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productostb.GridColor = System.Drawing.Color.Black;
-            this.productostb.Location = new System.Drawing.Point(5, 94);
-            this.productostb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.productostb.Location = new System.Drawing.Point(0, 90);
+            this.productostb.Margin = new System.Windows.Forms.Padding(0);
             this.productostb.Name = "productostb";
             this.productostb.ReadOnly = true;
             this.productostb.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.productostb.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.productostb.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productostb.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.productostb.Size = new System.Drawing.Size(971, 309);
+            this.productostb.Size = new System.Drawing.Size(981, 317);
             this.productostb.TabIndex = 0;
             this.productostb.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.productostb_CellMouseClick);
             // 
@@ -198,13 +198,14 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 13);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(5, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(971, 18);
+            this.label1.Size = new System.Drawing.Size(971, 45);
             this.label1.TabIndex = 1;
             this.label1.Text = "Lista de Productos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -235,9 +236,10 @@
             this.flowLayoutPanel1.Controls.Add(this.button3);
             this.flowLayoutPanel1.Controls.Add(this.button4);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 410);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 407);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(975, 40);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(981, 46);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // button1
@@ -292,9 +294,10 @@
             // 
             this.tx_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tx_buscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tx_buscar.Location = new System.Drawing.Point(3, 54);
+            this.tx_buscar.Location = new System.Drawing.Point(0, 54);
+            this.tx_buscar.Margin = new System.Windows.Forms.Padding(0);
             this.tx_buscar.Name = "tx_buscar";
-            this.tx_buscar.Size = new System.Drawing.Size(975, 27);
+            this.tx_buscar.Size = new System.Drawing.Size(981, 27);
             this.tx_buscar.TabIndex = 3;
             this.tx_buscar.TextChanged += new System.EventHandler(this.tx_buscar_TextChanged);
             // 
@@ -302,7 +305,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(76)))), ((int)(((byte)(119)))));
             this.ClientSize = new System.Drawing.Size(981, 453);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
