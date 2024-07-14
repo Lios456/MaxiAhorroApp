@@ -100,9 +100,9 @@ namespace MaxiAhorroApp.Tests
             e.Email = "Yuki@gmail.com";
             e.Contraseña = "12345";
             e.Rol = "Administrador";
-            e.FechaContratacion = new DateTime(year:1999, month:05, day:1);
+            e.FechaContratacion = DateTime.Now;
             e.Puesto = "Administrador";
-            e.Salario = -100;
+            e.Salario = 100;
             e.Estado = "Activo";
             // Act
             _servicioempleado.Object.Modificar(e);
@@ -163,6 +163,17 @@ namespace MaxiAhorroApp.Tests
             e.Estado = "Activo";
             // Act
             _servicioempleado.Object.Modificar(e);
+            // Assert
+            //_servicioempleado.Verify(mock => mock.Agregar(It.IsAny<Empleado>()), Times.Once);
+        }
+        [Test]
+        public void Eliminar_Empleado()
+        {
+            // Arrange
+            e.IDEmpleado = 3;
+            
+            // Act
+            _servicioempleado.Object.Eliminar(e);
             // Assert
             //_servicioempleado.Verify(mock => mock.Agregar(It.IsAny<Empleado>()), Times.Once);
         }

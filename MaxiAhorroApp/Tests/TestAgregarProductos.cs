@@ -33,8 +33,8 @@ namespace MaxiAhorroApp
             _form.expiretx.Value = DateTime.Now.AddYears(2);
             _form.signtx.Text = "5";
             _form.pricetx.Value = 0.75m;
-            _form.provetortx.SelectedIndex = 5;
-            _form.locationtx.SelectedIndex = 2;
+            _form.provetortx.SelectedIndex = 1;
+            _form.locationtx.SelectedIndex = 1;
             // Act
             _form.SetProducto();
 
@@ -55,8 +55,8 @@ namespace MaxiAhorroApp
             _form.expiretx.Value = DateTime.Now.AddYears(2);
             _form.signtx.Text = "5";
             _form.pricetx.Value = 0.75m;
-            _form.provetortx.SelectedIndex = 5;
-            _form.locationtx.Text = "1";
+            _form.provetortx.SelectedIndex = 1;
+            _form.locationtx.SelectedIndex = 1;
             // Act
             _form.SetProducto();
 

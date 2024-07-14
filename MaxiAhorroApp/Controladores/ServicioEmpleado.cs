@@ -38,6 +38,7 @@ namespace MaxiAhorroApp.Controladores
                     var sql2 = @"INSERT IGNORE INTO minimarket.empleados (`IDUsuario`, `FechaContratacion`, `Puesto`, `Salario`, `Estado`)
                     VALUES (@IDUsuario, @FechaContratacion, @Puesto, @Salario, @Estado);";
                     base.cn.Execute(sql2, e);
+                    MessageBox.Show("El Empleado se ha guardado correctamente", "Regitro de Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
@@ -68,9 +69,10 @@ namespace MaxiAhorroApp.Controladores
         {
             try
             {
-                var sql = @"SELECT * FROM minimarket.usuarios u 
+                var sql = @"SELECT u.Nombre, u.Apellido, u.Email, u.Rol, e.FechaContratacion, e.Puesto, e.Salario FROM minimarket.usuarios u 
                         INNER JOIN minimarket.empleados e 
-                        ON e.IDUsuario = u.IDUsuario;";
+                        ON e.IDUsuario = u.IDUsuario
+                        WHERE e.Estado = 'Activo'";
                 return base.cn.Query<Empleado>(sql).ToList();
             }
             catch (Exception ex)
@@ -112,6 +114,13 @@ namespace MaxiAhorroApp.Controladores
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        public void Eliminar(Empleado em)
+        {
+            var sql = @"Update minimarket.empleados
+            SET Estado = 'Inactivo' WHERE IdEmpleado = @IDEmpleado";
+            base.cn.Execute(sql, em);
+            MessageBox.Show("El empleado ha sido eliminado exitosamente", "Eliminación de Empleados", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         

@@ -197,4 +197,11 @@ BEGIN
     END IF;
 END;
 
+DROP TRIGGER IF EXISTS Encriptar_contrasenia_actualizar_usuario;
+CREATE TRIGGER Encriptar_contrasenia_actualizar_usuario
+BEFORE UPDATE ON minimarket.usuarios
+FOR EACH ROW
+BEGIN
+	SET new.Contraseña = MD5(new.Contraseña);
+END;
 

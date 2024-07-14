@@ -291,7 +291,7 @@
             this.provetortx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.provetortx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.provetortx.FormattingEnabled = true;
-            this.provetortx.Location = new System.Drawing.Point(152, 231);
+            this.provetortx.Location = new System.Drawing.Point(152, 229);
             this.provetortx.Name = "provetortx";
             this.provetortx.Size = new System.Drawing.Size(324, 26);
             this.provetortx.TabIndex = 13;
@@ -386,7 +386,7 @@
             this.categorytx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.categorytx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.categorytx.FormattingEnabled = true;
-            this.categorytx.Location = new System.Drawing.Point(152, 97);
+            this.categorytx.Location = new System.Drawing.Point(152, 99);
             this.categorytx.Name = "categorytx";
             this.categorytx.Size = new System.Drawing.Size(324, 26);
             this.categorytx.TabIndex = 19;
@@ -396,7 +396,7 @@
             this.signtx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.signtx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.signtx.FormattingEnabled = true;
-            this.signtx.Location = new System.Drawing.Point(152, 363);
+            this.signtx.Location = new System.Drawing.Point(152, 361);
             this.signtx.Name = "signtx";
             this.signtx.Size = new System.Drawing.Size(324, 26);
             this.signtx.TabIndex = 20;
