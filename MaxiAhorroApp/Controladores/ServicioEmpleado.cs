@@ -21,23 +21,99 @@ namespace MaxiAhorroApp.Controladores
             {
                 try
                 {
-                    var sql = @"INSERT INTO minimarket.empleados(Nombre,Apellido,Email,Contraseña,Rol) VALUES" +
+                    if (e.Nombre != "" && e.Apellido != "" && e.Email != "" && e.Contraseña != "" && e.Rol != "")
+                    {
+                        var sql = @"INSERT IGNORE INTO minimarket.usuarios(Nombre,Apellido,Email,Contraseña,Rol) VALUES" +
                     "(@Nombre," +
-                    "@Aellido," +
+                    "@Apellido," +
                     "@Email," +
                     "@Contraseña," +
                     "@Rol)";
-                    base.cn.Execute(sql, e);
+                        base.cn.Execute(sql, e);
+                    }
 
-                    var sql2 = @"INSERT INTO minimarket.empleados (`IDUsuario`, `FechaContratacion`, `Puesto`, `Salario`, `Estado`)
+                    var u = ConsultarUsuario(e);
+                    e.IDUsuario = u.IDUsuario;
+
+                    var sql2 = @"INSERT IGNORE INTO minimarket.empleados (`IDUsuario`, `FechaContratacion`, `Puesto`, `Salario`, `Estado`)
                     VALUES (@IDUsuario, @FechaContratacion, @Puesto, @Salario, @Estado);";
                     base.cn.Execute(sql2, e);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
+
+        public Usuario ConsultarUsuario(Empleado em)
+        {
+            Usuario u = null;
+            if (em != null)
+            {
+                try
+                {
+                    var sql = @"SELECT * FROM minimarket.usuarios WHERE Nombre = @Nombre AND Apellido = @Apellido AND Email = @Email AND Rol = @Rol";
+                    u = (Usuario)base.cn.Query<Usuario>(sql, em).First();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+            }
+            return u;
+        }
+
+        public List<Empleado> Consultar()
+        {
+            try
+            {
+                var sql = @"SELECT * FROM minimarket.usuarios u 
+                        INNER JOIN minimarket.empleados e 
+                        ON e.IDUsuario = u.IDUsuario;";
+                return base.cn.Query<Empleado>(sql).ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new List<Empleado>(); 
+            }
+        }
+
+        public void Modificar(Empleado em)
+        {
+            try
+            {
+                var sql = @"SELECT IDUsuario FROM minimarket.usuarios
+            WHERE Nombre = @Nombre AND Apellido = @Apellido AND Email = @Email";
+                var usuario = base.cn.Query<int>(sql, em).First();
+                em.IDUsuario = usuario;
+
+                var sql1 = @"UPDATE minimarket.usuarios
+            SET Nombre = @Nombre, 
+            Apellido = @Apellido,
+            Email = @Email,
+            Contraseña = @Contraseña,
+            Rol = @Rol
+            WHERE IDUsuario = @IDUsuario";
+
+                base.cn.Execute(sql1, em);
+
+                var sql2 = @"UPDATE minimarket.empleados
+            SET Puesto = @Puesto,
+            Salario = @Salario,
+            Estado = @Estado,
+            FechaContratacion = @FechaContratacion"
+            ;
+
+                base.cn.Execute(sql2, em);
+                MessageBox.Show("Empleado Actualizado correctamente","Actualización de Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        
     }
 }

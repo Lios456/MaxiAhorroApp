@@ -123,3 +123,78 @@ BEGIN
     INNER JOIN categorias c ON p.categoria_id = c.id 
     GROUP BY p.categoria_id;
 END;
+
+DROP TRIGGER IF EXISTS encriptar_contrasenia_usuario;
+
+CREATE TRIGGER encriptar_contrasenia_usuario
+BEFORE INSERT ON minimarket.usuarios 
+FOR EACH ROW
+begin
+ SET NEW.Contraseña = MD5(NEW.Contraseña);
+end;
+
+Drop TRIGGER IF EXISTS verificar_fecha_contratacion;
+CREATE TRIGGER verificar_fecha_contratacion 
+BEFORE INSERT ON minimarket.empleados
+FOR EACH ROW
+BEGIN
+IF New.FechaContratacion> date(now()) THEN
+SIGNAL SQLSTATE '45000' SET 
+MESSAGE_TEXT = 'Fecha no válida';
+END IF; 
+END;
+
+DROP TRIGGER IF EXISTS verificar_empleado_repetido;
+CREATE TRIGGER verificar_empleado_repetido 
+BEFORE INSERT
+ON minimarket.empleados
+FOR EACH ROW
+BEGIN
+IF (SELECT COUNT(*) FROM minimarket.empleados WHERE IDUsuario = new.IDUsuario) > 0 THEN
+	SIGNAL SQLSTATE '45000' SET 
+	MESSAGE_TEXT = 'Empleado ya registrado';
+END IF;
+END;
+
+DROP TRIGGER IF EXISTS verificar_usuario_repetido;
+CREATE TRIGGER verificar_usuario_repetido
+BEFORE INSERT 
+ON minimarket.usuarios
+FOR EACH ROW 
+BEGIN
+	IF(SELECT COUNT(*) FROM minimarket.usuarios 
+    WHERE 
+    Nombre = new.Nombre AND 
+    Apellido = new.Apellido AND
+    Rol = new.Rol) > 0 THEN
+    SIGNAL SQLSTATE '45000' SET 
+	MESSAGE_TEXT = 'Usuario ya registrado';
+    END IF;
+END;
+
+DROP TRIGGER IF EXISTS Validar_actualizacion_empleado;
+
+CREATE TRIGGER Validar_actualizacion_empleado
+BEFORE UPDATE 
+ON minimarket.empleados
+FOR EACH ROW 
+BEGIN
+    DECLARE Mensaje TEXT;
+    IF DATEDIFF(NEW.FechaContratacion, OLD.FechaContratacion) < 0 THEN
+        SET Mensaje = 'Fecha de Contrato no válida';
+    END IF;
+
+    IF NEW.Salario < OLD.Salario OR NEW.Salario < 0 THEN
+        IF Mensaje IS NULL THEN
+            SET Mensaje = 'Salario no válido';
+        ELSE
+            SET Mensaje = CONCAT(Mensaje, '\nSalario no válido');
+        END IF;
+    END IF;
+
+    IF Mensaje IS NOT NULL THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = Mensaje;
+    END IF;
+END;
+
+
