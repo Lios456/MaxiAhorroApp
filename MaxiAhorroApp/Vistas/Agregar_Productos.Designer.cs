@@ -74,7 +74,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.383627F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.61637F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(665, 492);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(424, 616);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -86,7 +86,7 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(665, 36);
+            this.label1.Size = new System.Drawing.Size(424, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registro de productos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -98,16 +98,16 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 39);
+            this.panel1.Location = new System.Drawing.Point(3, 48);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(659, 450);
+            this.panel1.Size = new System.Drawing.Size(418, 565);
             this.panel1.TabIndex = 1;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(181)))), ((int)(((byte)(64)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(506, 197);
+            this.button2.Location = new System.Drawing.Point(173, 517);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 30);
             this.button2.TabIndex = 2;
@@ -119,7 +119,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(164)))), ((int)(((byte)(55)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(506, 151);
+            this.button1.Location = new System.Drawing.Point(21, 517);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 30);
             this.button1.TabIndex = 1;
@@ -153,7 +153,7 @@
             this.tableLayoutPanel2.Controls.Add(this.categorytx, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.signtx, 1, 8);
             this.tableLayoutPanel2.Controls.Add(this.locationtx, 1, 9);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(21, 16);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(21, 73);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 10;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
@@ -166,7 +166,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(479, 420);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(346, 420);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label2
@@ -272,6 +272,7 @@
             // expiretx
             // 
             this.expiretx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.expiretx.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.expiretx.Location = new System.Drawing.Point(152, 317);
             this.expiretx.MinDate = new System.DateTime(2024, 6, 22, 0, 0, 0, 0);
             this.expiretx.Name = "expiretx";
@@ -293,7 +294,7 @@
             this.provetortx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.provetortx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.provetortx.FormattingEnabled = true;
-            this.provetortx.Location = new System.Drawing.Point(152, 231);
+            this.provetortx.Location = new System.Drawing.Point(152, 229);
             this.provetortx.Name = "provetortx";
             this.provetortx.Size = new System.Drawing.Size(324, 26);
             this.provetortx.TabIndex = 13;
@@ -388,7 +389,7 @@
             this.categorytx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.categorytx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.categorytx.FormattingEnabled = true;
-            this.categorytx.Location = new System.Drawing.Point(152, 97);
+            this.categorytx.Location = new System.Drawing.Point(152, 99);
             this.categorytx.Name = "categorytx";
             this.categorytx.Size = new System.Drawing.Size(324, 26);
             this.categorytx.TabIndex = 19;
@@ -398,7 +399,7 @@
             this.signtx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.signtx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.signtx.FormattingEnabled = true;
-            this.signtx.Location = new System.Drawing.Point(152, 363);
+            this.signtx.Location = new System.Drawing.Point(152, 361);
             this.signtx.Name = "signtx";
             this.signtx.Size = new System.Drawing.Size(324, 26);
             this.signtx.TabIndex = 20;
@@ -418,7 +419,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(225)))), ((int)(((byte)(221)))));
-            this.ClientSize = new System.Drawing.Size(665, 492);
+            this.ClientSize = new System.Drawing.Size(424, 616);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

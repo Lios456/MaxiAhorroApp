@@ -14,5 +14,13 @@ namespace MaxiAhorroApp.Clases
         public string Puesto { get; set; }
         public decimal Salario { get; set; }
         public string Estado { get; set; }
+        public Empleado()
+        {
+            IDEmpleado = 0;
+            IDUsuario = 0;
+            Puesto = string.Empty;
+            Estado = string.Empty;
+            Salario = 0;
+        }
     }
 }

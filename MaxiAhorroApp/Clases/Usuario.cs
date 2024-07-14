@@ -14,5 +14,13 @@ namespace MaxiAhorroApp.Clases
         public string Email { get; set; }
         public string Contraseña { get; set; }
         public string Rol {  get; set; }
+        public Usuario() {
+            IDUsuario = 0;
+            Nombre = string.Empty;
+            Apellido = string.Empty;
+            Email = string.Empty;
+            Contraseña = string.Empty;
+            Rol = string.Empty;
+        }
     }
 }

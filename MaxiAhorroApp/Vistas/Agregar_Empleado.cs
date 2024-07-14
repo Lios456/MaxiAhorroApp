@@ -48,7 +48,7 @@ namespace MaxiAhorroApp.Vistas
             this.txrol.SelectedIndex = 0;
             this.txfechacontratacioin.Value = DateTime.Today;
             this.txpuesto.SelectedIndex = 0;
-            this.txsalario.Value = 10;
+            this.txsalario.Value = this.txsalario.Minimum;
             this.txestado.SelectedIndex = 0;
         }
 
@@ -68,7 +68,7 @@ namespace MaxiAhorroApp.Vistas
             }
             else
             {
-                em = null;
+                em = new Empleado();
                 return;
             }
 

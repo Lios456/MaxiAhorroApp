@@ -33,12 +33,18 @@ namespace MaxiAhorroApp.Controladores
                     }
 
                     var u = ConsultarUsuario(e);
-                    e.IDUsuario = u.IDUsuario;
+                    if (u != null) {
+                        e.IDUsuario = u.IDUsuario;
 
-                    var sql2 = @"INSERT IGNORE INTO minimarket.empleados (`IDUsuario`, `FechaContratacion`, `Puesto`, `Salario`, `Estado`)
+                        var sql2 = @"INSERT IGNORE INTO minimarket.empleados (`IDUsuario`, `FechaContratacion`, `Puesto`, `Salario`, `Estado`)
                     VALUES (@IDUsuario, @FechaContratacion, @Puesto, @Salario, @Estado);";
-                    base.cn.Execute(sql2, e);
-                    MessageBox.Show("El Empleado se ha guardado correctamente", "Regitro de Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        base.cn.Execute(sql2, e);
+                        MessageBox.Show("El Empleado se ha guardado correctamente", "Regitro de Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Empleado no válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -54,8 +60,11 @@ namespace MaxiAhorroApp.Controladores
             {
                 try
                 {
-                    var sql = @"SELECT * FROM minimarket.usuarios WHERE Nombre = @Nombre AND Apellido = @Apellido AND Email = @Email AND Rol = @Rol";
-                    u = (Usuario)base.cn.Query<Usuario>(sql, em).First();
+                    if (em.Nombre != String.Empty && em.Apellido != String.Empty && em.Email != String.Empty && em.Rol != String.Empty)
+                    {
+                        var sql = @"SELECT * FROM minimarket.usuarios WHERE Nombre = @Nombre AND Apellido = @Apellido AND Email = @Email AND Rol = @Rol";
+                        u = (Usuario)base.cn.Query<Usuario>(sql, em).First();
+                    }
                 }
                 catch (Exception ex)
                 {
