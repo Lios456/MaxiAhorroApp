@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -54,9 +55,9 @@ namespace MaxiAhorroApp.Vistas
 
         public void setEmpleado()
         {
-            if (this.txemail.Text.Contains("@"))
+            em.Email = this.txemail.Text;
+            if (ValidarEmail(em.Email))
             {
-                em.Email = this.txemail.Text;
                 em.Nombre = this.txnombre.Text;
                 em.Apellido = this.txapellido.Text;
                 em.Contraseña = this.txcontrasenia.Text;
@@ -72,6 +73,14 @@ namespace MaxiAhorroApp.Vistas
                 return;
             }
 
+        }
+
+        private bool ValidarEmail(string email)
+        {
+            
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            Regex regex = new Regex(pattern);
+            return regex.IsMatch(email);
         }
 
         private void button1_Click(object sender, EventArgs e)
