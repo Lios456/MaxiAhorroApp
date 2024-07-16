@@ -108,11 +108,13 @@ CREATE TABLE IF NOT EXISTS minimarket.empleados (
     FOREIGN KEY (IDUsuario) REFERENCES Usuarios(IDUsuario)
 );
 
-CREATE TABLE IF NOT EXISTS minimarket.administradores (
-    IDAdministrador INT AUTO_INCREMENT PRIMARY KEY,
-    IDEmpleado INT,
-    NivelAcceso INT CHECK (NivelAcceso BETWEEN 1 AND 3),
-    FOREIGN KEY (IDEmpleado) REFERENCES Empleados(IDEmpleado)
+CREATE TABLE IF NOT EXISTS `administradores` (
+  `IDAdministrador` int NOT NULL AUTO_INCREMENT,
+  `IDEmpleado` int NOT NULL,
+  `NivelAcceso` int DEFAULT NULL,
+  PRIMARY KEY (`IDAdministrador`,`IDEmpleado`),
+  UNIQUE KEY `IDEmpleado_UNIQUE` (`IDEmpleado`),
+  CONSTRAINT `administradores_chk_1` CHECK ((`NivelAcceso` between 1 and 3))
 );
 
 DROP PROCEDURE IF EXISTS sp_total_productos_por_categoria;
@@ -230,5 +232,4 @@ BEGIN
 	set new.Nombre = upper(new.Nombre);
     set new.Apellido = upper(new.Apellido);
 END;
-
 

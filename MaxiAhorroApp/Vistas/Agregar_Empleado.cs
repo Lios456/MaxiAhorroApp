@@ -30,7 +30,6 @@ namespace MaxiAhorroApp.Vistas
             em = emp;
             this.txestado.Text = em.Estado;
             this.txsalario.Value = em.Salario;
-            this.txpuesto.Text = em.Puesto;
             this.txfechacontratacioin.Value = em.FechaContratacion;
             this.txrol.Text = em.Rol;
             //this.txcontrasenia.Text = em.Contraseña;
@@ -48,7 +47,6 @@ namespace MaxiAhorroApp.Vistas
             this.txcontrasenia.Text = "";
             this.txrol.SelectedIndex = 0;
             this.txfechacontratacioin.Value = DateTime.Today;
-            this.txpuesto.SelectedIndex = 0;
             this.txsalario.Value = this.txsalario.Minimum;
             this.txestado.SelectedIndex = 0;
         }
@@ -63,7 +61,7 @@ namespace MaxiAhorroApp.Vistas
                 em.Contraseña = this.txcontrasenia.Text;
                 em.Rol = this.txrol.Text;
                 em.FechaContratacion = this.txfechacontratacioin.Value;
-                em.Puesto = this.txpuesto.Text;
+                em.Puesto = this.txrol.Text;
                 em.Salario = this.txsalario.Value;
                 em.Estado = this.txestado.Text;
             }
@@ -103,5 +101,9 @@ namespace MaxiAhorroApp.Vistas
             }
         }
 
+        private void txpuesto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

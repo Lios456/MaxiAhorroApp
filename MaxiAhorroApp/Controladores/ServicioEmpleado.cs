@@ -40,6 +40,13 @@ namespace MaxiAhorroApp.Controladores
                     VALUES (@IDUsuario, @FechaContratacion, @Puesto, @Salario, @Estado);";
                         base.cn.Execute(sql2, e);
                         MessageBox.Show("El Empleado se ha guardado correctamente", "Regitro de Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        if(e.Rol == "Administrador")
+                        {
+                            var sql3 = @"INSERT IGNORE INTO minimarket.administradores(IDEmpleado, NivelAcceso)
+                            VALUES (@IDEmpleado, 1)";
+                            base.cn.Execute(sql3, e);
+                        }
                     }
                     else
                     {
@@ -119,6 +126,12 @@ namespace MaxiAhorroApp.Controladores
             ;
 
                 base.cn.Execute(sql2, em);
+                if (em.Rol == "Administrador")
+                {
+                    var sql3 = @"INSERT IGNORE INTO minimarket.administradores(IDEmpleado, NivelAcceso)
+                            VALUES (@IDEmpleado, 1)";
+                    base.cn.Execute(sql3, em);
+                }
                 MessageBox.Show("Empleado Actualizado correctamente","Actualización de Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }catch(Exception ex)
             {

@@ -40,16 +40,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.txnombre = new System.Windows.Forms.TextBox();
             this.txapellido = new System.Windows.Forms.TextBox();
             this.txemail = new System.Windows.Forms.TextBox();
             this.txcontrasenia = new System.Windows.Forms.TextBox();
             this.txrol = new System.Windows.Forms.ComboBox();
             this.txfechacontratacioin = new System.Windows.Forms.DateTimePicker();
-            this.txpuesto = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.txsalario = new System.Windows.Forms.NumericUpDown();
             this.txestado = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
@@ -139,18 +137,16 @@
             this.tableLayoutPanel2.Controls.Add(this.label5, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.label6, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.label7, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.label8, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.label9, 0, 7);
-            this.tableLayoutPanel2.Controls.Add(this.label10, 0, 8);
             this.tableLayoutPanel2.Controls.Add(this.txnombre, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.txapellido, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.txemail, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.txcontrasenia, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.txrol, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.txfechacontratacioin, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.txpuesto, 1, 6);
-            this.tableLayoutPanel2.Controls.Add(this.txsalario, 1, 7);
-            this.tableLayoutPanel2.Controls.Add(this.txestado, 1, 8);
+            this.tableLayoutPanel2.Controls.Add(this.label9, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.label10, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.txsalario, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.txestado, 1, 7);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 58);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -234,39 +230,6 @@
             this.label7.Text = "Fecha de Contratación:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 270);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(206, 18);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Puesto:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 313);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(206, 18);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Salario:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 356);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(206, 18);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Estado:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // txnombre
             // 
             this.txnombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -322,19 +285,27 @@
             this.txfechacontratacioin.Size = new System.Drawing.Size(207, 27);
             this.txfechacontratacioin.TabIndex = 14;
             // 
-            // txpuesto
+            // label9
             // 
-            this.txpuesto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txpuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txpuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txpuesto.FormattingEnabled = true;
-            this.txpuesto.Items.AddRange(new object[] {
-            "Cajero",
-            "Administrador"});
-            this.txpuesto.Location = new System.Drawing.Point(215, 269);
-            this.txpuesto.Name = "txpuesto";
-            this.txpuesto.Size = new System.Drawing.Size(207, 26);
-            this.txpuesto.TabIndex = 15;
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 270);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(206, 18);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Salario:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 313);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(206, 18);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Estado:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txsalario
             // 
@@ -344,7 +315,7 @@
             0,
             0,
             0});
-            this.txsalario.Location = new System.Drawing.Point(215, 309);
+            this.txsalario.Location = new System.Drawing.Point(215, 266);
             this.txsalario.Maximum = new decimal(new int[] {
             7000,
             0,
@@ -373,7 +344,7 @@
             this.txestado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.txestado.Location = new System.Drawing.Point(215, 355);
+            this.txestado.Location = new System.Drawing.Point(215, 312);
             this.txestado.Name = "txestado";
             this.txestado.Size = new System.Drawing.Size(207, 26);
             this.txestado.TabIndex = 17;
@@ -414,7 +385,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txnombre;
@@ -423,7 +393,6 @@
         private System.Windows.Forms.TextBox txcontrasenia;
         private System.Windows.Forms.ComboBox txrol;
         private System.Windows.Forms.DateTimePicker txfechacontratacioin;
-        private System.Windows.Forms.ComboBox txpuesto;
         private System.Windows.Forms.NumericUpDown txsalario;
         private System.Windows.Forms.ComboBox txestado;
     }
