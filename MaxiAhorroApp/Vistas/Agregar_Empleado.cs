@@ -56,8 +56,26 @@ namespace MaxiAhorroApp.Vistas
             em.Email = this.txemail.Text;
             if (ValidarEmail(em.Email))
             {
-                em.Nombre = this.txnombre.Text;
-                em.Apellido = this.txapellido.Text;
+                if (Regex.IsMatch(this.txnombre.Text, @"^[A-Z][a-z]+$"))
+                {
+                    em.Nombre = this.txnombre.Text;
+                }
+                else
+                {
+                    MessageBox.Show("El nombre debe comenzar con mayúscula y contener solo letras.");
+                    return;
+                }
+
+                if (Regex.IsMatch(this.txapellido.Text, @"^[A-Z][a-z]+$"))
+                {
+                    em.Apellido = this.txapellido.Text;
+                }
+                else
+                {
+                    MessageBox.Show("El apellido debe comenzar con mayúscula y contener solo letras.");
+                    return;
+                }
+
                 em.Contraseña = this.txcontrasenia.Text;
                 em.Rol = this.txrol.Text;
                 em.FechaContratacion = this.txfechacontratacioin.Value;
@@ -67,11 +85,11 @@ namespace MaxiAhorroApp.Vistas
             }
             else
             {
-                em = new Empleado();
+                em = new Empleado(); // Reinicia el objeto si el email no es válido
                 return;
             }
-
         }
+
 
         private bool ValidarEmail(string email)
         {

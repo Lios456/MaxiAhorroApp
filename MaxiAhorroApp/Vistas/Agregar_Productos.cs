@@ -170,5 +170,10 @@ namespace MaxiAhorroApp.Vistas
             }
 
         }
+
+        private void nombretx_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

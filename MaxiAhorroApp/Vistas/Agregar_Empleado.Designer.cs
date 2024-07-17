@@ -168,9 +168,9 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 12);
+            this.label2.Location = new System.Drawing.Point(3, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 18);
+            this.label2.Size = new System.Drawing.Size(206, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Nombre:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -179,9 +179,9 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 55);
+            this.label3.Location = new System.Drawing.Point(3, 52);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(206, 18);
+            this.label3.Size = new System.Drawing.Size(206, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "Apellido:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -190,9 +190,9 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 98);
+            this.label4.Location = new System.Drawing.Point(3, 95);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(206, 18);
+            this.label4.Size = new System.Drawing.Size(206, 25);
             this.label4.TabIndex = 2;
             this.label4.Text = "Email:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -201,9 +201,9 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 141);
+            this.label5.Location = new System.Drawing.Point(3, 138);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(206, 18);
+            this.label5.Size = new System.Drawing.Size(206, 25);
             this.label5.TabIndex = 3;
             this.label5.Text = "Contraseña:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -212,9 +212,9 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 184);
+            this.label6.Location = new System.Drawing.Point(3, 181);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(206, 18);
+            this.label6.Size = new System.Drawing.Size(206, 25);
             this.label6.TabIndex = 4;
             this.label6.Text = "Rol:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -223,9 +223,9 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 227);
+            this.label7.Location = new System.Drawing.Point(3, 215);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(206, 18);
+            this.label7.Size = new System.Drawing.Size(206, 43);
             this.label7.TabIndex = 5;
             this.label7.Text = "Fecha de Contratación:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -233,33 +233,33 @@
             // txnombre
             // 
             this.txnombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txnombre.Location = new System.Drawing.Point(215, 8);
+            this.txnombre.Location = new System.Drawing.Point(215, 5);
             this.txnombre.Name = "txnombre";
-            this.txnombre.Size = new System.Drawing.Size(207, 27);
+            this.txnombre.Size = new System.Drawing.Size(207, 32);
             this.txnombre.TabIndex = 9;
             // 
             // txapellido
             // 
             this.txapellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txapellido.Location = new System.Drawing.Point(215, 51);
+            this.txapellido.Location = new System.Drawing.Point(215, 48);
             this.txapellido.Name = "txapellido";
-            this.txapellido.Size = new System.Drawing.Size(207, 27);
+            this.txapellido.Size = new System.Drawing.Size(207, 32);
             this.txapellido.TabIndex = 10;
             // 
             // txemail
             // 
             this.txemail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txemail.Location = new System.Drawing.Point(215, 94);
+            this.txemail.Location = new System.Drawing.Point(215, 91);
             this.txemail.Name = "txemail";
-            this.txemail.Size = new System.Drawing.Size(207, 27);
+            this.txemail.Size = new System.Drawing.Size(207, 32);
             this.txemail.TabIndex = 11;
             // 
             // txcontrasenia
             // 
             this.txcontrasenia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txcontrasenia.Location = new System.Drawing.Point(215, 137);
+            this.txcontrasenia.Location = new System.Drawing.Point(215, 134);
             this.txcontrasenia.Name = "txcontrasenia";
-            this.txcontrasenia.Size = new System.Drawing.Size(207, 27);
+            this.txcontrasenia.Size = new System.Drawing.Size(207, 32);
             this.txcontrasenia.TabIndex = 12;
             // 
             // txrol
@@ -271,27 +271,27 @@
             this.txrol.Items.AddRange(new object[] {
             "Cajero",
             "Administrador"});
-            this.txrol.Location = new System.Drawing.Point(215, 183);
+            this.txrol.Location = new System.Drawing.Point(215, 181);
             this.txrol.Name = "txrol";
-            this.txrol.Size = new System.Drawing.Size(207, 26);
+            this.txrol.Size = new System.Drawing.Size(207, 33);
             this.txrol.TabIndex = 13;
             // 
             // txfechacontratacioin
             // 
             this.txfechacontratacioin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txfechacontratacioin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txfechacontratacioin.Location = new System.Drawing.Point(215, 223);
+            this.txfechacontratacioin.Location = new System.Drawing.Point(215, 220);
             this.txfechacontratacioin.Name = "txfechacontratacioin";
-            this.txfechacontratacioin.Size = new System.Drawing.Size(207, 27);
+            this.txfechacontratacioin.Size = new System.Drawing.Size(207, 32);
             this.txfechacontratacioin.TabIndex = 14;
             // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 270);
+            this.label9.Location = new System.Drawing.Point(3, 267);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(206, 18);
+            this.label9.Size = new System.Drawing.Size(206, 25);
             this.label9.TabIndex = 7;
             this.label9.Text = "Salario:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -300,9 +300,9 @@
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 313);
+            this.label10.Location = new System.Drawing.Point(3, 310);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(206, 18);
+            this.label10.Size = new System.Drawing.Size(206, 25);
             this.label10.TabIndex = 8;
             this.label10.Text = "Estado:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -315,7 +315,7 @@
             0,
             0,
             0});
-            this.txsalario.Location = new System.Drawing.Point(215, 266);
+            this.txsalario.Location = new System.Drawing.Point(215, 263);
             this.txsalario.Maximum = new decimal(new int[] {
             7000,
             0,
@@ -327,7 +327,7 @@
             0,
             0});
             this.txsalario.Name = "txsalario";
-            this.txsalario.Size = new System.Drawing.Size(207, 27);
+            this.txsalario.Size = new System.Drawing.Size(207, 32);
             this.txsalario.TabIndex = 16;
             this.txsalario.Value = new decimal(new int[] {
             100,
@@ -344,14 +344,14 @@
             this.txestado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.txestado.Location = new System.Drawing.Point(215, 312);
+            this.txestado.Location = new System.Drawing.Point(215, 310);
             this.txestado.Name = "txestado";
-            this.txestado.Size = new System.Drawing.Size(207, 26);
+            this.txestado.Size = new System.Drawing.Size(207, 33);
             this.txestado.TabIndex = 17;
             // 
             // Agregar_Empleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(225)))), ((int)(((byte)(221)))));
             this.ClientSize = new System.Drawing.Size(431, 553);
