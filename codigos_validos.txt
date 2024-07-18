@@ -1,0 +1,40 @@
+Producto 1
+
+Nombre: Chocolate Blanco
+Código de Barras: 5901234123457
+Producto 2
+
+Nombre: Café Orgánico
+Código de Barras: 1234567890128
+Producto 3
+
+Nombre: Galletas Integrales
+Código de Barras: 4006381333931
+Producto 4
+
+Nombre: Aceite de Oliva Extra Virgen
+Código de Barras: 8410297011020
+Producto 5
+
+Nombre: Yogurt Natural
+Código de Barras: 5601088102121
+Producto 6
+
+Nombre: Pasta Integral
+Código de Barras: 5601234891237
+Producto 7
+
+Nombre: Champú Revitalizante
+Código de Barras: 7501031312345
+Producto 8
+
+Nombre: Salsa de Tomate Orgánica
+Código de Barras: 8410137000156
+Producto 9
+
+Nombre: Arroz Basmati
+Código de Barras: 8411222992057
+Producto 10
+
+Nombre: Leche Desnatada
+Código de Barras: 5601234501128
