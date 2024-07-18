@@ -25,11 +25,11 @@ namespace MaxiAhorroApp
         [Test]
         public void Should_be_valid() {
             // Arrange
-            _form.nombretx.Text = "Té de Manzanilla";
+            _form.nombretx.Text = "Deja";
             _form.descriptiontx.Text = "Caja 5 sobres";
             _form.cuantitytx.Value = 100;
             _form.categorytx.SelectedIndex = 5;
-            _form.barcodetx.Text = "TEMANZA";
+            _form.barcodetx.Text = "DEJA123";
             _form.expiretx.Value = DateTime.Now.AddYears(2);
             _form.signtx.Text = "5";
             _form.pricetx.Value = 0.75m;
