@@ -92,6 +92,12 @@ namespace MaxiAhorroApp.Vistas
 
         private bool ValidarNombre(string nombre)
         {
+            // Validar que el nombre no esté vacío
+            if (string.IsNullOrEmpty(nombre))
+            {
+                return false;
+            }
+
             // Validar que la primera letra sea mayúscula
             if (!char.IsUpper(nombre[0]))
             {
@@ -110,6 +116,7 @@ namespace MaxiAhorroApp.Vistas
             return true;
         }
 
+
         private bool ValidarDescripcion(string descripcion)
         {
             // Validar que la descripción no contenga símbolos
@@ -119,19 +126,8 @@ namespace MaxiAhorroApp.Vistas
 
         private bool ValidarCodigoBarras(string codigoBarras)
         {
-            if (codigoBarras.Length != 13 || !codigoBarras.All(char.IsDigit))
-            {
-                return false;
-            }
-
-            int suma = 0;
-            for (int i = 0; i < 12; i++)
-            {
-                int num = int.Parse(codigoBarras[i].ToString());
-                suma += (i % 2 == 0) ? num : num * 3;
-            }
-            int digitoVerificador = (10 - (suma % 10)) % 10;
-            return digitoVerificador == int.Parse(codigoBarras[12].ToString());
+            // Verificar que el código de barras tenga exactamente 13 caracteres y que todos sean números
+            return codigoBarras.Length == 13 && codigoBarras.All(char.IsDigit);
         }
 
         public bool ExisteCodigoBarrasEnUso(string codigoBarras)
@@ -151,7 +147,6 @@ namespace MaxiAhorroApp.Vistas
             // y devolverías una lista de productos
             return new List<Producto>();
         }
-
         public void button1_Click(object sender, EventArgs e)
         {
             try
@@ -199,7 +194,6 @@ namespace MaxiAhorroApp.Vistas
                 MessageBox.Show(ex.Message);
             }
         }
-
         public void SetProducto()
         {
             p.nombre = this.nombretx.Text;

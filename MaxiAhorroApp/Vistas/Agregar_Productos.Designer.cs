@@ -176,7 +176,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(184, 44);
+            this.label2.Size = new System.Drawing.Size(221, 44);
             this.label2.TabIndex = 0;
             this.label2.Text = "Nombre:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -187,7 +187,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Location = new System.Drawing.Point(3, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(184, 44);
+            this.label3.Size = new System.Drawing.Size(221, 44);
             this.label3.TabIndex = 1;
             this.label3.Text = "Descripción:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -198,7 +198,7 @@
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.Location = new System.Drawing.Point(3, 396);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(184, 24);
+            this.label10.Size = new System.Drawing.Size(221, 24);
             this.label10.TabIndex = 8;
             this.label10.Text = "Ubicación:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,7 +209,7 @@
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Location = new System.Drawing.Point(3, 352);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(184, 44);
+            this.label9.Size = new System.Drawing.Size(221, 44);
             this.label9.TabIndex = 7;
             this.label9.Text = "Marca:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -220,7 +220,7 @@
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Location = new System.Drawing.Point(3, 308);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(184, 44);
+            this.label8.Size = new System.Drawing.Size(221, 44);
             this.label8.TabIndex = 6;
             this.label8.Text = "Vencimiento:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -231,9 +231,9 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Location = new System.Drawing.Point(3, 264);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(184, 44);
+            this.label7.Size = new System.Drawing.Size(221, 44);
             this.label7.TabIndex = 5;
-            this.label7.Text = "Código de Barras:";
+            this.label7.Text = "Código de Inventario:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
@@ -242,7 +242,7 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Location = new System.Drawing.Point(3, 220);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(184, 44);
+            this.label6.Size = new System.Drawing.Size(221, 44);
             this.label6.TabIndex = 4;
             this.label6.Text = "Proveedor:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -253,7 +253,7 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Location = new System.Drawing.Point(3, 176);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(184, 44);
+            this.label5.Size = new System.Drawing.Size(221, 44);
             this.label5.TabIndex = 3;
             this.label5.Text = "Cantidad:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -264,7 +264,7 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Location = new System.Drawing.Point(3, 132);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(184, 44);
+            this.label4.Size = new System.Drawing.Size(221, 44);
             this.label4.TabIndex = 2;
             this.label4.Text = "Precio:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -273,7 +273,7 @@
             // 
             this.expiretx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.expiretx.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.expiretx.Location = new System.Drawing.Point(193, 315);
+            this.expiretx.Location = new System.Drawing.Point(230, 315);
             this.expiretx.MinDate = new System.DateTime(2024, 6, 22, 0, 0, 0, 0);
             this.expiretx.Name = "expiretx";
             this.expiretx.Size = new System.Drawing.Size(324, 30);
@@ -283,7 +283,7 @@
             // 
             this.barcodetx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.barcodetx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.barcodetx.Location = new System.Drawing.Point(193, 274);
+            this.barcodetx.Location = new System.Drawing.Point(230, 274);
             this.barcodetx.Name = "barcodetx";
             this.barcodetx.Size = new System.Drawing.Size(324, 23);
             this.barcodetx.TabIndex = 14;
@@ -294,7 +294,7 @@
             this.provetortx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.provetortx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.provetortx.FormattingEnabled = true;
-            this.provetortx.Location = new System.Drawing.Point(193, 226);
+            this.provetortx.Location = new System.Drawing.Point(230, 230);
             this.provetortx.Name = "provetortx";
             this.provetortx.Size = new System.Drawing.Size(324, 31);
             this.provetortx.TabIndex = 13;
@@ -303,7 +303,7 @@
             // 
             this.cuantitytx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cuantitytx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cuantitytx.Location = new System.Drawing.Point(193, 185);
+            this.cuantitytx.Location = new System.Drawing.Point(230, 185);
             this.cuantitytx.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -333,7 +333,7 @@
             0,
             0,
             131072});
-            this.pricetx.Location = new System.Drawing.Point(193, 141);
+            this.pricetx.Location = new System.Drawing.Point(230, 141);
             this.pricetx.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -357,7 +357,7 @@
             // 
             this.nombretx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.nombretx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nombretx.Location = new System.Drawing.Point(193, 10);
+            this.nombretx.Location = new System.Drawing.Point(230, 10);
             this.nombretx.Name = "nombretx";
             this.nombretx.Size = new System.Drawing.Size(324, 23);
             this.nombretx.TabIndex = 9;
@@ -367,7 +367,7 @@
             // 
             this.descriptiontx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.descriptiontx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.descriptiontx.Location = new System.Drawing.Point(193, 47);
+            this.descriptiontx.Location = new System.Drawing.Point(230, 47);
             this.descriptiontx.Name = "descriptiontx";
             this.descriptiontx.Size = new System.Drawing.Size(324, 38);
             this.descriptiontx.TabIndex = 10;
@@ -379,7 +379,7 @@
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label11.Location = new System.Drawing.Point(3, 88);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(184, 44);
+            this.label11.Size = new System.Drawing.Size(221, 44);
             this.label11.TabIndex = 18;
             this.label11.Text = "Categoría:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -390,7 +390,7 @@
             this.categorytx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.categorytx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.categorytx.FormattingEnabled = true;
-            this.categorytx.Location = new System.Drawing.Point(193, 94);
+            this.categorytx.Location = new System.Drawing.Point(230, 98);
             this.categorytx.Name = "categorytx";
             this.categorytx.Size = new System.Drawing.Size(324, 31);
             this.categorytx.TabIndex = 19;
@@ -400,7 +400,7 @@
             this.signtx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.signtx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.signtx.FormattingEnabled = true;
-            this.signtx.Location = new System.Drawing.Point(193, 358);
+            this.signtx.Location = new System.Drawing.Point(230, 362);
             this.signtx.Name = "signtx";
             this.signtx.Size = new System.Drawing.Size(324, 31);
             this.signtx.TabIndex = 20;
@@ -410,7 +410,7 @@
             this.locationtx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.locationtx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.locationtx.FormattingEnabled = true;
-            this.locationtx.Location = new System.Drawing.Point(193, 399);
+            this.locationtx.Location = new System.Drawing.Point(230, 399);
             this.locationtx.Name = "locationtx";
             this.locationtx.Size = new System.Drawing.Size(324, 31);
             this.locationtx.TabIndex = 21;
