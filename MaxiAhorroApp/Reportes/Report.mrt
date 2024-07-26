@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="1">
+      <ReporteProductos Ref="2" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+        <Alias>ReporteProductos</Alias>
+        <BusinessObjects isList="true" count="0" />
+        <Category />
+        <Columns isList="true" count="46">
+          <value>AutoScroll,System.Boolean</value>
+          <value>AutoSize,System.Boolean</value>
+          <value>AutoSizeMode,System.Windows.Forms.AutoSizeMode</value>
+          <value>AutoValidate,System.Windows.Forms.AutoValidate</value>
+          <value>BackColor,System.Drawing.Color</value>
+          <value>FormBorderStyle,System.Windows.Forms.FormBorderStyle</value>
+          <value>ClientSize,System.Drawing.Size</value>
+          <value>ControlBox,System.Boolean</value>
+          <value>HelpButton,System.Boolean</value>
+          <value>IsMdiContainer,System.Boolean</value>
+          <value>KeyPreview,System.Boolean</value>
+          <value>Location,System.Drawing.Point</value>
+          <value>MaximumSize,System.Drawing.Size</value>
+          <value>MinimumSize,System.Drawing.Size</value>
+          <value>MaximizeBox,System.Boolean</value>
+          <value>MinimizeBox,System.Boolean</value>
+          <value>Opacity,System.Double</value>
+          <value>RightToLeftLayout,System.Boolean</value>
+          <value>ShowInTaskbar,System.Boolean</value>
+          <value>ShowIcon,System.Boolean</value>
+          <value>Size,System.Drawing.Size</value>
+          <value>SizeGripStyle,System.Windows.Forms.SizeGripStyle</value>
+          <value>StartPosition,System.Windows.Forms.FormStartPosition</value>
+          <value>Text,System.String</value>
+          <value>TopMost,System.Boolean</value>
+          <value>TransparencyKey,System.Drawing.Color</value>
+          <value>WindowState,System.Windows.Forms.FormWindowState</value>
+          <value>AutoScrollMargin,System.Drawing.Size</value>
+          <value>AutoScrollMinSize,System.Drawing.Size</value>
+          <value>DisplayRectangle,System.Drawing.Rectangle</value>
+          <value>AccessibleDescription,System.String</value>
+          <value>AccessibleName,System.String</value>
+          <value>AccessibleRole,System.Windows.Forms.AccessibleRole</value>
+          <value>AllowDrop,System.Boolean</value>
+          <value>Anchor,System.Windows.Forms.AnchorStyles</value>
+          <value>BackgroundImage,System.Drawing.Image</value>
+          <value>BackgroundImageLayout,System.Windows.Forms.ImageLayout</value>
+          <value>CausesValidation,System.Boolean</value>
+          <value>Dock,System.Windows.Forms.DockStyle</value>
+          <value>Enabled,System.Boolean</value>
+          <value>ForeColor,System.Drawing.Color</value>
+          <value>RightToLeft,System.Windows.Forms.RightToLeft</value>
+          <value>UseWaitCursor,System.Boolean</value>
+          <value>Visible,System.Boolean</value>
+          <value>Padding,System.Windows.Forms.Padding</value>
+          <value>ImeMode,System.Windows.Forms.ImeMode</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Guid>3a84e2a4cf744b26aef008ae8904ea94</Guid>
+        <Name>ReporteProductos</Name>
+      </ReporteProductos>
+    </BusinessObjects>
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <UserFunctions isList="true" count="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>912089d39dd44c67869234d8d1ea7cbf</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="3" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="1">
+        <ReportTitleBand1 Ref="4" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,0.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text1 Ref="5" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,0.8,6.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,20</Font>
+              <Name>Text1</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>Listado de Productos</Text>
+              <TextBrush>Black</TextBrush>
+            </Text1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>ReportTitleBand1</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </ReportTitleBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Expressions isList="true" count="0" />
+      <Guid>c091d586435e4cda94df61e94f4b36a6</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>7/26/2024 10:09:18 AM</ReportChanged>
+  <ReportCreated>7/26/2024 9:49:21 AM</ReportCreated>
+  <ReportGuid>6bb46e51f3ac4f72997763648d2e401e</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2024.3.2.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>
