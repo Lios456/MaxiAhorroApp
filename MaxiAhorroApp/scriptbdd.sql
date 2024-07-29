@@ -239,3 +239,12 @@ begin
 SELECT COUNT(*) FROM minimarket.productos;
 end;
 
+create procedure sp_consultar_empleados()
+begin
+set @con = 0;
+select *, @con:=@con+1 as 'Contador' from usuarios u
+inner join empleados e
+on e.IDUsuario = u.IDUsuario
+order by u.Apellido;
+end;
+
