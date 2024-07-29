@@ -1,36 +1,31 @@
-﻿using MySql.Data.MySqlClient;
-using Stimulsoft.Database;
+﻿using MaxiAhorroApp.Controladores;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MaxiAhorroApp.Clases;
-using Dapper;
-using Stimulsoft.Report;
-using Stimulsoft.Report.Components.Table;
-using MaxiAhorroApp.Controladores;
 
 namespace MaxiAhorroApp.Reportes
 {
-    public partial class ReporteProductos : Form
+    public partial class ReporteEmpleados : Form
     {
-
-        public ReporteProductos()
+        public ReporteEmpleados()
         {
+
+
             InitializeComponent();
+
             try
             {
 
-                this.productosreport.Load("productosreport.mrt");
-                this.viewer.Report = productosreport;
+                this.empleadosreport.Load("empleadosreport.mrt");
+                this.viewer.Report = empleadosreport;
 
-                productosreport.Render();
+                empleadosreport.Render();
                 //productosreport.Show();
                 this.viewer.Refresh();
 
@@ -39,10 +34,6 @@ namespace MaxiAhorroApp.Reportes
             {
                 MessageBox.Show(ex.Message);
             }
-
-
         }
-
-
     }
 }

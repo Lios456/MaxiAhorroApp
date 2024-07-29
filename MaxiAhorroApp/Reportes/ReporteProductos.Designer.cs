@@ -54,7 +54,7 @@
         "Stimulsoft.Report.Dll"};
             this.productosreport.ReportAlias = "Report";
             this.productosreport.ReportDataSources.Add(this.stiReportDataSource5);
-            this.productosreport.ReportGuid = "9f70c77bcdb74b43a3afc77474349a27";
+            this.productosreport.ReportGuid = "ebd05a2217654ee0beedbad8b673461d";
             this.productosreport.ReportName = "Report";
             this.productosreport.ReportSource = resources.GetString("productosreport.ReportSource");
             this.productosreport.ReportUnit = Stimulsoft.Report.StiReportUnitType.Centimeters;

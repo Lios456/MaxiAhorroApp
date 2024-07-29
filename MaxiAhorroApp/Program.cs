@@ -1,4 +1,5 @@
 ﻿using MaxiAhorroApp.Controladores;
+using MaxiAhorroApp.Reportes;
 using MaxiAhorroApp.Vistas;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace MaxiAhorroApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Reportes.ReporteProductos());
+            Application.Run(new ReporteEmpleados());
         }
     }
 }
