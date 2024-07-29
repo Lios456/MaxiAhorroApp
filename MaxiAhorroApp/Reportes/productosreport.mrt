@@ -1,0 +1,816 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="1">
+      <ReporteProductos Ref="2" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+        <Alias>ReporteProductos</Alias>
+        <BusinessObjects isList="true" count="0" />
+        <Category />
+        <Columns isList="true" count="46">
+          <value>AutoScroll,System.Boolean</value>
+          <value>AutoSize,System.Boolean</value>
+          <value>AutoSizeMode,System.Windows.Forms.AutoSizeMode</value>
+          <value>AutoValidate,System.Windows.Forms.AutoValidate</value>
+          <value>BackColor,System.Drawing.Color</value>
+          <value>FormBorderStyle,System.Windows.Forms.FormBorderStyle</value>
+          <value>ClientSize,System.Drawing.Size</value>
+          <value>ControlBox,System.Boolean</value>
+          <value>HelpButton,System.Boolean</value>
+          <value>IsMdiContainer,System.Boolean</value>
+          <value>KeyPreview,System.Boolean</value>
+          <value>Location,System.Drawing.Point</value>
+          <value>MaximumSize,System.Drawing.Size</value>
+          <value>MinimumSize,System.Drawing.Size</value>
+          <value>MaximizeBox,System.Boolean</value>
+          <value>MinimizeBox,System.Boolean</value>
+          <value>Opacity,System.Double</value>
+          <value>RightToLeftLayout,System.Boolean</value>
+          <value>ShowInTaskbar,System.Boolean</value>
+          <value>ShowIcon,System.Boolean</value>
+          <value>Size,System.Drawing.Size</value>
+          <value>SizeGripStyle,System.Windows.Forms.SizeGripStyle</value>
+          <value>StartPosition,System.Windows.Forms.FormStartPosition</value>
+          <value>Text,System.String</value>
+          <value>TopMost,System.Boolean</value>
+          <value>TransparencyKey,System.Drawing.Color</value>
+          <value>WindowState,System.Windows.Forms.FormWindowState</value>
+          <value>AutoScrollMargin,System.Drawing.Size</value>
+          <value>AutoScrollMinSize,System.Drawing.Size</value>
+          <value>DisplayRectangle,System.Drawing.Rectangle</value>
+          <value>AccessibleDescription,System.String</value>
+          <value>AccessibleName,System.String</value>
+          <value>AccessibleRole,System.Windows.Forms.AccessibleRole</value>
+          <value>AllowDrop,System.Boolean</value>
+          <value>Anchor,System.Windows.Forms.AnchorStyles</value>
+          <value>BackgroundImage,System.Drawing.Image</value>
+          <value>BackgroundImageLayout,System.Windows.Forms.ImageLayout</value>
+          <value>CausesValidation,System.Boolean</value>
+          <value>Dock,System.Windows.Forms.DockStyle</value>
+          <value>Enabled,System.Boolean</value>
+          <value>ForeColor,System.Drawing.Color</value>
+          <value>RightToLeft,System.Windows.Forms.RightToLeft</value>
+          <value>UseWaitCursor,System.Boolean</value>
+          <value>Visible,System.Boolean</value>
+          <value>Padding,System.Windows.Forms.Padding</value>
+          <value>ImeMode,System.Windows.Forms.ImeMode</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Guid>3a84e2a4cf744b26aef008ae8904ea94</Guid>
+        <Name>ReporteProductos</Name>
+      </ReporteProductos>
+    </BusinessObjects>
+    <Databases isList="true" count="1">
+      <MySQL Ref="3" type="Stimulsoft.Report.Dictionary.StiMySqlDatabase" isKey="true">
+        <Alias>MySQL</Alias>
+        <ConnectionStringEncrypted>42zBCUhVo81GWrmYZFyxXotwf6/FXUuI4lqh6OREpEbGOv3LxgWzmWtJuaVkZKBm2XZpiWZL8/lFWj34wz13F+B62aHvS5L1</ConnectionStringEncrypted>
+        <Name>MySQL</Name>
+      </MySQL>
+    </Databases>
+    <DataSources isList="true" count="11">
+      <productos Ref="4" type="Stimulsoft.Report.Dictionary.StiMySqlSource" isKey="true">
+        <Alias>productos</Alias>
+        <Columns isList="true" count="13">
+          <value>id,System.Int32</value>
+          <value>nombre,System.String</value>
+          <value>descripcion,System.String</value>
+          <value>categoria_id,System.Int32</value>
+          <value>precio,System.Decimal</value>
+          <value>cantidad,System.Int32</value>
+          <value>fecha_ingreso,System.DateTime</value>
+          <value>proveedor_id,System.Int32</value>
+          <value>codigo_barra,System.String</value>
+          <value>fecha_vencimiento,System.DateTime</value>
+          <value>marca_id,System.Int32</value>
+          <value>ubicacion_id,System.Int32</value>
+          <value>estado,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>5371c2a0c213427cad12bd3a6812dd2a</Key>
+        <Name>productos</Name>
+        <NameInSource>MySQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from productos</SqlCommand>
+      </productos>
+      <administradores Ref="5" type="Stimulsoft.Report.Dictionary.StiMySqlSource" isKey="true">
+        <Alias>administradores</Alias>
+        <Columns isList="true" count="3">
+          <value>IDAdministrador,System.Int32</value>
+          <value>IDEmpleado,System.Int32</value>
+          <value>NivelAcceso,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>20520d1495bf4473a8d35f79e9f04c66</Key>
+        <Name>administradores</Name>
+        <NameInSource>MySQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from administradores</SqlCommand>
+      </administradores>
+      <categorias Ref="6" type="Stimulsoft.Report.Dictionary.StiMySqlSource" isKey="true">
+        <Alias>categorias</Alias>
+        <Columns isList="true" count="2">
+          <value>id,System.Int32</value>
+          <value>nombre,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>a5091ca640a142ed9267a56f5cb091cd</Key>
+        <Name>categorias</Name>
+        <NameInSource>MySQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from categorias</SqlCommand>
+      </categorias>
+      <empleados Ref="7" type="Stimulsoft.Report.Dictionary.StiMySqlSource" isKey="true">
+        <Alias>empleados</Alias>
+        <Columns isList="true" count="6">
+          <value>IDEmpleado,System.Int32</value>
+          <value>IDUsuario,System.Int32</value>
+          <value>FechaContratacion,System.DateTime</value>
+          <value>Puesto,System.String</value>
+          <value>Salario,System.Decimal</value>
+          <value>Estado,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>ad08e8b0dc284b6ca587d6743987b224</Key>
+        <Name>empleados</Name>
+        <NameInSource>MySQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from empleados</SqlCommand>
+      </empleados>
+      <marcas Ref="8" type="Stimulsoft.Report.Dictionary.StiMySqlSource" isKey="true">
+        <Alias>marcas</Alias>
+        <Columns isList="true" count="2">
+          <value>id,System.Int32</value>
+          <value>nombre,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>b83f72cefcbc42ed846becef769bcefc</Key>
+        <Name>marcas</Name>
+        <NameInSource>MySQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from marcas</SqlCommand>
+      </marcas>
+      <productos2 Ref="9" type="Stimulsoft.Report.Dictionary.StiMySqlSource" isKey="true">
+        <Alias>productos2</Alias>
+        <Columns isList="true" count="13">
+          <value>id,System.Int32</value>
+          <value>nombre,System.String</value>
+          <value>descripcion,System.String</value>
+          <value>categoria_id,System.Int32</value>
+          <value>precio,System.Decimal</value>
+          <value>cantidad,System.Int32</value>
+          <value>fecha_ingreso,System.DateTime</value>
+          <value>proveedor_id,System.Int32</value>
+          <value>codigo_barra,System.String</value>
+          <value>fecha_vencimiento,System.DateTime</value>
+          <value>marca_id,System.Int32</value>
+          <value>ubicacion_id,System.Int32</value>
+          <value>estado,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>5486108341874414a0e38fbeffcb3713</Key>
+        <Name>productos2</Name>
+        <NameInSource>MySQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from productos</SqlCommand>
+      </productos2>
+      <proveedores Ref="10" type="Stimulsoft.Report.Dictionary.StiMySqlSource" isKey="true">
+        <Alias>proveedores</Alias>
+        <Columns isList="true" count="2">
+          <value>id,System.Int32</value>
+          <value>nombre,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>22d9439864ea497fa3af9bd359ea0159</Key>
+        <Name>proveedores</Name>
+        <NameInSource>MySQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from proveedores</SqlCommand>
+      </proveedores>
+      <ubicaciones Ref="11" type="Stimulsoft.Report.Dictionary.StiMySqlSource" isKey="true">
+        <Alias>ubicaciones</Alias>
+        <Columns isList="true" count="2">
+          <value>id,System.Int32</value>
+          <value>nombre,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>db44ad401ac842c3a11c320b1de34eb3</Key>
+        <Name>ubicaciones</Name>
+        <NameInSource>MySQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from ubicaciones</SqlCommand>
+      </ubicaciones>
+      <usuarios Ref="12" type="Stimulsoft.Report.Dictionary.StiMySqlSource" isKey="true">
+        <Alias>usuarios</Alias>
+        <Columns isList="true" count="6">
+          <value>IDUsuario,System.Int32</value>
+          <value>Nombre,System.String</value>
+          <value>Apellido,System.String</value>
+          <value>Email,System.String</value>
+          <value>Contraseña,System.String</value>
+          <value>Rol,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>308e102a0aa74873a828c083d4043e46</Key>
+        <Name>usuarios</Name>
+        <NameInSource>MySQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from usuarios</SqlCommand>
+      </usuarios>
+      <sp_total_productos Ref="13" type="Stimulsoft.Report.Dictionary.StiMySqlSource" isKey="true">
+        <Alias>sp_total_productos</Alias>
+        <Columns isList="true" count="1">
+          <value>COUNT_x0028__x002A__x0029_,System.Int64</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>2f60b6de3f2a4d719ebde1dec63099f7</Key>
+        <Name>sp_total_productos</Name>
+        <NameInSource>MySQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>sp_total_productos</SqlCommand>
+        <Type>StoredProcedure</Type>
+      </sp_total_productos>
+      <sp_total_productos_por_categoria Ref="14" type="Stimulsoft.Report.Dictionary.StiMySqlSource" isKey="true">
+        <Alias>sp_total_productos_por_categoria</Alias>
+        <Columns isList="true" count="2">
+          <value>nombre,System.String</value>
+          <value>SUM_x0028_p.cantidad_x0029_,System.Decimal</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>3abf2260e5344bbdb3725d4bb83a584b</Key>
+        <Name>sp_total_productos_por_categoria</Name>
+        <NameInSource>MySQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>sp_total_productos_por_categoria</SqlCommand>
+        <Type>StoredProcedure</Type>
+      </sp_total_productos_por_categoria>
+    </DataSources>
+    <Relations isList="true" count="1">
+      <Name Ref="15" type="DataRelation" isKey="true">
+        <Active>True</Active>
+        <Alias>Name</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>categoria_id</value>
+        </ChildColumns>
+        <ChildSource isRef="4" />
+        <Dictionary isRef="1" />
+        <Name>Name</Name>
+        <NameInSource>cat_prod</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>id</value>
+        </ParentColumns>
+        <ParentSource isRef="6" />
+      </Name>
+    </Relations>
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <UserFunctions isList="true" count="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>912089d39dd44c67869234d8d1ea7cbf</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="16" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="2">
+        <HeaderBand1 Ref="17" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,2.8</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text2 Ref="18" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2,6.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Name>Text2</Name>
+              <Page isRef="16" />
+              <Parent isRef="17" />
+              <Text>Estos son los productos disponibles</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text1 Ref="19" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.6,1,8.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,20</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Name>Text1</Name>
+              <Page isRef="16" />
+              <Parent isRef="17" />
+              <Text>Listado de Productos</Text>
+              <TextBrush>Black</TextBrush>
+            </Text1>
+            <Text3 Ref="20" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13,0,6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,16</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Name>Text3</Name>
+              <Page isRef="16" />
+              <Parent isRef="17" />
+              <Text>Minimarket "Maxiahorro"</Text>
+              <TextBrush>Black</TextBrush>
+            </Text3>
+            <Text4 Ref="21" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.8,2,6.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Name>Text4</Name>
+              <Page isRef="16" />
+              <Parent isRef="17" />
+              <Text>Fecha: {DateTime.Now}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>HeaderBand1</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+        </HeaderBand1>
+        <DataBand1 Ref="22" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,4,19,8.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Table1 Ref="23" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+              <Brush>Transparent</Brush>
+              <BusinessObjectGuid isNull="true" />
+              <ClientRectangle>0,0.4,19,3.2</ClientRectangle>
+              <ColumnCount>7</ColumnCount>
+              <Components isList="true" count="21">
+                <Table1_Cell1 Ref="24" type="TableCell" isKey="true">
+                  <Border>All;[0:0:0];2;Solid;False;4;Black</Border>
+                  <Brush>[191:191:191]</Brush>
+                  <ClientRectangle>0,0,2.8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,11</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>0</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell1</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>ID</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell1>
+                <Table1_Cell2 Ref="25" type="TableCell" isKey="true">
+                  <Border>All;[0:0:0];2;Solid;False;4;Black</Border>
+                  <Brush>[191:191:191]</Brush>
+                  <ClientRectangle>2.8,0,2.8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,11</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>1</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell2</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Nombre</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell2>
+                <Table1_Cell3 Ref="26" type="TableCell" isKey="true">
+                  <Border>All;[0:0:0];2;Solid;False;4;Black</Border>
+                  <Brush>[191:191:191]</Brush>
+                  <ClientRectangle>5.6,0,2.8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,11</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>2</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell3</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Precio</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell3>
+                <Table1_Cell4 Ref="27" type="TableCell" isKey="true">
+                  <Border>All;[0:0:0];2;Solid;False;4;Black</Border>
+                  <Brush>[191:191:191]</Brush>
+                  <ClientRectangle>8.4,0,2.8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,11</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>3</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell4</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Cantidad</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>DataColumn</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell4>
+                <Table1_Cell5 Ref="28" type="TableCell" isKey="true">
+                  <Border>All;[0:0:0];2;Solid;False;4;Black</Border>
+                  <Brush>[191:191:191]</Brush>
+                  <ClientRectangle>11.2,0,2.6,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,11</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>4</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell5</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Ingreso</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>DataColumn</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell5>
+                <Table1_Cell6 Ref="29" type="TableCell" isKey="true">
+                  <Border>All;[0:0:0];2;Solid;False;4;Transparent</Border>
+                  <Brush>[191:191:191]</Brush>
+                  <ClientRectangle>13.8,0,2.6,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,11</Font>
+                  <HorAlignment>Width</HorAlignment>
+                  <ID>35</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell6</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Código de inventario</Text>
+                  <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell6>
+                <Table1_Cell7 Ref="30" type="TableCell" isKey="true">
+                  <Border>All;[0:0:0];2;Solid;False;4;Transparent</Border>
+                  <Brush>[191:191:191]</Brush>
+                  <ClientRectangle>16.4,0,2.6,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,11</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>36</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell7</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Estado</Text>
+                  <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell7>
+                <Table1_Cell8 Ref="31" type="TableCell" isKey="true">
+                  <Border>All;[127:127:127];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,1,2.8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>25</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell8</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{productos.id}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell8>
+                <Table1_Cell9 Ref="32" type="TableCell" isKey="true">
+                  <Border>All;[127:127:127];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>2.8,1,2.8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>26</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell9</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{productos.nombre}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell9>
+                <Table1_Cell10 Ref="33" type="TableCell" isKey="true">
+                  <Border>All;[127:127:127];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>5.6,1,2.8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>27</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell10</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{productos.precio}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell10>
+                <Table1_Cell11 Ref="34" type="TableCell" isKey="true">
+                  <Border>All;[127:127:127];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>8.4,1,2.8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>28</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell11</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{productos.cantidad}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell11>
+                <Table1_Cell12 Ref="35" type="TableCell" isKey="true">
+                  <Border>All;[127:127:127];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>11.2,1,2.6,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>29</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell12</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{productos.fecha_ingreso}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell12>
+                <Table1_Cell13 Ref="36" type="TableCell" isKey="true">
+                  <Border>All;[127:127:127];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>13.8,1,2.6,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>37</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell13</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{productos.codigo_barra}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>DataColumn</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell13>
+                <Table1_Cell14 Ref="37" type="TableCell" isKey="true">
+                  <Border>All;[127:127:127];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>16.4,1,2.6,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>38</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell14</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{productos.estado}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>DataColumn</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell14>
+                <Table1_Cell15 Ref="38" type="TableCell" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,2,2.8,1.2</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>30</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell15</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table1_Cell15>
+                <Table1_Cell16 Ref="39" type="TableCell" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>2.8,2,2.8,1.2</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>31</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell16</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table1_Cell16>
+                <Table1_Cell17 Ref="40" type="TableCell" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>5.6,2,2.8,1.2</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>32</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell17</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table1_Cell17>
+                <Table1_Cell18 Ref="41" type="TableCell" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>8.4,2,2.8,1.2</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,10</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>33</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell18</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell18>
+                <Table1_Cell19 Ref="42" type="TableCell" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>11.2,2,2.6,1.2</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>34</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell19</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table1_Cell19>
+                <Table1_Cell20 Ref="43" type="TableCell" isKey="true">
+                  <Border>All;[0:0:0];2;Solid;False;4;Black</Border>
+                  <Brush>[79:129:189]</Brush>
+                  <ClientRectangle>13.8,2,2.6,1.2</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,12</Font>
+                  <HorAlignment>Width</HorAlignment>
+                  <ID>39</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell20</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total de Productos:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell20>
+                <Table1_Cell21 Ref="44" type="TableCell" isKey="true">
+                  <Border>All;[0:0:0];2;Solid;False;4;Black</Border>
+                  <Brush>[149:179:215]</Brush>
+                  <ClientRectangle>16.4,2,2.6,1.2</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>40</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell21</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="23" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{sp_total_productos.COUNT___}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell21>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <DataRelationName isNull="true" />
+              <DataSourceName>productos</DataSourceName>
+              <Expressions isList="true" count="0" />
+              <Filters isList="true" count="0" />
+              <FooterRowsCount>1</FooterRowsCount>
+              <HeaderRowsCount>1</HeaderRowsCount>
+              <MasterComponent isRef="22" />
+              <MinHeight>0.60000000000000009</MinHeight>
+              <Name>Table1</Name>
+              <NumberID>41</NumberID>
+              <Page isRef="16" />
+              <Parent isRef="22" />
+              <RowCount>3</RowCount>
+              <Sort isList="true" count="0" />
+            </Table1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>productos</DataSourceName>
+          <Expressions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Expressions isList="true" count="0" />
+      <Guid>c091d586435e4cda94df61e94f4b36a6</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>7/28/2024 3:52:17 PM</ReportChanged>
+  <ReportCreated>7/26/2024 9:49:21 AM</ReportCreated>
+  <ReportFile>C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\productosreport.mrt</ReportFile>
+  <ReportGuid>7570f7cfe10e46bf92bc92d6f27d92f1</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2024.3.2.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

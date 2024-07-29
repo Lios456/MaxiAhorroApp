@@ -382,6 +382,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Reportes\empleadosreport.mrt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reportes\productosreport.mrt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Reportes\ReporteProductos.mrt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
