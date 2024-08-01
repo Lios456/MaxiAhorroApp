@@ -44,6 +44,11 @@ namespace MaxiAhorroApp.Vistas
         {
             new ReporteProductos().ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new ReporteEmpleados().ShowDialog();
+        }
     }
 
 }

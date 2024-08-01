@@ -481,3 +481,5 @@ C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\bi
 C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\Stimulsoft.Report.Wpf.pdb
 C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\Stimulsoft.Report.Wpf.xml
 C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.Reportes.ReporteEmpleados.resources
+C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\Reportes\empleadosreport.mrt
+C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\Reportes\productosreport.mrt

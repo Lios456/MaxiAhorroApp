@@ -19,7 +19,7 @@ namespace MaxiAhorroApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ReporteEmpleados());
+            Application.Run(new Main());
         }
     }
 }

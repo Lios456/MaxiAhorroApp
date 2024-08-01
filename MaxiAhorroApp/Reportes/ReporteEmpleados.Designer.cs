@@ -62,7 +62,7 @@
         "Stimulsoft.Base.Dll",
         "Stimulsoft.Report.Dll"};
             this.empleadosreport.ReportAlias = "Report";
-            this.empleadosreport.ReportGuid = "a76f95a7c212489c9117173bad191a7a";
+            this.empleadosreport.ReportGuid = "dc018519dc664654b16dd969bdea6c7a";
             this.empleadosreport.ReportName = "Report";
             this.empleadosreport.ReportSource = resources.GetString("empleadosreport.ReportSource");
             this.empleadosreport.ReportUnit = Stimulsoft.Report.StiReportUnitType.Centimeters;
