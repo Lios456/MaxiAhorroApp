@@ -321,6 +321,12 @@
     <Compile Include="Vistas\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Venta.Designer.cs">
+      <DependentUpon>Venta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\ver_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -360,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Venta.resx">
+      <DependentUpon>Venta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\ver_Empleados.resx">
       <DependentUpon>ver_Empleados.cs</DependentUpon>
@@ -439,6 +448,10 @@
     <Content Include="Localization\vi.xml" />
     <Content Include="Localization\zh-CHS.xml" />
     <Content Include="Localization\zh-CHT.xml" />
+    <None Include="Resources\lupa.png" />
+    <Content Include="Resources\sales_sale_supermarket_stock_market_icon_153849.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="scriptbdd.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
