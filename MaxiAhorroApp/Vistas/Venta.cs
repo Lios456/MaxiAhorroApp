@@ -139,7 +139,8 @@ namespace MaxiAhorroApp.Vistas
                 {
                     MessageBox.Show("Cédula ecuatoriana inválida. Verifique e intente nuevamente.");
                 }
-            }         
+            }
+            
         }
 
         private bool EsCedulaEcuatorianaValida(string cedula)

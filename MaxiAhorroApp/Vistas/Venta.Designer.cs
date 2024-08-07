@@ -55,7 +55,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tipopago = new System.Windows.Forms.ComboBox();
             this.bt_agregar_producto = new System.Windows.Forms.Button();
-            this.bt_cancelar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label14 = new System.Windows.Forms.Label();
@@ -70,9 +69,10 @@
             this.nomcli = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.numfactu = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.bt_cancelar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbproductos)).BeginInit();
@@ -394,7 +394,7 @@
             this.tipopago.Items.AddRange(new object[] {
             "EFECTIVO",
             "TRANSFERENCIA"});
-            this.tipopago.Location = new System.Drawing.Point(203, 149);
+            this.tipopago.Location = new System.Drawing.Point(203, 153);
             this.tipopago.Name = "tipopago";
             this.tipopago.Size = new System.Drawing.Size(194, 28);
             this.tipopago.TabIndex = 3;
@@ -415,22 +415,6 @@
             this.bt_agregar_producto.Text = "Agregar Producto";
             this.bt_agregar_producto.UseVisualStyleBackColor = false;
             this.bt_agregar_producto.Click += new System.EventHandler(this.bt_agregar_producto_Click);
-            // 
-            // bt_cancelar
-            // 
-            this.bt_cancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_cancelar.BackColor = System.Drawing.Color.DarkCyan;
-            this.bt_cancelar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_cancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_cancelar.Location = new System.Drawing.Point(713, 3);
-            this.bt_cancelar.Name = "bt_cancelar";
-            this.bt_cancelar.Size = new System.Drawing.Size(299, 47);
-            this.bt_cancelar.TabIndex = 5;
-            this.bt_cancelar.Text = "LIMPIAR";
-            this.bt_cancelar.UseVisualStyleBackColor = false;
-            this.bt_cancelar.Click += new System.EventHandler(this.bt_cancelar_Click);
             // 
             // label7
             // 
@@ -602,22 +586,6 @@
             this.numfactu.TabIndex = 1;
             this.numfactu.TextChanged += new System.EventHandler(this.numfactura_TextChanged);
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(307, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(400, 47);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "GENERAR COMPROBANTE";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -637,6 +605,22 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(1015, 53);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Location = new System.Drawing.Point(307, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(400, 47);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "GENERAR COMPROBANTE";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -651,6 +635,22 @@
             this.button2.TabIndex = 15;
             this.button2.Text = "REGRESAR";
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // bt_cancelar
+            // 
+            this.bt_cancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_cancelar.BackColor = System.Drawing.Color.DarkCyan;
+            this.bt_cancelar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_cancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.bt_cancelar.Location = new System.Drawing.Point(713, 3);
+            this.bt_cancelar.Name = "bt_cancelar";
+            this.bt_cancelar.Size = new System.Drawing.Size(299, 47);
+            this.bt_cancelar.TabIndex = 5;
+            this.bt_cancelar.Text = "LIMPIAR";
+            this.bt_cancelar.UseVisualStyleBackColor = false;
+            this.bt_cancelar.Click += new System.EventHandler(this.bt_cancelar_Click);
             // 
             // Venta
             // 

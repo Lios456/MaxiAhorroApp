@@ -276,19 +276,19 @@
             // 
             this.expiretx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.expiretx.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.expiretx.Location = new System.Drawing.Point(184, 369);
+            this.expiretx.Location = new System.Drawing.Point(184, 367);
             this.expiretx.MinDate = new System.DateTime(2024, 6, 22, 0, 0, 0, 0);
             this.expiretx.Name = "expiretx";
-            this.expiretx.Size = new System.Drawing.Size(175, 26);
+            this.expiretx.Size = new System.Drawing.Size(175, 30);
             this.expiretx.TabIndex = 15;
             // 
             // barcodetx
             // 
             this.barcodetx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.barcodetx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.barcodetx.Location = new System.Drawing.Point(184, 322);
+            this.barcodetx.Location = new System.Drawing.Point(184, 320);
             this.barcodetx.Name = "barcodetx";
-            this.barcodetx.Size = new System.Drawing.Size(175, 19);
+            this.barcodetx.Size = new System.Drawing.Size(175, 23);
             this.barcodetx.TabIndex = 14;
             // 
             // provetortx
@@ -297,16 +297,16 @@
             this.provetortx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.provetortx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.provetortx.FormattingEnabled = true;
-            this.provetortx.Location = new System.Drawing.Point(184, 270);
+            this.provetortx.Location = new System.Drawing.Point(184, 268);
             this.provetortx.Name = "provetortx";
-            this.provetortx.Size = new System.Drawing.Size(175, 26);
+            this.provetortx.Size = new System.Drawing.Size(175, 31);
             this.provetortx.TabIndex = 13;
             // 
             // cuantitytx
             // 
             this.cuantitytx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cuantitytx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cuantitytx.Location = new System.Drawing.Point(184, 218);
+            this.cuantitytx.Location = new System.Drawing.Point(184, 216);
             this.cuantitytx.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -318,7 +318,7 @@
             0,
             0});
             this.cuantitytx.Name = "cuantitytx";
-            this.cuantitytx.Size = new System.Drawing.Size(175, 22);
+            this.cuantitytx.Size = new System.Drawing.Size(175, 26);
             this.cuantitytx.TabIndex = 12;
             this.cuantitytx.Value = new decimal(new int[] {
             1,
@@ -336,7 +336,7 @@
             0,
             0,
             131072});
-            this.pricetx.Location = new System.Drawing.Point(184, 167);
+            this.pricetx.Location = new System.Drawing.Point(184, 165);
             this.pricetx.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -348,7 +348,7 @@
             0,
             65536});
             this.pricetx.Name = "pricetx";
-            this.pricetx.Size = new System.Drawing.Size(175, 22);
+            this.pricetx.Size = new System.Drawing.Size(175, 26);
             this.pricetx.TabIndex = 11;
             this.pricetx.Value = new decimal(new int[] {
             5,
@@ -360,9 +360,9 @@
             // 
             this.nombretx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.nombretx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nombretx.Location = new System.Drawing.Point(184, 16);
+            this.nombretx.Location = new System.Drawing.Point(184, 14);
             this.nombretx.Name = "nombretx";
-            this.nombretx.Size = new System.Drawing.Size(175, 19);
+            this.nombretx.Size = new System.Drawing.Size(175, 23);
             this.nombretx.TabIndex = 9;
             this.nombretx.TextChanged += new System.EventHandler(this.nombretx_TextChanged);
             // 
@@ -393,9 +393,9 @@
             this.categorytx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.categorytx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.categorytx.FormattingEnabled = true;
-            this.categorytx.Location = new System.Drawing.Point(184, 117);
+            this.categorytx.Location = new System.Drawing.Point(184, 115);
             this.categorytx.Name = "categorytx";
-            this.categorytx.Size = new System.Drawing.Size(175, 26);
+            this.categorytx.Size = new System.Drawing.Size(175, 31);
             this.categorytx.TabIndex = 19;
             // 
             // signtx
@@ -403,9 +403,9 @@
             this.signtx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.signtx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.signtx.FormattingEnabled = true;
-            this.signtx.Location = new System.Drawing.Point(184, 423);
+            this.signtx.Location = new System.Drawing.Point(184, 421);
             this.signtx.Name = "signtx";
-            this.signtx.Size = new System.Drawing.Size(175, 26);
+            this.signtx.Size = new System.Drawing.Size(175, 31);
             this.signtx.TabIndex = 20;
             // 
             // locationtx
@@ -413,14 +413,14 @@
             this.locationtx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.locationtx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.locationtx.FormattingEnabled = true;
-            this.locationtx.Location = new System.Drawing.Point(184, 474);
+            this.locationtx.Location = new System.Drawing.Point(184, 472);
             this.locationtx.Name = "locationtx";
-            this.locationtx.Size = new System.Drawing.Size(175, 26);
+            this.locationtx.Size = new System.Drawing.Size(175, 31);
             this.locationtx.TabIndex = 21;
             // 
             // Agregar_Productos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(225)))), ((int)(((byte)(221)))));
             this.ClientSize = new System.Drawing.Size(368, 616);
