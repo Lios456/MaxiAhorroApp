@@ -260,7 +260,7 @@
   <ItemGroup>
     <Compile Include="Clases\Administrador.cs" />
     <Compile Include="Clases\Category.cs" />
-    <Compile Include="Clases\datoscli.cs" />
+    <Compile Include="Clases\DatosCli.cs" />
     <Compile Include="Clases\Empleado.cs" />
     <Compile Include="Clases\Marca.cs" />
     <Compile Include="Clases\Producto.cs" />

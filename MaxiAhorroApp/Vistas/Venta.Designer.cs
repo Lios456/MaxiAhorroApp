@@ -57,24 +57,24 @@
             this.bt_agregar_producto = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.totalpag = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.telcli = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dircli = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cedcli = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.nomcli = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.numfactu = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.totalpag = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.telcli = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dircli = new System.Windows.Forms.TextBox();
+            this.cedcli = new System.Windows.Forms.TextBox();
+            this.apelcli = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.bt_cancelar = new System.Windows.Forms.Button();
-            this.apelcli = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbproductos)).BeginInit();
@@ -396,7 +396,7 @@
             this.tipopago.Items.AddRange(new object[] {
             "EFECTIVO",
             "TRANSFERENCIA"});
-            this.tipopago.Location = new System.Drawing.Point(203, 149);
+            this.tipopago.Location = new System.Drawing.Point(203, 153);
             this.tipopago.Name = "tipopago";
             this.tipopago.Size = new System.Drawing.Size(194, 28);
             this.tipopago.TabIndex = 3;
@@ -467,98 +467,6 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(400, 222);
             this.tableLayoutPanel5.TabIndex = 9;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 186);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(54, 20);
-            this.label14.TabIndex = 12;
-            this.label14.Text = "TOTAL:";
-            // 
-            // totalpag
-            // 
-            this.totalpag.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.totalpag.Location = new System.Drawing.Point(203, 189);
-            this.totalpag.Name = "totalpag";
-            this.totalpag.ReadOnly = true;
-            this.totalpag.Size = new System.Drawing.Size(194, 25);
-            this.totalpag.TabIndex = 13;
-            this.totalpag.TextChanged += new System.EventHandler(this.totalpagar_TextChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 155);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 20);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Teléfono:";
-            // 
-            // telcli
-            // 
-            this.telcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.telcli.Location = new System.Drawing.Point(203, 158);
-            this.telcli.Name = "telcli";
-            this.telcli.Size = new System.Drawing.Size(194, 25);
-            this.telcli.TabIndex = 9;
-            this.telcli.Text = "09";
-            this.telcli.TextChanged += new System.EventHandler(this.telcli_TextChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 124);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 20);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Dirección:";
-            // 
-            // dircli
-            // 
-            this.dircli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dircli.Location = new System.Drawing.Point(203, 127);
-            this.dircli.Name = "dircli";
-            this.dircli.Size = new System.Drawing.Size(194, 25);
-            this.dircli.TabIndex = 7;
-            this.dircli.TextChanged += new System.EventHandler(this.dircli_TextChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 93);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 20);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Cédula:";
-            // 
-            // cedcli
-            // 
-            this.cedcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cedcli.Location = new System.Drawing.Point(203, 96);
-            this.cedcli.Name = "cedcli";
-            this.cedcli.Size = new System.Drawing.Size(194, 25);
-            this.cedcli.TabIndex = 5;
-            this.cedcli.Text = "Si existe, empiece aquí";
-            this.cedcli.TextChanged += new System.EventHandler(this.cedcli_TextChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 31);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 20);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Nombre:";
-            // 
             // nomcli
             // 
             this.nomcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -589,6 +497,117 @@
             this.numfactu.Size = new System.Drawing.Size(194, 25);
             this.numfactu.TabIndex = 1;
             this.numfactu.TextChanged += new System.EventHandler(this.numfactura_TextChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 186);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(54, 20);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "TOTAL:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(3, 155);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(62, 20);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Teléfono:";
+            // 
+            // totalpag
+            // 
+            this.totalpag.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.totalpag.Location = new System.Drawing.Point(203, 189);
+            this.totalpag.Name = "totalpag";
+            this.totalpag.Size = new System.Drawing.Size(194, 25);
+            this.totalpag.TabIndex = 13;
+            this.totalpag.TextChanged += new System.EventHandler(this.totalpag_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 124);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(66, 20);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Dirección:";
+            // 
+            // telcli
+            // 
+            this.telcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.telcli.Location = new System.Drawing.Point(203, 158);
+            this.telcli.Name = "telcli";
+            this.telcli.Size = new System.Drawing.Size(194, 25);
+            this.telcli.TabIndex = 9;
+            this.telcli.Text = "09";
+            this.telcli.TextChanged += new System.EventHandler(this.telcli_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 93);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 20);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Cédula:";
+            // 
+            // dircli
+            // 
+            this.dircli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dircli.Location = new System.Drawing.Point(203, 127);
+            this.dircli.Name = "dircli";
+            this.dircli.Size = new System.Drawing.Size(194, 25);
+            this.dircli.TabIndex = 7;
+            this.dircli.TextChanged += new System.EventHandler(this.dircli_TextChanged);
+            // 
+            // cedcli
+            // 
+            this.cedcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cedcli.Location = new System.Drawing.Point(203, 96);
+            this.cedcli.Name = "cedcli";
+            this.cedcli.Size = new System.Drawing.Size(194, 25);
+            this.cedcli.TabIndex = 5;
+            this.cedcli.Text = "Si existe, empiece aquí";
+            this.cedcli.TextChanged += new System.EventHandler(this.cedcli_TextChanged);
+            // 
+            // apelcli
+            // 
+            this.apelcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.apelcli.Location = new System.Drawing.Point(203, 65);
+            this.apelcli.Name = "apelcli";
+            this.apelcli.Size = new System.Drawing.Size(194, 25);
+            this.apelcli.TabIndex = 14;
+            this.apelcli.TextChanged += new System.EventHandler(this.apelcli_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 31);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 20);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Nombre:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(3, 62);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(56, 20);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "Apellido:";
             // 
             // tableLayoutPanel6
             // 
@@ -655,25 +674,6 @@
             this.bt_cancelar.Text = "LIMPIAR";
             this.bt_cancelar.UseVisualStyleBackColor = false;
             this.bt_cancelar.Click += new System.EventHandler(this.bt_cancelar_Click);
-            // 
-            // apelcli
-            // 
-            this.apelcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.apelcli.Location = new System.Drawing.Point(203, 65);
-            this.apelcli.Name = "apelcli";
-            this.apelcli.Size = new System.Drawing.Size(194, 25);
-            this.apelcli.TabIndex = 14;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 62);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(56, 20);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "Apellido:";
             // 
             // Venta
             // 

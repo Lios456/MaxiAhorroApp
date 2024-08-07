@@ -272,7 +272,7 @@ CREATE TABLE IF NOT EXISTS minimarket.facturas (
     cliente_id INT NOT NULL,
     formapago VARCHAR(50) NOT NULL,
     fechapago DATE NOT NULL,
-    totalpagar DECIMAL(10, 2) NOT NULL,
+    totalpagar DECIMAL(10, 2) NOT NULL CHECK (totalpagar >= 0),
     FOREIGN KEY (cliente_id) REFERENCES minimarket.clientes(id)
 );
 
@@ -286,3 +286,4 @@ CREATE TABLE IF NOT EXISTS minimarket.detalle_factura (
     FOREIGN KEY (factura_id) REFERENCES minimarket.facturas(id),
     FOREIGN KEY (producto_id) REFERENCES minimarket.productos(id)
 );
+

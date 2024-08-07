@@ -7,16 +7,13 @@ namespace MaxiAhorroApp.Controladores
 {
     public class ventascliente : Connection
     {
-        public void insertarventa(datoscli datoscli)
+
+
+        public void insertarventa(DatosCli datoscli)
         {
             base.cn.Execute("sp_insertar_factura", datoscli, commandType: CommandType.StoredProcedure);
             base.cn.Close();
         }
 
-        public datoscli completarporcedula(string cedula)
-        {
-            var query = "SELECT nombrecliente, direccioncliente, telefonocliente FROM minimarket.factura WHERE cedulacliente = @Cedula";
-            return base.cn.QueryFirstOrDefault<datoscli>(query, new { Cedula = cedula });
-        }
     }
 }
