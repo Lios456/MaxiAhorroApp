@@ -73,6 +73,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.bt_cancelar = new System.Windows.Forms.Button();
+            this.apelcli = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbproductos)).BeginInit();
@@ -394,7 +396,7 @@
             this.tipopago.Items.AddRange(new object[] {
             "EFECTIVO",
             "TRANSFERENCIA"});
-            this.tipopago.Location = new System.Drawing.Point(203, 153);
+            this.tipopago.Location = new System.Drawing.Point(203, 149);
             this.tipopago.Name = "tipopago";
             this.tipopago.Size = new System.Drawing.Size(194, 28);
             this.tipopago.TabIndex = 3;
@@ -436,18 +438,20 @@
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.label14, 0, 6);
-            this.tableLayoutPanel5.Controls.Add(this.totalpag, 1, 6);
-            this.tableLayoutPanel5.Controls.Add(this.label12, 0, 4);
-            this.tableLayoutPanel5.Controls.Add(this.telcli, 1, 4);
-            this.tableLayoutPanel5.Controls.Add(this.label11, 0, 3);
-            this.tableLayoutPanel5.Controls.Add(this.dircli, 1, 3);
-            this.tableLayoutPanel5.Controls.Add(this.label10, 0, 2);
-            this.tableLayoutPanel5.Controls.Add(this.cedcli, 1, 2);
-            this.tableLayoutPanel5.Controls.Add(this.label9, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.nomcli, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.numfactu, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label14, 0, 7);
+            this.tableLayoutPanel5.Controls.Add(this.label12, 0, 6);
+            this.tableLayoutPanel5.Controls.Add(this.totalpag, 1, 7);
+            this.tableLayoutPanel5.Controls.Add(this.label11, 0, 4);
+            this.tableLayoutPanel5.Controls.Add(this.telcli, 1, 6);
+            this.tableLayoutPanel5.Controls.Add(this.label10, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.dircli, 1, 4);
+            this.tableLayoutPanel5.Controls.Add(this.cedcli, 1, 3);
+            this.tableLayoutPanel5.Controls.Add(this.apelcli, 1, 2);
+            this.tableLayoutPanel5.Controls.Add(this.label9, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.label13, 0, 2);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(612, 394);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 8;
@@ -466,7 +470,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 155);
+            this.label14.Location = new System.Drawing.Point(3, 186);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 20);
             this.label14.TabIndex = 12;
@@ -477,7 +481,7 @@
             this.totalpag.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.totalpag.Location = new System.Drawing.Point(203, 158);
+            this.totalpag.Location = new System.Drawing.Point(203, 189);
             this.totalpag.Name = "totalpag";
             this.totalpag.ReadOnly = true;
             this.totalpag.Size = new System.Drawing.Size(194, 25);
@@ -487,7 +491,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 124);
+            this.label12.Location = new System.Drawing.Point(3, 155);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(62, 20);
             this.label12.TabIndex = 8;
@@ -498,7 +502,7 @@
             this.telcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.telcli.Location = new System.Drawing.Point(203, 127);
+            this.telcli.Location = new System.Drawing.Point(203, 158);
             this.telcli.Name = "telcli";
             this.telcli.Size = new System.Drawing.Size(194, 25);
             this.telcli.TabIndex = 9;
@@ -508,7 +512,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 93);
+            this.label11.Location = new System.Drawing.Point(3, 124);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(66, 20);
             this.label11.TabIndex = 6;
@@ -519,7 +523,7 @@
             this.dircli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dircli.Location = new System.Drawing.Point(203, 96);
+            this.dircli.Location = new System.Drawing.Point(203, 127);
             this.dircli.Name = "dircli";
             this.dircli.Size = new System.Drawing.Size(194, 25);
             this.dircli.TabIndex = 7;
@@ -528,7 +532,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 62);
+            this.label10.Location = new System.Drawing.Point(3, 93);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 20);
             this.label10.TabIndex = 4;
@@ -539,7 +543,7 @@
             this.cedcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cedcli.Location = new System.Drawing.Point(203, 65);
+            this.cedcli.Location = new System.Drawing.Point(203, 96);
             this.cedcli.Name = "cedcli";
             this.cedcli.Size = new System.Drawing.Size(194, 25);
             this.cedcli.TabIndex = 5;
@@ -551,9 +555,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(3, 31);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 20);
+            this.label9.Size = new System.Drawing.Size(57, 20);
             this.label9.TabIndex = 2;
-            this.label9.Text = "Nombre y Apellido:";
+            this.label9.Text = "Nombre:";
             // 
             // nomcli
             // 
@@ -652,6 +656,25 @@
             this.bt_cancelar.UseVisualStyleBackColor = false;
             this.bt_cancelar.Click += new System.EventHandler(this.bt_cancelar_Click);
             // 
+            // apelcli
+            // 
+            this.apelcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.apelcli.Location = new System.Drawing.Point(203, 65);
+            this.apelcli.Name = "apelcli";
+            this.apelcli.Size = new System.Drawing.Size(194, 25);
+            this.apelcli.TabIndex = 14;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(3, 62);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(56, 20);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "Apellido:";
+            // 
             // Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
@@ -729,5 +752,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button bt_agregar_producto;
+        private System.Windows.Forms.TextBox apelcli;
+        private System.Windows.Forms.Label label13;
     }
 }

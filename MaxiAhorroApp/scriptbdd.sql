@@ -258,54 +258,31 @@ select
 end;
 
 
-CREATE TABLE IF NOT EXISTS minimarket.factura (
+CREATE TABLE IF NOT EXISTS minimarket.clientes (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    numfactura INT NOT NULL,
     nombrecliente VARCHAR(100) NOT NULL,
-    cedulacliente VARCHAR(20) NOT NULL,
-    direccioncliente VARCHAR(255) NOT NULL,
-    telefonocliente VARCHAR(20) NOT NULL,
+    cedulacliente VARCHAR(20) UNIQUE NOT NULL,
+    direccioncliente TEXT,
+    telefonocliente VARCHAR(15)
+);
+
+CREATE TABLE IF NOT EXISTS minimarket.facturas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    numfactura INT NOT NULL UNIQUE,
+    cliente_id INT NOT NULL,
     formapago VARCHAR(50) NOT NULL,
     fechapago DATE NOT NULL,
     totalpagar DECIMAL(10, 2) NOT NULL,
-    FOREIGN KEY (numfactura) REFERENCES productos(id)  -- Ejemplo de referencia, ajusta según sea necesario
+    FOREIGN KEY (cliente_id) REFERENCES minimarket.clientes(id)
 );
 
-
-
-drop procedure if exists sp_insertar_factura;
-
-CREATE PROCEDURE sp_insertar_factura(
-    IN numfactura INT,
-    IN nombrecliente VARCHAR(100),
-    IN cedulacliente VARCHAR(20),
-    IN direccioncliente VARCHAR(255),
-    IN telefonocliente VARCHAR(20),
-    IN formapago VARCHAR(50),
-    IN fechapago DATE,
-    in totalpagar decimal (10,2)
-)
-BEGIN
-    INSERT INTO minimarket.factura (
-        numfactura,
-        nombrecliente,
-        cedulacliente,
-        direccioncliente,
-        telefonocliente,
-        formapago,
-        fechapago,
-        totalpagar
-    )
-    VALUES (
-        numfactura,
-        nombrecliente,
-        cedulacliente,
-        direccioncliente,
-        telefonocliente,
-        formapago,
-        fechapago,
-        totalpagar
-    );
-END;
-
-
+CREATE TABLE IF NOT EXISTS minimarket.detalle_factura (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    factura_id INT NOT NULL,
+    producto_id INT NOT NULL,
+    cantidad INT NOT NULL,
+    precio_unitario DECIMAL(10, 2) NOT NULL,
+    subtotal DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (factura_id) REFERENCES minimarket.facturas(id),
+    FOREIGN KEY (producto_id) REFERENCES minimarket.productos(id)
+);
