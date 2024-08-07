@@ -937,3 +937,4 @@ C:\GIT_CLONE\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.csproj.CoreComp
 C:\GIT_CLONE\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.csproj.CopyComplete
 C:\GIT_CLONE\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.exe
 C:\GIT_CLONE\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.pdb
+C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.Reportes.ReporteFactura.resources

@@ -307,5 +307,19 @@ BEGIN
         totalpagar
     );
 END;
+use minimarket;
+drop procedure if exists sp_obtener_factura;
+create procedure sp_obtener_factura(IN id int)
+begin
+	select * from minimarket.factura f WHERE f.id = id;
+end;
 
+drop procedure if exists sp_obtener_facturas;
+delimiter //
+create procedure sp_obtener_facturas()
+begin
+	select * from minimarket.factura;
+end//
+
+delimiter ;
 

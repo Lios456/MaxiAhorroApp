@@ -41,7 +41,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.productos_agregados = new System.Windows.Forms.DataGridView();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,16 +72,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.bt_cancelar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbproductos)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productos_agregados)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cantidad)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -240,21 +240,10 @@
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(3, 8);
+            this.textBox1.Location = new System.Drawing.Point(3, 10);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(536, 25);
             this.textBox1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackgroundImage = global::MaxiAhorroApp.Properties.Resources.lupa;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(545, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 28);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -394,7 +383,7 @@
             this.tipopago.Items.AddRange(new object[] {
             "EFECTIVO",
             "TRANSFERENCIA"});
-            this.tipopago.Location = new System.Drawing.Point(203, 153);
+            this.tipopago.Location = new System.Drawing.Point(203, 149);
             this.tipopago.Name = "tipopago";
             this.tipopago.Size = new System.Drawing.Size(194, 28);
             this.tipopago.TabIndex = 3;
@@ -466,7 +455,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 155);
+            this.label14.Location = new System.Drawing.Point(3, 130);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 20);
             this.label14.TabIndex = 12;
@@ -477,7 +466,7 @@
             this.totalpag.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.totalpag.Location = new System.Drawing.Point(203, 158);
+            this.totalpag.Location = new System.Drawing.Point(203, 133);
             this.totalpag.Name = "totalpag";
             this.totalpag.ReadOnly = true;
             this.totalpag.Size = new System.Drawing.Size(194, 25);
@@ -487,7 +476,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 124);
+            this.label12.Location = new System.Drawing.Point(3, 104);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(62, 20);
             this.label12.TabIndex = 8;
@@ -498,7 +487,7 @@
             this.telcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.telcli.Location = new System.Drawing.Point(203, 127);
+            this.telcli.Location = new System.Drawing.Point(203, 107);
             this.telcli.Name = "telcli";
             this.telcli.Size = new System.Drawing.Size(194, 25);
             this.telcli.TabIndex = 9;
@@ -508,7 +497,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 93);
+            this.label11.Location = new System.Drawing.Point(3, 78);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(66, 20);
             this.label11.TabIndex = 6;
@@ -519,7 +508,7 @@
             this.dircli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dircli.Location = new System.Drawing.Point(203, 96);
+            this.dircli.Location = new System.Drawing.Point(203, 81);
             this.dircli.Name = "dircli";
             this.dircli.Size = new System.Drawing.Size(194, 25);
             this.dircli.TabIndex = 7;
@@ -528,7 +517,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 62);
+            this.label10.Location = new System.Drawing.Point(3, 52);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 20);
             this.label10.TabIndex = 4;
@@ -539,7 +528,7 @@
             this.cedcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cedcli.Location = new System.Drawing.Point(203, 65);
+            this.cedcli.Location = new System.Drawing.Point(203, 55);
             this.cedcli.Name = "cedcli";
             this.cedcli.Size = new System.Drawing.Size(194, 25);
             this.cedcli.TabIndex = 5;
@@ -549,7 +538,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 31);
+            this.label9.Location = new System.Drawing.Point(3, 26);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(112, 20);
             this.label9.TabIndex = 2;
@@ -560,7 +549,7 @@
             this.nomcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.nomcli.Location = new System.Drawing.Point(203, 34);
+            this.nomcli.Location = new System.Drawing.Point(203, 29);
             this.nomcli.Name = "nomcli";
             this.nomcli.Size = new System.Drawing.Size(194, 25);
             this.nomcli.TabIndex = 3;
@@ -652,6 +641,17 @@
             this.bt_cancelar.UseVisualStyleBackColor = false;
             this.bt_cancelar.Click += new System.EventHandler(this.bt_cancelar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackgroundImage = global::MaxiAhorroApp.Properties.Resources.lupa;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(545, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 28);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
@@ -670,7 +670,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbproductos)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productos_agregados)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
@@ -678,6 +677,7 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
