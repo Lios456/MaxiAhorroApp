@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace MaxiAhorroApp.Clases
 {
-    internal class datoscli
-    {
-        public int idcliente { get; set; }
+    public class datoscli
+    {        
         public int numfactura { get; set; }
         public string nombrecliente { get; set; }
         public string cedulacliente { get; set; }  
@@ -16,5 +15,6 @@ namespace MaxiAhorroApp.Clases
         public string telefonocliente { get; set; }
         public string formapago { get; set; }
         public DateTime fechapago { get; set; }
+        public float totalpagar { get; set; }
     }
 }
