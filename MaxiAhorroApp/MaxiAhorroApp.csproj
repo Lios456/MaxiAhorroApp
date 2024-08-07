@@ -323,6 +323,12 @@
     <Compile Include="Vistas\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Venta.Designer.cs">
+      <DependentUpon>Venta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\ver_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -362,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Venta.resx">
+      <DependentUpon>Venta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\ver_Empleados.resx">
       <DependentUpon>ver_Empleados.cs</DependentUpon>

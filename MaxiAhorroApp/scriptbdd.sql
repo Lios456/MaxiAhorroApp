@@ -233,7 +233,7 @@ BEGIN
     set new.Apellido = upper(new.Apellido);
 END;
 
-drop procedure sp_total_productos;
+drop procedure if exists sp_total_productos;
 create procedure sp_total_productos()
 begin
 SELECT COUNT(*) FROM minimarket.productos;
