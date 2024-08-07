@@ -235,7 +235,6 @@ namespace MaxiAhorroApp.Vistas
             dircli.Clear();
             telcli.Clear();
             totalpag.Clear();
-
             productos.Clear();
             productos_agregados.DataSource = null;
             productos_agregados.DataSource = productos;

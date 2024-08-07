@@ -257,11 +257,11 @@ select
         u.Apellido;
 end;
 
-
+-- aqui esta la parte del sp y las tres tablas de cliente, factura y detalles factura
 CREATE TABLE IF NOT EXISTS minimarket.clientes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    cedulacliente VARCHAR(20) PRIMARY KEY,
     nombrecliente VARCHAR(100) NOT NULL,
-    cedulacliente VARCHAR(20) UNIQUE NOT NULL,
+    apellidocliente varchar(29) not null,
     direccioncliente TEXT,
     telefonocliente VARCHAR(15)
 );
@@ -269,11 +269,11 @@ CREATE TABLE IF NOT EXISTS minimarket.clientes (
 CREATE TABLE IF NOT EXISTS minimarket.facturas (
     id INT AUTO_INCREMENT PRIMARY KEY,
     numfactura INT NOT NULL UNIQUE,
-    cliente_id INT NOT NULL,
+    cedulacliente VARCHAR(20) NOT NULL,
     formapago VARCHAR(50) NOT NULL,
     fechapago DATE NOT NULL,
     totalpagar DECIMAL(10, 2) NOT NULL CHECK (totalpagar >= 0),
-    FOREIGN KEY (cliente_id) REFERENCES minimarket.clientes(id)
+    FOREIGN KEY (cedulacliente) REFERENCES minimarket.clientes(cedulacliente)
 );
 
 CREATE TABLE IF NOT EXISTS minimarket.detalle_factura (
@@ -287,3 +287,52 @@ CREATE TABLE IF NOT EXISTS minimarket.detalle_factura (
     FOREIGN KEY (producto_id) REFERENCES minimarket.productos(id)
 );
 
+drop procedure sp_insertar_factura;
+CREATE PROCEDURE sp_insertar_factura(
+    IN NumFactura INT,
+    IN NombreCliente VARCHAR(100),
+    IN ApellidoCliente VARCHAR(100),
+    IN CedulaCliente VARCHAR(20),
+    IN DireccionCliente TEXT,
+    IN TelefonoCliente VARCHAR(15),
+    IN TotalPagar DECIMAL(10, 2),
+    IN FormaPago VARCHAR(50),
+    IN FechaPago DATE
+)
+BEGIN
+    -- Verificar si el cliente ya existe
+    IF NOT EXISTS (
+        SELECT 1 FROM minimarket.clientes WHERE cedulacliente = p_CedulaCliente
+    ) THEN
+        -- Si el cliente no existe, insertar los datos del cliente
+        INSERT INTO minimarket.clientes (
+            nombrecliente,
+            apellidoCliente,
+            cedulacliente,
+            direccioncliente,
+            telefonocliente
+        ) VALUES (
+            NombreCliente,
+            ApellidoCliente,
+            CedulaCliente,
+            DireccionCliente,
+            TelefonoCliente
+        );
+    END IF;
+
+    -- Insertar la factura asociada a la cédula del cliente
+    INSERT INTO minimarket.facturas (
+        numfactura,
+        cedulacliente,
+        formapago,
+        fechapago,
+        totalpagar
+    ) VALUES (
+        NumFactura,
+        CedulaCliente,
+        FormaPago,
+        FechaPago,
+        TotalPagar
+    );
+    
+END;
