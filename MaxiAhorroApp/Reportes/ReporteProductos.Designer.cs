@@ -76,11 +76,12 @@
             this.viewer.AllowDrop = true;
             this.viewer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewer.Location = new System.Drawing.Point(0, 0);
+            this.viewer.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.viewer.Name = "viewer";
             this.viewer.Report = null;
             this.viewer.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.viewer.ShowZoom = true;
-            this.viewer.Size = new System.Drawing.Size(1102, 597);
+            this.viewer.Size = new System.Drawing.Size(1469, 735);
             this.viewer.TabIndex = 0;
             // 
             // stiReportDataSource3
@@ -95,12 +96,14 @@
             // 
             // ReporteProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 597);
+            this.ClientSize = new System.Drawing.Size(1469, 735);
             this.Controls.Add(this.viewer);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ReporteProductos";
             this.Text = "ReporteProductos";
+            this.Load += new System.EventHandler(this.ReporteProductos_Load);
             this.ResumeLayout(false);
 
         }

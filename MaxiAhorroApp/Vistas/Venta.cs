@@ -261,5 +261,10 @@ namespace MaxiAhorroApp.Vistas
             nomcli.Text = filteredText;
             nomcli.SelectionStart = Math.Min(cursorPosition, nomcli.Text.Length);
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

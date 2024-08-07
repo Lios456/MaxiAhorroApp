@@ -1,0 +1,957 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <CalculationMode>Interpretation</CalculationMode>
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="3">
+      <MySQL Ref="2" type="Stimulsoft.Report.Dictionary.StiMySqlDatabase" isKey="true">
+        <Alias>MySQL</Alias>
+        <ConnectionStringEncrypted />
+        <Name>MySQL</Name>
+      </MySQL>
+      <MySQL2 Ref="3" type="Stimulsoft.Report.Dictionary.StiMySqlDatabase" isKey="true">
+        <Alias>MySQL2</Alias>
+        <ConnectionStringEncrypted>41bRCWFT+6RsT+GE6RjhG9Vg0SvGUUFZRhWhhOl4pGfZastIT12b9WxFsMBqEHUH0fLN600Yox1reLXw6uygKo0SZQLGSvPFRQjd3E4Jd3s=</ConnectionStringEncrypted>
+        <Name>MySQL2</Name>
+      </MySQL2>
+      <MS_x0020_SQL Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>MS SQL</Alias>
+        <ConnectionStringEncrypted>9Fz7SEZKct35CE3AepiiJ9FS+89IXZPN4k3oDOFsYDvFVNvrXUujpOJGjZzDhOFjwyr7KEVWS931TO2AThzre99w+8LvZ1oFRWv93GNc4zvTWvcCVVmjXWlhCYRNTKQPi3xp79cFQg==</ConnectionStringEncrypted>
+        <Name>MS SQL</Name>
+      </MS_x0020_SQL>
+    </Databases>
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <UserFunctions isList="true" count="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>53463c3382854b698239184ae5cb483a</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="5" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="4">
+        <PageHeaderBand1 Ref="6" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,2.4</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text2 Ref="7" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.6,0.4,4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,20,Bold</Font>
+              <Name>Text2</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>MaxiAhorro
+</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text2>
+            <Text3 Ref="8" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.8,0,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,12,Italic</Font>
+              <Name>Text3</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>MiniMarket</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text3>
+            <Image1 Ref="9" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,-0.4,3.2,3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <IconColor>68, 114, 196</IconColor>
+              <ImageBytes>iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAQAAABpN6lAAAAAIGNIUk0AAHomAACAhAAA+gAAAIDo
+AAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAD/h4/MvwAAAAd0SU1FB+gIBxIkCHv1Xr0AAAAB
+b3JOVAHPoneaAAAIkUlEQVR42u3d268dVR0H8M/M7EJLe2jLpRQClbuAQUWMCjVQUSSgEG4RSiTc
+QvAeffJ/IDE++OgDUZuA8UEawRgeDEWrgCaACCIkFaHKJVbshULPnpnlw949l57ZZ8++zN6zD+e7
+HtrstWf2+n1/v/X7/dZvrZnDMpaxjGUsYxnL+KAiGujqeMDrh4MgH8fPxuJxSz6DpP+x9KvBWBCc
+4wIrhTGKHjnoBbtEjHIcMTZ5WCrUoE37hZPbo+qDwX7Ez51uh03ysWp/VobYy7Z4QzSa8cT4peCQ
+fOzaD4LcIcE2fdpAP+JfLK+J8LMkTLuwHwp65yzCHSLZKNgujcwK9xg0rJcU/wRvCLWzgOBtG3un
+oFcLSHCTjbJapEBzFZM50e3tEVaMPwqysev8yJYJXrJSpdMgwZbamf/hlgq29moDvTvBexlP7t0V
+Eb5R5ehinOFAbS2gNa4v6MkGerGAGHdYLa2ZA5xFjm+qaFUQYY1dtXSAcy0g9TE9KLa8BcS43hmy
+Gi2DFyopk7hPJZEgwo62r61vywXvOK08BWW1mQguc5kwikRjIDWl1rlLaUfYiznXNwAeKdHd1g7X
+VbcC4P4aB8C5LRXcq6QNlLOAGHdZU+MAOBeRlrUObb0a4Viv1joAzm+Z4GqlbKCMBcS40YdqHQDn
+I+DrhpYQRdg5QfpvearMRUoouLtOE8HnXCpMjP5bwTB2txLZQDmh7jMJAXAuEnzFSd0LN90IiGXO
+cm2Jb9YLkcwGt+jqCLsTwB2OmZAAOJ8C7hQPNvIIU/4xUQ6wx2C4uAW0VoCnT1AAnIuAewwUDCM8
+ru4rwMWC4UFnW1TNi2k2Fnza5UZSaq4AkdQqW/snoLUHRDpuSfpGjK1W9OcII2zwlslYAfbtCDtb
+QIKbbajdHlBvCPhq/5fXcw+oV0f4XyfrmBR3soAYl/iMSVoBFCGSWe/LOk6CuOOFbDXEosJYcUtn
+SaIOnwZr/dWpwkR7AAgi0y70srhoQVdsATGuceqEO8AWIqmjXNdJ1mICAm4b98iHSAHX6zAJijQc
+y53peccsgQlAaxKkLvRS0SQosoAY107kErgYkVTDVcXSFhGQ4UYjOHA0Qgq4RmFVa6GQsdx5ntdY
+IhOA1iTY7wK7F06ChRYQ4VyNJREBZmXKTTlHgcI7h8Glh8Jc8INCQMCKDzIB0Cgvah3OgA8fPUyB
+ydoEKYseLKA57rFWgsKoVkzA+5ZSGnQYhRO7mID3liQBhXa9kICAA4zq8ZMR4v1yBMAeB8c92iEj
+wrvlCAj4n33jHvFQ0aps7lPgB4oIiBzwuqUWDN/1n6KPO9UDXhn3eIeKgD3eUcoCWvPlaUspHwzY
+5T1xOQICnjSpW6KdCPiL0hWhHM94RbRkvECE3yu06WILaJi23VJxg0FijyeK5em8GHrAIY0l4Qcy
+/NpbkiJpiud5kHjbaS6e0MMx8xHha3b3lttG2Oh1k3o8ZrZNC36sjyJPgqtk8kUpyLtsn6ddCBy0
+v9vm/bTgRev1tbhLcKtU0Fz0lEhaOIx85vOsgxDd+9NF+7Ou5DQFrzm3H/230MDlXhPkHUjYZ1fb
+DppSmVwuk858+2EPtulY2J8Ltnto0f5HbVvQn0s12+Q950Ah+U2ZXPC40wyU0SRY5357LTwrlAt2
+O8n32hTN7216zJXg835bYCOZHa4R4Uo7Csl9yg0iXOY3mgW//bLbbfCOolNMueBFd4pFi2u/+8xI
+BLmNbvb9I84LBJE3nWu/1a7wJRc5xWqpPV72hEf8XetFOxk+6jqbnWmtYK9ddvpVOzdr9V/kBp91
+hnXY61V/sN3Twkz/+a53uXMcJ/Gu3f5ku8cdssErjl0wqn/5qcfs1BQbQjYTSSR4UJiniVzwb1Nm
+Z9gx1jt2xuDi9v9mX3LTMGVqkf6jHec4Kzv2H+V4G6xpixvjxAW22RT8DImouAw6HyW+IsiskEkK
+LSa0BxnJHGwXUhKRfIb5TOutQ7nU/vbQ48L+Qw7N9IeZ/fzZ/ml72ippCDpH9RiJvMwJxzIE0DKj
+zqZ0+F1Oh+nJCq7P5/TnC+7VW3+QWmz6BmRKpT1lCSiHbj852x+LZl5+1Po3lHgpTwWJ+XAJKINI
+UqDhFilxWb1NKgFR2xOwySec71RT2Ge3Fz3jdXmbnhGSMEoCYmTWu9VtLrbqiN73/Nk2P7e3HXhr
+hgQPmb80aoXBNcrl2QkavutNh5/zb85pWfvTN3xLolzuFukUBreVvIPRbYQnMh+20w9taCepicac
+FrcT6pP8yO+c3Q66I8BoCEhktnjSp6SCRFJgM610K0hd4kmbR0XBKAhIZC71iHVSja5PKTWkjveo
+T46mGFP9T0QyJ3vQallJl9uQWeshJ8ir36IdBQH8wCZpDyadSJ3lfiPYo66agETuClvlPQbchuAu
+m+VVj7BqAgK+rZ8kNsd3VG4D1RLQOnbd4ZRuiZFdbVPVrrBqArjCqr5OnUYyU7ZUPcZqCQjYrN9V
+XMCllY6vcgJynKffeRzhIyp+bqlKAiLBysUeWStBwEYrVHpqveoosNLUQARMzVQIJ5SAQd9A3i11
+rj0Bg8bxic8Ea49BK0JRu3xRFOhizSFUnBpodKghNgdfMg86wFb1vriUmaM5YHGrVQBPO95/etDi
+2aAErHKjgx0sIJJa6+iB7n+0G+zvcFIlklo/4P0HIiDCOj8p+c3+7r/GA5Xdf2ACWuiWpw06Syu+
+/+AEVF25q/j+vYbBpXBqrG8CIkvwMYpeCDhoUiygh6cdyhIQ4dmJIeBZQ7fVGKfYc8QZkfq1puCt
+Xv7SRFkfGyT22e2m9tmOcQta3Fry3OMpSRXbq60y5d/U9d1SueAFX9STZ+ttpsRyR/m4TbVcReb+
+6TnTxW+LGRaSmgfCqNfEqZ9ydR21fxj1+ONfy1jGMpaxjGUsYyLwf0VCzItP3dMAAAAAJXRFWHRk
+YXRlOmNyZWF0ZQAyMDI0LTA4LTA3VDE4OjM2OjA4KzAwOjAwxHp6OAAAACV0RVh0ZGF0ZTptb2Rp
+ZnkAMjAyNC0wOC0wN1QxODozNjowOCswMDowMLUnwoQAAAAodEVYdGRhdGU6dGltZXN0YW1wADIw
+MjQtMDgtMDdUMTg6MzY6MDgrMDA6MDDiMuNbAAAAAElFTkSuQmCC</ImageBytes>
+              <Name>Image1</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+            </Image1>
+            <Text4 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.2,1.8,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <Name>Text4</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>Fecha:
+</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text4>
+            <Text5 Ref="11" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.6,1.8,6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,12,Italic</Font>
+              <Name>Text5</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{DateTime.Now.Day}/{DateTime.Now.Month}/{DateTime.Now.Year}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text5>
+            <Text19 Ref="12" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.2,1.2,10.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,12,Italic</Font>
+              <Name>Text19</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>"MaxiAhorro: grandes ahorros en cada pequeño detalle."</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text19>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </PageHeaderBand1>
+        <PageFooterBand1 Ref="13" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,25.1,19,2.6</ClientRectangle>
+          <Components isList="true" count="7">
+            <Text8 Ref="14" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.2,0.1,2.8,2.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Name>Text8</Name>
+              <Page isRef="5" />
+              <Parent isRef="13" />
+              <Text>Desarrollado por:
+Luis Jerez
+Bryan Guayta
+Richard Farinango
+Henrry Barrionuevo
+Gendres Santana
+Jean Basantes</Text>
+              <TextBrush>[127:127:127]</TextBrush>
+              <Type>Expression</Type>
+            </Text8>
+            <Text7 Ref="15" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.2,1.9,7.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,12,Bold</Font>
+              <Name>Text7</Name>
+              <Page isRef="5" />
+              <Parent isRef="13" />
+              <Text>@Desarrollodo por estudiantes de la UTC
+
+</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text7>
+            <Text15 Ref="16" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,0.3,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,12,Bold</Font>
+              <Name>Text15</Name>
+              <Page isRef="5" />
+              <Parent isRef="13" />
+              <Text>Dirección:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text15>
+            <Text14 Ref="17" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.4,0.3,9,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,10,Italic</Font>
+              <Name>Text14</Name>
+              <Page isRef="5" />
+              <Parent isRef="13" />
+              <Text>Av. Simón Rodríguez s/n Barrio El Ejido Sector San Felipe.</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text14>
+            <Text16 Ref="18" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.6,1.9,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,10,Bold| Italic</Font>
+              <Name>Text16</Name>
+              <Page isRef="5" />
+              <Parent isRef="13" />
+              <Text>Latacunga-Ecuador
+</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text16>
+            <Text17 Ref="19" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,1.1,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Times New Roman,12,Bold</Font>
+              <Name>Text17</Name>
+              <Page isRef="5" />
+              <Parent isRef="13" />
+              <Text>Teléfono:
+</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text17>
+            <Text18 Ref="20" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.4,1.1,9,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,10,Italic</Font>
+              <Name>Text18</Name>
+              <Page isRef="5" />
+              <Parent isRef="13" />
+              <Text>0997870978</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text18>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </PageFooterBand1>
+        <DataBand2 Ref="21" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,3.6,19,3.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <Table1 Ref="22" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+              <Brush>Transparent</Brush>
+              <BusinessObjectGuid isNull="true" />
+              <ClientRectangle>0,0.4,19,3.6</ClientRectangle>
+              <ColumnCount>4</ColumnCount>
+              <Components isList="true" count="16">
+                <Table1_Cell1 Ref="23" type="TableCell" isKey="true">
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,0,4.8,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Enabled>False</Enabled>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>59</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell1</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="22" />
+                  <ParentJoin>55</ParentJoin>
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table1_Cell1>
+                <Table1_Cell2 Ref="24" type="TableCell" isKey="true">
+                  <Border>Left;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[127:127:127]</Brush>
+                  <ClientRectangle>0,0,9.6,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,12,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>55</ID>
+                  <Join>True</Join>
+                  <JoinCells isList="true" count="2">
+                    <value>59</value>
+                    <value>55</value>
+                  </JoinCells>
+                  <JoinHeight>1</JoinHeight>
+                  <JoinWidth>2</JoinWidth>
+                  <Name>Table1_Cell2</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="22" />
+                  <ParentJoin>55</ParentJoin>
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Datos del cliente</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell2>
+                <Table1_Cell3 Ref="25" type="TableCell" isKey="true">
+                  <Border>Left, Right;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[127:127:127]</Brush>
+                  <ClientRectangle>9.6,0,4.8,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,11,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>63</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell3</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="22" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Factura N°</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell3>
+                <Table1_Cell4 Ref="26" type="TableCell" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>14.4,0,4.6,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,11,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>0</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell4</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="22" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell4>
+                <Table1_Cell5 Ref="27" type="TableCell" isKey="true">
+                  <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[198:217:240]</Brush>
+                  <ClientRectangle>0,0.6,4.8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,11,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>60</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell5</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="22" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Nombre:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell5>
+                <Table1_Cell6 Ref="28" type="TableCell" isKey="true">
+                  <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>4.8,0.6,4.8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>56</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell6</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="22" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table1_Cell6>
+                <Table1_Cell7 Ref="29" type="TableCell" isKey="true">
+                  <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[198:217:240]</Brush>
+                  <ClientRectangle>9.6,0.6,4.8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,11,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>64</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell7</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="22" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Cédula:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell7>
+                <Table1_Cell8 Ref="30" type="TableCell" isKey="true">
+                  <Border>Right, Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>14.4,0.6,4.6,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>5</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell8</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="22" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell8>
+                <Table1_Cell9 Ref="31" type="TableCell" isKey="true">
+                  <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[198:217:240]</Brush>
+                  <ClientRectangle>0,1.6,4.8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,11,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>61</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell9</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="22" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Apellido:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell9>
+                <Table1_Cell10 Ref="32" type="TableCell" isKey="true">
+                  <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>4.8,1.6,4.8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>57</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell10</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="22" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table1_Cell10>
+                <Table1_Cell11 Ref="33" type="TableCell" isKey="true">
+                  <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[198:217:240]</Brush>
+                  <ClientRectangle>9.6,1.6,4.8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,11,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>65</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell11</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="22" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Teléfono:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell11>
+                <Table1_Cell12 Ref="34" type="TableCell" isKey="true">
+                  <Border>Right, Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>14.4,1.6,4.6,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>40</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell12</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="22" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table1_Cell12>
+                <Table1_Cell13 Ref="35" type="TableCell" isKey="true">
+                  <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[198:217:240]</Brush>
+                  <ClientRectangle>0,2.6,4.8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,11,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>62</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell13</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="22" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Dirección:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table1_Cell13>
+                <Table1_Cell14 Ref="36" type="TableCell" isKey="true">
+                  <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>4.8,2.6,4.8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>58</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell14</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="22" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table1_Cell14>
+                <Table1_Cell15 Ref="37" type="TableCell" isKey="true">
+                  <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>9.6,2.6,4.8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>66</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell15</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="22" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table1_Cell15>
+                <Table1_Cell16 Ref="38" type="TableCell" isKey="true">
+                  <Border>Right, Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>14.4,2.6,4.6,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>43</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table1_Cell16</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="22" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table1_Cell16>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <DataRelationName isNull="true" />
+              <DataSourceName>sp_consultar_empleados3</DataSourceName>
+              <Expressions isList="true" count="0" />
+              <Filters isList="true" count="0" />
+              <HeaderRowsCount>1</HeaderRowsCount>
+              <MinHeight>0.4</MinHeight>
+              <Name>Table1</Name>
+              <NumberID>67</NumberID>
+              <Page isRef="5" />
+              <Parent isRef="21" />
+              <RowCount>4</RowCount>
+              <Sort isList="true" count="0" />
+            </Table1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>sp_consultar_empleados</DataSourceName>
+          <Expressions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand2</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+          <Sort isList="true" count="0" />
+        </DataBand2>
+        <DataBand1 Ref="39" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,8,19,4</ClientRectangle>
+          <Components isList="true" count="1">
+            <Table2 Ref="40" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+              <Brush>Transparent</Brush>
+              <BusinessObjectGuid isNull="true" />
+              <ClientRectangle>0,0.4,19,4.8</ClientRectangle>
+              <ColumnCount>3</ColumnCount>
+              <Components isList="true" count="15">
+                <Table2_Cell1 Ref="41" type="TableCell" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[127:127:127]</Brush>
+                  <ClientRectangle>0,0,13,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,12,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>55</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table2_Cell1</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="40" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Datos del cliente</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table2_Cell1>
+                <Table2_Cell2 Ref="42" type="TableCell" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[127:127:127]</Brush>
+                  <ClientRectangle>13,0,3,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,11,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>63</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table2_Cell2</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="40" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Cantidad</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table2_Cell2>
+                <Table2_Cell3 Ref="43" type="TableCell" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[127:127:127]</Brush>
+                  <ClientRectangle>16,0,3,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,11,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>0</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table2_Cell3</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="40" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Precio Unitario</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table2_Cell3>
+                <Table2_Cell4 Ref="44" type="TableCell" isKey="true">
+                  <Border>Left, Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,0.6,13,1.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Enabled>False</Enabled>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>67</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table2_Cell4</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="40" />
+                  <ParentJoin>79</ParentJoin>
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table2_Cell4>
+                <Table2_Cell5 Ref="45" type="TableCell" isKey="true">
+                  <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>13,0.6,3,1.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>68</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table2_Cell5</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="40" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table2_Cell5>
+                <Table2_Cell6 Ref="46" type="TableCell" isKey="true">
+                  <Border>Right, Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>16,0.6,3,1.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>69</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table2_Cell6</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="40" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table2_Cell6>
+                <Table2_Cell7 Ref="47" type="TableCell" isKey="true">
+                  <Border>Left, Right;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,2.4,13,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Enabled>False</Enabled>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>73</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table2_Cell7</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="40" />
+                  <ParentJoin>79</ParentJoin>
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table2_Cell7>
+                <Table2_Cell8 Ref="48" type="TableCell" isKey="true">
+                  <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[127:127:127]</Brush>
+                  <ClientRectangle>13,2.4,3,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,10,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>74</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table2_Cell8</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="40" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>SubTotal IVA 15%</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table2_Cell8>
+                <Table2_Cell9 Ref="49" type="TableCell" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>16,2.4,3,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>75</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table2_Cell9</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="40" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table2_Cell9>
+                <Table2_Cell10 Ref="50" type="TableCell" isKey="true">
+                  <Border>Left, Right;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,3.2,13,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Enabled>False</Enabled>
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>76</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table2_Cell10</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="40" />
+                  <ParentJoin>79</ParentJoin>
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table2_Cell10>
+                <Table2_Cell11 Ref="51" type="TableCell" isKey="true">
+                  <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[127:127:127]</Brush>
+                  <ClientRectangle>13,3.2,3,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,10,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>77</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table2_Cell11</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="40" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Valor IVA 15%</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table2_Cell11>
+                <Table2_Cell12 Ref="52" type="TableCell" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>16,3.2,3,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>78</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table2_Cell12</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="40" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table2_Cell12>
+                <Table2_Cell13 Ref="53" type="TableCell" isKey="true">
+                  <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,0.6,13,4.2</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>79</ID>
+                  <Join>True</Join>
+                  <JoinCells isList="true" count="4">
+                    <value>67</value>
+                    <value>73</value>
+                    <value>76</value>
+                    <value>79</value>
+                  </JoinCells>
+                  <JoinHeight>4</JoinHeight>
+                  <JoinWidth>1</JoinWidth>
+                  <Name>Table2_Cell13</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="40" />
+                  <ParentJoin>79</ParentJoin>
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table2_Cell13>
+                <Table2_Cell14 Ref="54" type="TableCell" isKey="true">
+                  <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+                  <Brush>[127:127:127]</Brush>
+                  <ClientRectangle>13,4,3,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,10,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <ID>80</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table2_Cell14</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="40" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Valor Total</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Table2_Cell14>
+                <Table2_Cell15 Ref="55" type="TableCell" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>16,4,3,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Expressions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <ID>81</ID>
+                  <JoinCells isList="true" count="0" />
+                  <Name>Table2_Cell15</Name>
+                  <Page isRef="5" />
+                  <Parent isRef="40" />
+                  <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <TextBrush>Black</TextBrush>
+                </Table2_Cell15>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <DataRelationName isNull="true" />
+              <DataSourceName>sp_consultar_empleados3</DataSourceName>
+              <Expressions isList="true" count="0" />
+              <Filters isList="true" count="0" />
+              <HeaderRowsCount>1</HeaderRowsCount>
+              <MinHeight>0.4</MinHeight>
+              <Name>Table2</Name>
+              <NumberID>82</NumberID>
+              <Page isRef="5" />
+              <Parent isRef="39" />
+              <Sort isList="true" count="0" />
+            </Table2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>sp_consultar_empleados</DataSourceName>
+          <Expressions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Expressions isList="true" count="0" />
+      <Guid>4580d8342590494886bbdc9fb5005911</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportAuthor>Henrry Barrionuevo</ReportAuthor>
+  <ReportChanged>8/7/2024 3:24:53 PM</ReportChanged>
+  <ReportCreated>8/7/2024 1:43:29 PM</ReportCreated>
+  <ReportFile>C:\Users\User\Desktop\maxiahrro\MaxiAhorroApp\MaxiAhorroApp\Reportes\factura.mrt</ReportFile>
+  <ReportGuid>f6ba860fccc24834aa0d63dae492d61b</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2024.3.3.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

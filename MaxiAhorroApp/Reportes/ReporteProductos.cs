@@ -43,6 +43,9 @@ namespace MaxiAhorroApp.Reportes
 
         }
 
+        private void ReporteProductos_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

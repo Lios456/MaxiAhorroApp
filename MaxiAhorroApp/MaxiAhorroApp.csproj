@@ -317,6 +317,12 @@
     <Compile Include="Vistas\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\facturavista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\facturavista.Designer.cs">
+      <DependentUpon>facturavista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -366,6 +372,9 @@
     <EmbeddedResource Include="Vistas\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\facturavista.resx">
+      <DependentUpon>facturavista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -394,6 +403,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Reportes\empleadosreport.mrt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reportes\factura.mrt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Reportes\productosreport.mrt">
