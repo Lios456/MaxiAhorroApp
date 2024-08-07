@@ -13,7 +13,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>MaxiAhorroApp</RootNamespace>
     <AssemblyName>MaxiAhorroApp</AssemblyName>
-    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -260,6 +260,7 @@
   <ItemGroup>
     <Compile Include="Clases\Administrador.cs" />
     <Compile Include="Clases\Category.cs" />
+    <Compile Include="Clases\datoscli.cs" />
     <Compile Include="Clases\Empleado.cs" />
     <Compile Include="Clases\Marca.cs" />
     <Compile Include="Clases\Producto.cs" />
