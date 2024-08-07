@@ -114,33 +114,68 @@ namespace MaxiAhorroApp.Vistas
 
         private void cedcli_TextChanged(object sender, EventArgs e)
         {
-            // Guardar la posición actual del cursor
+            // Validación del campo de cédula como lo hiciste antes
             int cursorPosition = cedcli.SelectionStart;
-
-            // Filtrar el texto para que solo contenga caracteres numéricos
             string filteredText = new string(cedcli.Text.Where(char.IsDigit).ToArray());
 
-            // Limitar el texto a un máximo de 10 dígitos
             if (filteredText.Length > 10)
             {
                 filteredText = filteredText.Substring(0, 10);
+                // Validar si existe
+
             }
 
-            // Asignar el texto filtrado de nuevo al TextBox
             cedcli.Text = filteredText;
-
-            // Restaurar la posición del cursor
             cedcli.SelectionStart = Math.Min(cursorPosition, cedcli.Text.Length);
 
-            // Validar la cédula ecuatoriana si tiene 10 dígitos
+            // Verificación de la longitud de la cédula
             if (filteredText.Length == 10)
             {
-                if (!EsCedulaEcuatorianaValida(filteredText))
+                if (EsCedulaEcuatorianaValida(filteredText))
+                {
+                    // Obtener los datos del cliente
+                    ventascliente controlador = new ventascliente();
+                    datoscli datos = controlador.completarporcedula(filteredText);
+
+                    if (datos != null)
+                    {
+                        // Completar los campos en el formulario y hacerlos ReadOnly
+                        nomcli.Text = datos.nombrecliente;
+                        nomcli.ReadOnly = true;
+
+                        dircli.Text = datos.direccioncliente;
+                        dircli.ReadOnly = true;
+
+                        telcli.Text = datos.telefonocliente;
+                        telcli.ReadOnly = true;
+                    }
+                    else
+                    {
+                        // Si no se encuentran datos, puedes dejar los campos editables
+                        nomcli.ReadOnly = false;
+                        dircli.ReadOnly = false;
+                        telcli.ReadOnly = false;
+                    }
+                }
+                else
                 {
                     MessageBox.Show("Cédula ecuatoriana inválida. Verifique e intente nuevamente.");
                 }
             }
-            
+            else
+            {
+                // Si la cédula no tiene 10 dígitos, los campos deben ser editables
+                nomcli.ReadOnly = false;
+                dircli.ReadOnly = false;
+                telcli.ReadOnly = false;
+
+                // Limpiar los campos si el usuario borra la cédula parcial
+                nomcli.Clear();
+                dircli.Clear();
+                telcli.Clear();
+            }
+
+
         }
 
         private bool EsCedulaEcuatorianaValida(string cedula)

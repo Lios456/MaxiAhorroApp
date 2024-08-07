@@ -306,6 +306,6 @@ BEGIN
         fechapago,
         totalpagar
     );
-END //
+END;
 
 
