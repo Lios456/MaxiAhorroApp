@@ -215,14 +215,23 @@ namespace MaxiAhorroApp.Vistas
                     FechaPago = DateTime.Now
                 };
 
+                // Llamada al método para insertar la venta
                 new ventascliente().insertarventa(DatosCli);
+
+                // Mostrar mensaje de éxito
                 MessageBox.Show("Factura insertada exitosamente.");
+
+                facturavista abrirfacura = new facturavista();
+
+                abrirfacura.Show();
             }
             catch (Exception ex)
             {
+                // Mostrar mensaje de error en caso de excepción
                 MessageBox.Show($"Error: {ex.Message}");
             }
         }
+
         private void totalpag_TextChanged(object sender, EventArgs e)
         {
             //NO BORRAR, ES IMPORTANTE.
