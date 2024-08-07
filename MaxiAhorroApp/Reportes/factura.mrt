@@ -624,7 +624,7 @@ Jean Basantes</Text>
                   <Page isRef="5" />
                   <Parent isRef="40" />
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
-                  <Text>Datos del cliente</Text>
+                  <Text>Descripción</Text>
                   <TextBrush>Black</TextBrush>
                   <Type>Expression</Type>
                   <VertAlignment>Center</VertAlignment>
@@ -922,10 +922,10 @@ Jean Basantes</Text>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
   <ReportAuthor>Henrry Barrionuevo</ReportAuthor>
-  <ReportChanged>8/7/2024 3:24:53 PM</ReportChanged>
+  <ReportChanged>8/7/2024 5:08:06 PM</ReportChanged>
   <ReportCreated>8/7/2024 1:43:29 PM</ReportCreated>
   <ReportFile>C:\Users\User\Desktop\maxiahrro\MaxiAhorroApp\MaxiAhorroApp\Reportes\factura.mrt</ReportFile>
-  <ReportGuid>f6ba860fccc24834aa0d63dae492d61b</ReportGuid>
+  <ReportGuid>85071bc03f76497287cb1affd5b40643</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2024.3.3.0</ReportVersion>
