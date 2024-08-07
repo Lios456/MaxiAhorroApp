@@ -258,3 +258,54 @@ select
 end;
 
 
+CREATE TABLE IF NOT EXISTS minimarket.factura (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    numfactura INT NOT NULL,
+    nombrecliente VARCHAR(100) NOT NULL,
+    cedulacliente VARCHAR(20) NOT NULL,
+    direccioncliente VARCHAR(255) NOT NULL,
+    telefonocliente VARCHAR(20) NOT NULL,
+    formapago VARCHAR(50) NOT NULL,
+    fechapago DATE NOT NULL,
+    totalpagar DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (numfactura) REFERENCES productos(id)  -- Ejemplo de referencia, ajusta según sea necesario
+);
+
+
+
+drop procedure if exists sp_insertar_factura;
+
+CREATE PROCEDURE sp_insertar_factura(
+    IN numfactura INT,
+    IN nombrecliente VARCHAR(100),
+    IN cedulacliente VARCHAR(20),
+    IN direccioncliente VARCHAR(255),
+    IN telefonocliente VARCHAR(20),
+    IN formapago VARCHAR(50),
+    IN fechapago DATE,
+    in totalpagar decimal (10,2)
+)
+BEGIN
+    INSERT INTO minimarket.factura (
+        numfactura,
+        nombrecliente,
+        cedulacliente,
+        direccioncliente,
+        telefonocliente,
+        formapago,
+        fechapago,
+        totalpagar
+    )
+    VALUES (
+        numfactura,
+        nombrecliente,
+        cedulacliente,
+        direccioncliente,
+        telefonocliente,
+        formapago,
+        fechapago,
+        totalpagar
+    );
+END //
+
+
