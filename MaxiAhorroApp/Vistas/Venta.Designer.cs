@@ -41,6 +41,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.productos_agregados = new System.Windows.Forms.DataGridView();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,33 +57,34 @@
             this.bt_agregar_producto = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.totalpag = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.telcli = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dircli = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cedcli = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.nomcli = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.numfactu = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.totalpag = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.telcli = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dircli = new System.Windows.Forms.TextBox();
+            this.cedcli = new System.Windows.Forms.TextBox();
+            this.apelcli = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.bt_cancelar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbproductos)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productos_agregados)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cantidad)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -112,7 +114,7 @@
             this.label1.Location = new System.Drawing.Point(4, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 6);
+            this.label1.Size = new System.Drawing.Size(55, 6);
             this.label1.TabIndex = 0;
             this.label1.Text = "VENTAS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -155,6 +157,7 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "DETALLE";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label2
             // 
@@ -240,10 +243,21 @@
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(3, 10);
+            this.textBox1.Location = new System.Drawing.Point(3, 6);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(536, 25);
+            this.textBox1.Size = new System.Drawing.Size(536, 29);
             this.textBox1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackgroundImage = global::MaxiAhorroApp.Properties.Resources.lupa;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(545, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 28);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -334,9 +348,9 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(69, 44);
+            this.label5.Location = new System.Drawing.Point(62, 43);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 20);
+            this.label5.Size = new System.Drawing.Size(76, 23);
             this.label5.TabIndex = 0;
             this.label5.Text = "Cantidad:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -344,7 +358,7 @@
             // cantidad
             // 
             this.cantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cantidad.Location = new System.Drawing.Point(203, 42);
+            this.cantidad.Location = new System.Drawing.Point(203, 40);
             this.cantidad.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -356,7 +370,7 @@
             0,
             0});
             this.cantidad.Name = "cantidad";
-            this.cantidad.Size = new System.Drawing.Size(194, 25);
+            this.cantidad.Size = new System.Drawing.Size(194, 29);
             this.cantidad.TabIndex = 1;
             this.cantidad.Value = new decimal(new int[] {
             1,
@@ -368,9 +382,9 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(79, 153);
+            this.label6.Location = new System.Drawing.Point(74, 152);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 20);
+            this.label6.Size = new System.Drawing.Size(51, 23);
             this.label6.TabIndex = 2;
             this.label6.Text = "Pago:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -383,9 +397,9 @@
             this.tipopago.Items.AddRange(new object[] {
             "EFECTIVO",
             "TRANSFERENCIA"});
-            this.tipopago.Location = new System.Drawing.Point(203, 149);
+            this.tipopago.Location = new System.Drawing.Point(203, 151);
             this.tipopago.Name = "tipopago";
-            this.tipopago.Size = new System.Drawing.Size(194, 28);
+            this.tipopago.Size = new System.Drawing.Size(194, 31);
             this.tipopago.TabIndex = 3;
             // 
             // bt_agregar_producto
@@ -425,18 +439,20 @@
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.label14, 0, 6);
-            this.tableLayoutPanel5.Controls.Add(this.totalpag, 1, 6);
-            this.tableLayoutPanel5.Controls.Add(this.label12, 0, 4);
-            this.tableLayoutPanel5.Controls.Add(this.telcli, 1, 4);
-            this.tableLayoutPanel5.Controls.Add(this.label11, 0, 3);
-            this.tableLayoutPanel5.Controls.Add(this.dircli, 1, 3);
-            this.tableLayoutPanel5.Controls.Add(this.label10, 0, 2);
-            this.tableLayoutPanel5.Controls.Add(this.cedcli, 1, 2);
-            this.tableLayoutPanel5.Controls.Add(this.label9, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.nomcli, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.numfactu, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label14, 0, 7);
+            this.tableLayoutPanel5.Controls.Add(this.label12, 0, 6);
+            this.tableLayoutPanel5.Controls.Add(this.totalpag, 1, 7);
+            this.tableLayoutPanel5.Controls.Add(this.label11, 0, 4);
+            this.tableLayoutPanel5.Controls.Add(this.telcli, 1, 6);
+            this.tableLayoutPanel5.Controls.Add(this.label10, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.dircli, 1, 4);
+            this.tableLayoutPanel5.Controls.Add(this.cedcli, 1, 3);
+            this.tableLayoutPanel5.Controls.Add(this.apelcli, 1, 2);
+            this.tableLayoutPanel5.Controls.Add(this.label9, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.label13, 0, 2);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(612, 394);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 8;
@@ -452,106 +468,14 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(400, 222);
             this.tableLayoutPanel5.TabIndex = 9;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 130);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(54, 20);
-            this.label14.TabIndex = 12;
-            this.label14.Text = "TOTAL:";
-            // 
-            // totalpag
-            // 
-            this.totalpag.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.totalpag.Location = new System.Drawing.Point(203, 133);
-            this.totalpag.Name = "totalpag";
-            this.totalpag.ReadOnly = true;
-            this.totalpag.Size = new System.Drawing.Size(194, 25);
-            this.totalpag.TabIndex = 13;
-            this.totalpag.TextChanged += new System.EventHandler(this.totalpagar_TextChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 104);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 20);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Teléfono:";
-            // 
-            // telcli
-            // 
-            this.telcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.telcli.Location = new System.Drawing.Point(203, 107);
-            this.telcli.Name = "telcli";
-            this.telcli.Size = new System.Drawing.Size(194, 25);
-            this.telcli.TabIndex = 9;
-            this.telcli.Text = "09";
-            this.telcli.TextChanged += new System.EventHandler(this.telcli_TextChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 78);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 20);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Dirección:";
-            // 
-            // dircli
-            // 
-            this.dircli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dircli.Location = new System.Drawing.Point(203, 81);
-            this.dircli.Name = "dircli";
-            this.dircli.Size = new System.Drawing.Size(194, 25);
-            this.dircli.TabIndex = 7;
-            this.dircli.TextChanged += new System.EventHandler(this.dircli_TextChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 52);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 20);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Cédula:";
-            // 
-            // cedcli
-            // 
-            this.cedcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cedcli.Location = new System.Drawing.Point(203, 55);
-            this.cedcli.Name = "cedcli";
-            this.cedcli.Size = new System.Drawing.Size(194, 25);
-            this.cedcli.TabIndex = 5;
-            this.cedcli.Text = "Si existe, empiece aquí";
-            this.cedcli.TextChanged += new System.EventHandler(this.cedcli_TextChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 26);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 20);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Nombre y Apellido:";
-            // 
             // nomcli
             // 
             this.nomcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.nomcli.Location = new System.Drawing.Point(203, 29);
+            this.nomcli.Location = new System.Drawing.Point(203, 38);
             this.nomcli.Name = "nomcli";
-            this.nomcli.Size = new System.Drawing.Size(194, 25);
+            this.nomcli.Size = new System.Drawing.Size(194, 29);
             this.nomcli.TabIndex = 3;
             this.nomcli.TextChanged += new System.EventHandler(this.nomcli_TextChanged);
             // 
@@ -560,7 +484,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 20);
+            this.label8.Size = new System.Drawing.Size(122, 23);
             this.label8.TabIndex = 0;
             this.label8.Text = "Nro. de Factura:";
             // 
@@ -571,9 +495,120 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.numfactu.Location = new System.Drawing.Point(203, 3);
             this.numfactu.Name = "numfactu";
-            this.numfactu.Size = new System.Drawing.Size(194, 25);
+            this.numfactu.Size = new System.Drawing.Size(194, 29);
             this.numfactu.TabIndex = 1;
             this.numfactu.TextChanged += new System.EventHandler(this.numfactura_TextChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 210);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(63, 20);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "TOTAL:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(3, 175);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(74, 23);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Teléfono:";
+            // 
+            // totalpag
+            // 
+            this.totalpag.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.totalpag.Location = new System.Drawing.Point(203, 213);
+            this.totalpag.Name = "totalpag";
+            this.totalpag.Size = new System.Drawing.Size(194, 29);
+            this.totalpag.TabIndex = 13;
+            this.totalpag.TextChanged += new System.EventHandler(this.totalpag_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 140);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(79, 23);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Dirección:";
+            // 
+            // telcli
+            // 
+            this.telcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.telcli.Location = new System.Drawing.Point(203, 178);
+            this.telcli.Name = "telcli";
+            this.telcli.Size = new System.Drawing.Size(194, 29);
+            this.telcli.TabIndex = 9;
+            this.telcli.Text = "09";
+            this.telcli.TextChanged += new System.EventHandler(this.telcli_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 105);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 23);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Cédula:";
+            // 
+            // dircli
+            // 
+            this.dircli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dircli.Location = new System.Drawing.Point(203, 143);
+            this.dircli.Name = "dircli";
+            this.dircli.Size = new System.Drawing.Size(194, 29);
+            this.dircli.TabIndex = 7;
+            this.dircli.TextChanged += new System.EventHandler(this.dircli_TextChanged);
+            // 
+            // cedcli
+            // 
+            this.cedcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cedcli.Location = new System.Drawing.Point(203, 108);
+            this.cedcli.Name = "cedcli";
+            this.cedcli.Size = new System.Drawing.Size(194, 29);
+            this.cedcli.TabIndex = 5;
+            this.cedcli.Text = "Si existe, empiece aquí";
+            this.cedcli.TextChanged += new System.EventHandler(this.cedcli_TextChanged);
+            // 
+            // apelcli
+            // 
+            this.apelcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.apelcli.Location = new System.Drawing.Point(203, 73);
+            this.apelcli.Name = "apelcli";
+            this.apelcli.Size = new System.Drawing.Size(194, 29);
+            this.apelcli.TabIndex = 14;
+            this.apelcli.TextChanged += new System.EventHandler(this.apelcli_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 35);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 23);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Nombre:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(3, 70);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(69, 23);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "Apellido:";
             // 
             // tableLayoutPanel6
             // 
@@ -641,20 +676,9 @@
             this.bt_cancelar.UseVisualStyleBackColor = false;
             this.bt_cancelar.Click += new System.EventHandler(this.bt_cancelar_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackgroundImage = global::MaxiAhorroApp.Properties.Resources.lupa;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(545, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 28);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // Venta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1021, 690);
@@ -670,6 +694,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbproductos)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productos_agregados)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
@@ -677,7 +702,6 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -729,5 +753,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button bt_agregar_producto;
+        private System.Windows.Forms.TextBox apelcli;
+        private System.Windows.Forms.Label label13;
     }
 }

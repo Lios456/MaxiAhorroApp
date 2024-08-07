@@ -257,69 +257,88 @@ select
         u.Apellido;
 end;
 
-
-CREATE TABLE IF NOT EXISTS minimarket.factura (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    numfactura INT NOT NULL,
+-- aqui esta la parte del sp y las tres tablas de cliente, factura y detalles factura
+CREATE TABLE IF NOT EXISTS minimarket.clientes (
+    cedulacliente VARCHAR(20) PRIMARY KEY,
     nombrecliente VARCHAR(100) NOT NULL,
+    apellidocliente varchar(29) not null,
+    direccioncliente TEXT,
+    telefonocliente VARCHAR(15)
+);
+
+CREATE TABLE IF NOT EXISTS minimarket.facturas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    numfactura INT NOT NULL UNIQUE,
     cedulacliente VARCHAR(20) NOT NULL,
-    direccioncliente VARCHAR(255) NOT NULL,
-    telefonocliente VARCHAR(20) NOT NULL,
     formapago VARCHAR(50) NOT NULL,
     fechapago DATE NOT NULL,
-    totalpagar DECIMAL(10, 2) NOT NULL,
-    FOREIGN KEY (numfactura) REFERENCES productos(id)  -- Ejemplo de referencia, ajusta según sea necesario
+    totalpagar DECIMAL(10, 2) NOT NULL CHECK (totalpagar >= 0),
+    FOREIGN KEY (cedulacliente) REFERENCES minimarket.clientes(cedulacliente)
+);
+
+CREATE TABLE IF NOT EXISTS minimarket.detalle_factura (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    factura_id INT NOT NULL,
+    producto_id INT NOT NULL,
+    cantidad INT NOT NULL,
+    precio_unitario DECIMAL(10, 2) NOT NULL,
+    subtotal DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (factura_id) REFERENCES minimarket.facturas(id),
+    FOREIGN KEY (producto_id) REFERENCES minimarket.productos(id)
 );
 
 
+-- Eliminar el procedimiento si ya existe
+DROP PROCEDURE IF  not EXISTS sp_insertar_factura;
 
-drop procedure if exists sp_insertar_factura;
-
+-- Crear el nuevo procedimiento
 CREATE PROCEDURE sp_insertar_factura(
-    IN numfactura INT,
-    IN nombrecliente VARCHAR(100),
-    IN cedulacliente VARCHAR(20),
-    IN direccioncliente VARCHAR(255),
-    IN telefonocliente VARCHAR(20),
-    IN formapago VARCHAR(50),
-    IN fechapago DATE,
-    in totalpagar decimal (10,2)
+    IN NumFactura INT,
+    IN NombreCliente VARCHAR(100),
+    IN ApellidoCliente VARCHAR(100),
+    IN CedulaCliente VARCHAR(20),
+    IN DireccionCliente TEXT,
+    IN TelefonoCliente VARCHAR(15),
+    IN TotalPagar DECIMAL(10, 2),
+    IN FormaPago VARCHAR(50),
+    IN FechaPago DATE
 )
 BEGIN
-    INSERT INTO minimarket.factura (
+    -- Verificar si el cliente ya existe
+    IF NOT EXISTS (
+        SELECT 1 FROM minimarket.clientes WHERE cedulacliente = CedulaCliente
+    ) THEN
+        -- Si el cliente no existe, insertar los datos del cliente
+        INSERT INTO minimarket.clientes (
+            nombrecliente,
+            apellidoCliente,
+            cedulacliente,
+            direccioncliente,
+            telefonocliente
+        ) VALUES (
+            NombreCliente,
+            ApellidoCliente,
+            CedulaCliente,
+            DireccionCliente,
+            TelefonoCliente
+        );
+    END IF;
+
+    -- Insertar la factura asociada a la cédula del cliente
+    INSERT INTO minimarket.facturas (
         numfactura,
-        nombrecliente,
         cedulacliente,
-        direccioncliente,
-        telefonocliente,
         formapago,
         fechapago,
         totalpagar
-    )
-    VALUES (
-        numfactura,
-        nombrecliente,
-        cedulacliente,
-        direccioncliente,
-        telefonocliente,
-        formapago,
-        fechapago,
-        totalpagar
+    ) VALUES (
+        NumFactura,
+        CedulaCliente,
+        FormaPago,
+        FechaPago,
+        TotalPagar
     );
+    
 END;
-use minimarket;
-drop procedure if exists sp_obtener_factura;
-create procedure sp_obtener_factura(IN id int)
-begin
-	select * from minimarket.factura f WHERE f.id = id;
-end;
 
-drop procedure if exists sp_obtener_facturas;
-delimiter //
-create procedure sp_obtener_facturas()
-begin
-	select * from minimarket.factura;
-end//
-
-delimiter ;
 

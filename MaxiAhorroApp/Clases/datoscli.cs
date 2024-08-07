@@ -6,15 +6,28 @@ using System.Threading.Tasks;
 
 namespace MaxiAhorroApp.Clases
 {
-    public class datoscli
-    {        
-        public int numfactura { get; set; }
-        public string nombrecliente { get; set; }
-        public string cedulacliente { get; set; }  
-        public string direccioncliente { get; set; }
-        public string telefonocliente { get; set; }
-        public string formapago { get; set; }
-        public DateTime fechapago { get; set; }
-        public float totalpagar { get; set; }
+    public class DatosCli
+    {
+        public int NumFactura { get; set; }
+        public string NombreCliente { get; set; }
+        public string ApellidoCliente { get; set; }
+        public string CedulaCliente { get; set; }
+        public string DireccionCliente { get; set; }
+        public string TelefonoCliente { get; set; }
+        public string FormaPago { get; set; }
+        public DateTime FechaPago { get; set; }
+        public float TotalPagar { get; set; }
+
+        // Relación con los productos comprados (detalles de factura)
+        public List<DetalleFactura> DetallesFactura { get; set; } = new List<DetalleFactura>();
+    }
+
+    public class DetalleFactura
+    {
+        public int ProductoId { get; set; }
+        public string NombreProducto { get; set; }
+        public int Cantidad { get; set; }
+        public float PrecioUnitario { get; set; }
+        public float Subtotal => Cantidad * PrecioUnitario;
     }
 }

@@ -151,8 +151,9 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(106, 49);
             this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
+            this.button5.Text = "Ventas";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -261,7 +262,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 18);
+            this.label1.Size = new System.Drawing.Size(271, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Total Ingresos Generales:";
             // 
@@ -269,9 +270,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label2.Location = new System.Drawing.Point(229, 0);
+            this.label2.Location = new System.Drawing.Point(280, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(224, 18);
+            this.label2.Size = new System.Drawing.Size(274, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Total Ingresos Mensuales:";
             // 
@@ -279,15 +280,15 @@
             // 
             this.label3.AutoSize = true;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label3.Location = new System.Drawing.Point(459, 0);
+            this.label3.Location = new System.Drawing.Point(560, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(227, 18);
+            this.label3.Size = new System.Drawing.Size(279, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Total Ingresos Semanales:";
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1017, 452);
