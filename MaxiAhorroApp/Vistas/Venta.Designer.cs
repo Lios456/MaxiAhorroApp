@@ -58,20 +58,20 @@
             this.bt_cancelar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.numfactura = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.nomcli = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cedcli = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dircli = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.telcli = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.formapago = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.fechapago = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.formapago = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.telcli = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dircli = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cedcli = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.nomcli = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.numfactura = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbproductos)).BeginInit();
@@ -233,9 +233,9 @@
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(3, 9);
+            this.textBox1.Location = new System.Drawing.Point(3, 7);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(538, 25);
+            this.textBox1.Size = new System.Drawing.Size(538, 29);
             this.textBox1.TabIndex = 0;
             // 
             // pictureBox1
@@ -339,9 +339,9 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(69, 52);
+            this.label5.Location = new System.Drawing.Point(62, 51);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 20);
+            this.label5.Size = new System.Drawing.Size(76, 23);
             this.label5.TabIndex = 0;
             this.label5.Text = "Cantidad:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -349,7 +349,7 @@
             // cantidad
             // 
             this.cantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cantidad.Location = new System.Drawing.Point(204, 50);
+            this.cantidad.Location = new System.Drawing.Point(204, 48);
             this.cantidad.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -361,7 +361,7 @@
             0,
             0});
             this.cantidad.Name = "cantidad";
-            this.cantidad.Size = new System.Drawing.Size(195, 25);
+            this.cantidad.Size = new System.Drawing.Size(195, 29);
             this.cantidad.TabIndex = 1;
             this.cantidad.Value = new decimal(new int[] {
             1,
@@ -373,9 +373,9 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(80, 177);
+            this.label6.Location = new System.Drawing.Point(75, 176);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 20);
+            this.label6.Size = new System.Drawing.Size(51, 23);
             this.label6.TabIndex = 2;
             this.label6.Text = "Pago:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -385,9 +385,9 @@
             this.tipopago.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tipopago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tipopago.FormattingEnabled = true;
-            this.tipopago.Location = new System.Drawing.Point(204, 173);
+            this.tipopago.Location = new System.Drawing.Point(204, 175);
             this.tipopago.Name = "tipopago";
-            this.tipopago.Size = new System.Drawing.Size(195, 28);
+            this.tipopago.Size = new System.Drawing.Size(195, 31);
             this.tipopago.TabIndex = 3;
             // 
             // bt_agregar_producto
@@ -456,12 +456,126 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(402, 222);
             this.tableLayoutPanel5.TabIndex = 9;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 210);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(122, 23);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "Fecha de Pago:";
+            // 
+            // fechapago
+            // 
+            this.fechapago.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.fechapago.Location = new System.Drawing.Point(204, 213);
+            this.fechapago.Name = "fechapago";
+            this.fechapago.Size = new System.Drawing.Size(195, 29);
+            this.fechapago.TabIndex = 13;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(3, 175);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(123, 23);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "Forma de Pago:";
+            // 
+            // formapago
+            // 
+            this.formapago.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.formapago.Location = new System.Drawing.Point(204, 178);
+            this.formapago.Name = "formapago";
+            this.formapago.Size = new System.Drawing.Size(195, 29);
+            this.formapago.TabIndex = 11;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(3, 140);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(74, 23);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Teléfono:";
+            // 
+            // telcli
+            // 
+            this.telcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.telcli.Location = new System.Drawing.Point(204, 143);
+            this.telcli.Name = "telcli";
+            this.telcli.Size = new System.Drawing.Size(195, 29);
+            this.telcli.TabIndex = 9;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 105);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(79, 23);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Dirección:";
+            // 
+            // dircli
+            // 
+            this.dircli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dircli.Location = new System.Drawing.Point(204, 108);
+            this.dircli.Name = "dircli";
+            this.dircli.Size = new System.Drawing.Size(195, 29);
+            this.dircli.TabIndex = 7;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 70);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(96, 23);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Cédula/Ruc:";
+            // 
+            // cedcli
+            // 
+            this.cedcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cedcli.Location = new System.Drawing.Point(204, 73);
+            this.cedcli.Name = "cedcli";
+            this.cedcli.Size = new System.Drawing.Size(195, 29);
+            this.cedcli.TabIndex = 5;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 35);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 23);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Nombre:";
+            // 
+            // nomcli
+            // 
+            this.nomcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nomcli.Location = new System.Drawing.Point(204, 38);
+            this.nomcli.Name = "nomcli";
+            this.nomcli.Size = new System.Drawing.Size(195, 29);
+            this.nomcli.TabIndex = 3;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 20);
+            this.label8.Size = new System.Drawing.Size(122, 23);
             this.label8.TabIndex = 0;
             this.label8.Text = "Nro. de Factura:";
             // 
@@ -472,126 +586,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.numfactura.Location = new System.Drawing.Point(204, 3);
             this.numfactura.Name = "numfactura";
-            this.numfactura.Size = new System.Drawing.Size(195, 25);
+            this.numfactura.Size = new System.Drawing.Size(195, 29);
             this.numfactura.TabIndex = 1;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 31);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 20);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Nombre:";
-            // 
-            // nomcli
-            // 
-            this.nomcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nomcli.Location = new System.Drawing.Point(204, 34);
-            this.nomcli.Name = "nomcli";
-            this.nomcli.Size = new System.Drawing.Size(195, 25);
-            this.nomcli.TabIndex = 3;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 62);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 20);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Cédula/Ruc:";
-            // 
-            // cedcli
-            // 
-            this.cedcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cedcli.Location = new System.Drawing.Point(204, 65);
-            this.cedcli.Name = "cedcli";
-            this.cedcli.Size = new System.Drawing.Size(195, 25);
-            this.cedcli.TabIndex = 5;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 93);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 20);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Dirección:";
-            // 
-            // dircli
-            // 
-            this.dircli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dircli.Location = new System.Drawing.Point(204, 96);
-            this.dircli.Name = "dircli";
-            this.dircli.Size = new System.Drawing.Size(195, 25);
-            this.dircli.TabIndex = 7;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 124);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 20);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Teléfono:";
-            // 
-            // telcli
-            // 
-            this.telcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.telcli.Location = new System.Drawing.Point(204, 127);
-            this.telcli.Name = "telcli";
-            this.telcli.Size = new System.Drawing.Size(195, 25);
-            this.telcli.TabIndex = 9;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 155);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(98, 20);
-            this.label13.TabIndex = 10;
-            this.label13.Text = "Forma de Pago:";
-            // 
-            // formapago
-            // 
-            this.formapago.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.formapago.Location = new System.Drawing.Point(204, 158);
-            this.formapago.Name = "formapago";
-            this.formapago.Size = new System.Drawing.Size(195, 25);
-            this.formapago.TabIndex = 11;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 186);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(97, 20);
-            this.label14.TabIndex = 12;
-            this.label14.Text = "Fecha de Pago:";
-            // 
-            // fechapago
-            // 
-            this.fechapago.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.fechapago.Location = new System.Drawing.Point(204, 189);
-            this.fechapago.Name = "fechapago";
-            this.fechapago.Size = new System.Drawing.Size(195, 25);
-            this.fechapago.TabIndex = 13;
             // 
             // Venta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1025, 749);
