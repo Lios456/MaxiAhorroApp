@@ -114,7 +114,7 @@
             this.label1.Location = new System.Drawing.Point(4, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 6);
+            this.label1.Size = new System.Drawing.Size(44, 6);
             this.label1.TabIndex = 0;
             this.label1.Text = "VENTAS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -243,9 +243,9 @@
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(3, 6);
+            this.textBox1.Location = new System.Drawing.Point(3, 8);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(536, 29);
+            this.textBox1.Size = new System.Drawing.Size(536, 25);
             this.textBox1.TabIndex = 0;
             // 
             // pictureBox1
@@ -348,9 +348,9 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(62, 43);
+            this.label5.Location = new System.Drawing.Point(69, 44);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 23);
+            this.label5.Size = new System.Drawing.Size(62, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "Cantidad:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -358,7 +358,7 @@
             // cantidad
             // 
             this.cantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cantidad.Location = new System.Drawing.Point(203, 40);
+            this.cantidad.Location = new System.Drawing.Point(203, 42);
             this.cantidad.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -370,7 +370,7 @@
             0,
             0});
             this.cantidad.Name = "cantidad";
-            this.cantidad.Size = new System.Drawing.Size(194, 29);
+            this.cantidad.Size = new System.Drawing.Size(194, 25);
             this.cantidad.TabIndex = 1;
             this.cantidad.Value = new decimal(new int[] {
             1,
@@ -382,9 +382,9 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(74, 152);
+            this.label6.Location = new System.Drawing.Point(79, 153);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 23);
+            this.label6.Size = new System.Drawing.Size(41, 20);
             this.label6.TabIndex = 2;
             this.label6.Text = "Pago:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -397,9 +397,9 @@
             this.tipopago.Items.AddRange(new object[] {
             "EFECTIVO",
             "TRANSFERENCIA"});
-            this.tipopago.Location = new System.Drawing.Point(203, 151);
+            this.tipopago.Location = new System.Drawing.Point(203, 153);
             this.tipopago.Name = "tipopago";
-            this.tipopago.Size = new System.Drawing.Size(194, 31);
+            this.tipopago.Size = new System.Drawing.Size(194, 28);
             this.tipopago.TabIndex = 3;
             // 
             // bt_agregar_producto
@@ -473,9 +473,9 @@
             this.nomcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.nomcli.Location = new System.Drawing.Point(203, 38);
+            this.nomcli.Location = new System.Drawing.Point(203, 34);
             this.nomcli.Name = "nomcli";
-            this.nomcli.Size = new System.Drawing.Size(194, 29);
+            this.nomcli.Size = new System.Drawing.Size(194, 25);
             this.nomcli.TabIndex = 3;
             this.nomcli.TextChanged += new System.EventHandler(this.nomcli_TextChanged);
             // 
@@ -484,7 +484,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(122, 23);
+            this.label8.Size = new System.Drawing.Size(98, 20);
             this.label8.TabIndex = 0;
             this.label8.Text = "Nro. de Factura:";
             // 
@@ -495,25 +495,25 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.numfactu.Location = new System.Drawing.Point(203, 3);
             this.numfactu.Name = "numfactu";
-            this.numfactu.Size = new System.Drawing.Size(194, 29);
+            this.numfactu.Size = new System.Drawing.Size(194, 25);
             this.numfactu.TabIndex = 1;
             this.numfactu.TextChanged += new System.EventHandler(this.numfactura_TextChanged);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 210);
+            this.label14.Location = new System.Drawing.Point(3, 186);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(63, 20);
+            this.label14.Size = new System.Drawing.Size(54, 20);
             this.label14.TabIndex = 12;
             this.label14.Text = "TOTAL:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 175);
+            this.label12.Location = new System.Drawing.Point(3, 155);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(74, 23);
+            this.label12.Size = new System.Drawing.Size(62, 20);
             this.label12.TabIndex = 8;
             this.label12.Text = "Teléfono:";
             // 
@@ -522,18 +522,19 @@
             this.totalpag.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.totalpag.Location = new System.Drawing.Point(203, 213);
+            this.totalpag.Location = new System.Drawing.Point(203, 189);
             this.totalpag.Name = "totalpag";
-            this.totalpag.Size = new System.Drawing.Size(194, 29);
+            this.totalpag.ReadOnly = true;
+            this.totalpag.Size = new System.Drawing.Size(194, 25);
             this.totalpag.TabIndex = 13;
             this.totalpag.TextChanged += new System.EventHandler(this.totalpag_TextChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 140);
+            this.label11.Location = new System.Drawing.Point(3, 124);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(79, 23);
+            this.label11.Size = new System.Drawing.Size(66, 20);
             this.label11.TabIndex = 6;
             this.label11.Text = "Dirección:";
             // 
@@ -542,9 +543,9 @@
             this.telcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.telcli.Location = new System.Drawing.Point(203, 178);
+            this.telcli.Location = new System.Drawing.Point(203, 158);
             this.telcli.Name = "telcli";
-            this.telcli.Size = new System.Drawing.Size(194, 29);
+            this.telcli.Size = new System.Drawing.Size(194, 25);
             this.telcli.TabIndex = 9;
             this.telcli.Text = "09";
             this.telcli.TextChanged += new System.EventHandler(this.telcli_TextChanged);
@@ -552,9 +553,9 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 105);
+            this.label10.Location = new System.Drawing.Point(3, 93);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 23);
+            this.label10.Size = new System.Drawing.Size(52, 20);
             this.label10.TabIndex = 4;
             this.label10.Text = "Cédula:";
             // 
@@ -563,9 +564,9 @@
             this.dircli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dircli.Location = new System.Drawing.Point(203, 143);
+            this.dircli.Location = new System.Drawing.Point(203, 127);
             this.dircli.Name = "dircli";
-            this.dircli.Size = new System.Drawing.Size(194, 29);
+            this.dircli.Size = new System.Drawing.Size(194, 25);
             this.dircli.TabIndex = 7;
             this.dircli.TextChanged += new System.EventHandler(this.dircli_TextChanged);
             // 
@@ -574,9 +575,9 @@
             this.cedcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cedcli.Location = new System.Drawing.Point(203, 108);
+            this.cedcli.Location = new System.Drawing.Point(203, 96);
             this.cedcli.Name = "cedcli";
-            this.cedcli.Size = new System.Drawing.Size(194, 29);
+            this.cedcli.Size = new System.Drawing.Size(194, 25);
             this.cedcli.TabIndex = 5;
             this.cedcli.Text = "Si existe, empiece aquí";
             this.cedcli.TextChanged += new System.EventHandler(this.cedcli_TextChanged);
@@ -586,27 +587,27 @@
             this.apelcli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.apelcli.Location = new System.Drawing.Point(203, 73);
+            this.apelcli.Location = new System.Drawing.Point(203, 65);
             this.apelcli.Name = "apelcli";
-            this.apelcli.Size = new System.Drawing.Size(194, 29);
+            this.apelcli.Size = new System.Drawing.Size(194, 25);
             this.apelcli.TabIndex = 14;
             this.apelcli.TextChanged += new System.EventHandler(this.apelcli_TextChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 35);
+            this.label9.Location = new System.Drawing.Point(3, 31);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 23);
+            this.label9.Size = new System.Drawing.Size(57, 20);
             this.label9.TabIndex = 2;
             this.label9.Text = "Nombre:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 70);
+            this.label13.Location = new System.Drawing.Point(3, 62);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(69, 23);
+            this.label13.Size = new System.Drawing.Size(56, 20);
             this.label13.TabIndex = 15;
             this.label13.Text = "Apellido:";
             // 
@@ -678,7 +679,7 @@
             // 
             // Venta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1021, 690);

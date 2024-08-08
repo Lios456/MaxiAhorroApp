@@ -26,6 +26,14 @@ namespace MaxiAhorroApp.Vistas
             this.productos_agregados.AutoGenerateColumns = false;
             this.tbproductos.DataSource = new ServicioProducto().Consultar();
             this.productos_agregados.DataSource = productos;
+
+            this.numfactu.Text = "1";
+            this.nomcli.Text = "Luis";
+            apelcli.Text = "Jerez";
+            cedcli.Text = "0504760075";
+            dircli.Text = "Latacunga";
+            telcli.Text = "0978700978";
+            totalpag.Text = "1500";
         }
 
         private void bt_agregar_producto_Click(object sender, EventArgs e)
@@ -210,20 +218,29 @@ namespace MaxiAhorroApp.Vistas
                     CedulaCliente = cedcli.Text,
                     DireccionCliente = dircli.Text,
                     TelefonoCliente = telcli.Text,
-                    TotalPagar = (float)Convert.ToDecimal(totalpag.Text),
                     FormaPago = tipopago.Text,
                     FechaPago = DateTime.Now
                 };
 
+                float total = 0;
+
+                foreach(DataGridViewRow fila in productos_agregados.Rows)
+                {
+                    DetalleFactura det = new DetalleFactura();
+                    det.ProductoId = (int)fila.Cells[0].Value;
+                    det.NombreProducto = fila.Cells[1].Value.ToString();
+                    det.Cantidad = (int)Convert.ToInt64(fila.Cells[2].Value);
+                    det.PrecioUnitario = (float)fila.Cells[3].Value;
+                    total += det.PrecioUnitario * (float)det.Cantidad;
+                    DatosCli.DetallesFactura.Add(det);
+                    Console.WriteLine(det);
+                }
+                DatosCli.TotalPagar = (float)Math.Round(total,2);
+                DatosCli.detallestring = DatosCli.obtenerdetalles();
+
                 // Llamada al método para insertar la venta
-                new ventascliente().insertarventa(DatosCli);
+                new facturavista(DatosCli).ShowDialog();
 
-                // Mostrar mensaje de éxito
-                MessageBox.Show("Factura insertada exitosamente.");
-
-                facturavista abrirfacura = new facturavista();
-
-                abrirfacura.Show();
             }
             catch (Exception ex)
             {

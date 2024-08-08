@@ -51,7 +51,8 @@ namespace MaxiAhorroApp.Vistas
                 {
                     this.factura_Ttal.Load(reportPath);
                     this.vista.Report = this.factura_Ttal;
-                    factura_Ttal.RegData("datosfactura", "Table1", datosfactura);
+                    factura_Ttal.RegData("datosfactura", datosfactura);
+                    this.factura_Ttal.Dictionary.Synchronize();
                     this.factura_Ttal.Render();
                     this.vista.Refresh();
                 }
@@ -69,6 +70,16 @@ namespace MaxiAhorroApp.Vistas
         private void facturavista_Load(object sender, EventArgs e)
         {
             // Lógica adicional si es necesario
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Ingresar factura a la base de datos
         }
     }
 

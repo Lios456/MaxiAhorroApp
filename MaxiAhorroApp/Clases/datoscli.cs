@@ -20,6 +20,7 @@ namespace MaxiAhorroApp.Clases
 
         // Relación con los productos comprados (detalles de factura)
         public List<DetalleFactura> DetallesFactura { get; set; } = new List<DetalleFactura>();
+        public string detallestring { get; set; }
 
         public DatosCli() {
             NumFactura = 0;
@@ -30,7 +31,8 @@ namespace MaxiAhorroApp.Clases
             TelefonoCliente = "0978700978";
             FormaPago = "Efectivo";
             FechaPago = DateTime.Now;
-            TotalPagar = 150;
+            TotalPagar = 0;
+            detallestring = obtenerdetalles();
         }
         public DatosCli(int numFactura, string nombreCliente, string apellidoCliente, string cedulaCliente, string direccionCliente, string telefonoCliente, string formaPago, DateTime fechaPago, float totalPagar, List<DetalleFactura> detallesFactura)
         {
@@ -45,6 +47,38 @@ namespace MaxiAhorroApp.Clases
             TotalPagar = totalPagar;
             DetallesFactura = detallesFactura;
         }
+
+        public string obtenerdetalles()
+        {
+            string head = string.Format("{0,10}|{1,-50}|{2,-20}|{3,-20}|{4,-20}",
+                         formatear("Id", 10),
+                         formatear("Nombre", 50),
+                         formatear("Cantidad", 20),
+                         formatear("Precio c/u".ToString(), 20),
+                         formatear("Subtotal", 20));
+            string separator = new string('-', head.Length);
+            string det = "";
+
+            if (DetallesFactura.Count > 0)
+            {
+                foreach (DetalleFactura item in DetallesFactura)
+                {
+                    det += $"\n{item.ToString()}";
+                }
+            }
+
+            return head + $"\n" + separator + det;
+        }
+
+        public string formatear(string cadena, int largo)
+        {
+            string cadenaformateada = cadena;
+            while (cadenaformateada.Length < largo)
+            {
+                cadenaformateada += " ";
+            }
+            return cadenaformateada;
+        }
     }
 
 
@@ -56,5 +90,26 @@ namespace MaxiAhorroApp.Clases
         public int Cantidad { get; set; }
         public float PrecioUnitario { get; set; }
         public float Subtotal => Cantidad * PrecioUnitario;
+
+        public override string ToString()
+        {
+            
+            return string.Format("{0,10}|{1,-50}|{2,-20}|{3,-20}|{4,-20}",
+                         formatear(this.ProductoId.ToString(),10), 
+                         formatear(this.NombreProducto,50),
+                         formatear(this.Cantidad.ToString(),20),
+                         formatear(this.PrecioUnitario.ToString(),20),
+                         formatear(this.Subtotal.ToString(),20));
+        }
+
+        public string formatear(string cadena, int largo)
+        {
+            string cadenaformateada = cadena;
+            while (cadenaformateada.Length < largo)
+            {
+                cadenaformateada += " ";
+            }
+            return cadenaformateada;
+        }
     }
 }

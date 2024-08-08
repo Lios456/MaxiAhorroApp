@@ -283,17 +283,17 @@ Jean Basantes</Text>
         <DataBand2 Ref="21" type="DataBand" isKey="true">
           <Brush>Transparent</Brush>
           <BusinessObjectGuid isNull="true" />
-          <ClientRectangle>0,3.6,19,3.6</ClientRectangle>
+          <ClientRectangle>0,3.6,19,4.2</ClientRectangle>
           <Components isList="true" count="1">
             <Table1 Ref="22" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
               <Brush>Transparent</Brush>
               <BusinessObjectGuid isNull="true" />
-              <ClientRectangle>0,0.4,19,3.6</ClientRectangle>
+              <ClientRectangle>0,0.4,19,3.2</ClientRectangle>
               <ColumnCount>4</ColumnCount>
               <Components isList="true" count="16">
                 <Table1_Cell1 Ref="23" type="TableCell" isKey="true">
                   <Brush>White</Brush>
-                  <ClientRectangle>0,0,4.8,0.6</ClientRectangle>
+                  <ClientRectangle>0,0,4.8,0.54</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Enabled>False</Enabled>
                   <Expressions isList="true" count="0" />
@@ -310,7 +310,7 @@ Jean Basantes</Text>
                 <Table1_Cell2 Ref="24" type="TableCell" isKey="true">
                   <Border>Left;Black;1;Solid;False;4;Black</Border>
                   <Brush>[127:127:127]</Brush>
-                  <ClientRectangle>0,0,9.6,0.6</ClientRectangle>
+                  <ClientRectangle>0,0,9.6,0.54</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,12,Bold</Font>
@@ -336,7 +336,7 @@ Jean Basantes</Text>
                 <Table1_Cell3 Ref="25" type="TableCell" isKey="true">
                   <Border>Left, Right;Black;1;Solid;False;4;Black</Border>
                   <Brush>[127:127:127]</Brush>
-                  <ClientRectangle>9.6,0,4.8,0.6</ClientRectangle>
+                  <ClientRectangle>9.6,0,4.8,0.54</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,11,Bold</Font>
@@ -355,7 +355,7 @@ Jean Basantes</Text>
                 <Table1_Cell4 Ref="26" type="TableCell" isKey="true">
                   <Border>All;Black;1;Solid;False;4;Black</Border>
                   <Brush>[255:255:255]</Brush>
-                  <ClientRectangle>14.4,0,4.6,0.6</ClientRectangle>
+                  <ClientRectangle>14.4,0,4.6,0.54</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,11,Bold</Font>
@@ -373,7 +373,7 @@ Jean Basantes</Text>
                 <Table1_Cell5 Ref="27" type="TableCell" isKey="true">
                   <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
                   <Brush>[198:217:240]</Brush>
-                  <ClientRectangle>0,0.6,4.8,1</ClientRectangle>
+                  <ClientRectangle>0,0.54,4.8,0.88</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,11,Bold</Font>
@@ -392,7 +392,7 @@ Jean Basantes</Text>
                 <Table1_Cell6 Ref="28" type="TableCell" isKey="true">
                   <Border>Bottom;Black;1;Solid;False;4;Black</Border>
                   <Brush>White</Brush>
-                  <ClientRectangle>4.8,0.6,4.8,1</ClientRectangle>
+                  <ClientRectangle>4.8,0.54,4.8,0.88</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,9</Font>
@@ -405,12 +405,13 @@ Jean Basantes</Text>
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
                   <Text>{datosfactura.NombreCliente}</Text>
                   <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
                   <VertAlignment>Center</VertAlignment>
                 </Table1_Cell6>
                 <Table1_Cell7 Ref="29" type="TableCell" isKey="true">
                   <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
                   <Brush>[198:217:240]</Brush>
-                  <ClientRectangle>9.6,0.6,4.8,1</ClientRectangle>
+                  <ClientRectangle>9.6,0.54,4.8,0.88</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,11,Bold</Font>
@@ -429,7 +430,7 @@ Jean Basantes</Text>
                 <Table1_Cell8 Ref="30" type="TableCell" isKey="true">
                   <Border>Right, Bottom;Black;1;Solid;False;4;Black</Border>
                   <Brush>White</Brush>
-                  <ClientRectangle>14.4,0.6,4.6,1</ClientRectangle>
+                  <ClientRectangle>14.4,0.54,4.6,0.88</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,9</Font>
@@ -448,7 +449,7 @@ Jean Basantes</Text>
                 <Table1_Cell9 Ref="31" type="TableCell" isKey="true">
                   <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
                   <Brush>[198:217:240]</Brush>
-                  <ClientRectangle>0,1.6,4.8,1</ClientRectangle>
+                  <ClientRectangle>0,1.42,4.8,0.89</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,11,Bold</Font>
@@ -467,7 +468,7 @@ Jean Basantes</Text>
                 <Table1_Cell10 Ref="32" type="TableCell" isKey="true">
                   <Border>Bottom;Black;1;Solid;False;4;Black</Border>
                   <Brush>White</Brush>
-                  <ClientRectangle>4.8,1.6,4.8,1</ClientRectangle>
+                  <ClientRectangle>4.8,1.42,4.8,0.89</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,9</Font>
@@ -485,7 +486,7 @@ Jean Basantes</Text>
                 <Table1_Cell11 Ref="33" type="TableCell" isKey="true">
                   <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
                   <Brush>[198:217:240]</Brush>
-                  <ClientRectangle>9.6,1.6,4.8,1</ClientRectangle>
+                  <ClientRectangle>9.6,1.42,4.8,0.89</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,11,Bold</Font>
@@ -504,7 +505,7 @@ Jean Basantes</Text>
                 <Table1_Cell12 Ref="34" type="TableCell" isKey="true">
                   <Border>Right, Bottom;Black;1;Solid;False;4;Black</Border>
                   <Brush>White</Brush>
-                  <ClientRectangle>14.4,1.6,4.6,1</ClientRectangle>
+                  <ClientRectangle>14.4,1.42,4.6,0.89</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,9</Font>
@@ -522,7 +523,7 @@ Jean Basantes</Text>
                 <Table1_Cell13 Ref="35" type="TableCell" isKey="true">
                   <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
                   <Brush>[198:217:240]</Brush>
-                  <ClientRectangle>0,2.6,4.8,1</ClientRectangle>
+                  <ClientRectangle>0,2.31,4.8,0.89</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,11,Bold</Font>
@@ -541,7 +542,7 @@ Jean Basantes</Text>
                 <Table1_Cell14 Ref="36" type="TableCell" isKey="true">
                   <Border>Bottom;Black;1;Solid;False;4;Black</Border>
                   <Brush>White</Brush>
-                  <ClientRectangle>4.8,2.6,4.8,1</ClientRectangle>
+                  <ClientRectangle>4.8,2.31,4.8,0.89</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,9</Font>
@@ -559,7 +560,7 @@ Jean Basantes</Text>
                 <Table1_Cell15 Ref="37" type="TableCell" isKey="true">
                   <Border>Bottom;Black;1;Solid;False;4;Black</Border>
                   <Brush>White</Brush>
-                  <ClientRectangle>9.6,2.6,4.8,1</ClientRectangle>
+                  <ClientRectangle>9.6,2.31,4.8,0.89</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,9</Font>
@@ -574,7 +575,7 @@ Jean Basantes</Text>
                 <Table1_Cell16 Ref="38" type="TableCell" isKey="true">
                   <Border>Right, Bottom;Black;1;Solid;False;4;Black</Border>
                   <Brush>White</Brush>
-                  <ClientRectangle>14.4,2.6,4.6,1</ClientRectangle>
+                  <ClientRectangle>14.4,2.31,4.6,0.89</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,9</Font>
@@ -615,7 +616,7 @@ Jean Basantes</Text>
         <DataBand1 Ref="39" type="DataBand" isKey="true">
           <Brush>Transparent</Brush>
           <BusinessObjectGuid isNull="true" />
-          <ClientRectangle>0,8,19,4</ClientRectangle>
+          <ClientRectangle>0,8.6,19,6</ClientRectangle>
           <Components isList="true" count="1">
             <Table2 Ref="40" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
               <Brush>Transparent</Brush>
@@ -628,6 +629,7 @@ Jean Basantes</Text>
                   <Brush>[127:127:127]</Brush>
                   <ClientRectangle>0,0,13,0.6</ClientRectangle>
                   <Conditions isList="true" count="0" />
+                  <Enabled>False</Enabled>
                   <Expressions isList="true" count="0" />
                   <Font>Arial,12,Bold</Font>
                   <HorAlignment>Center</HorAlignment>
@@ -636,6 +638,7 @@ Jean Basantes</Text>
                   <Name>Table2_Cell1</Name>
                   <Page isRef="5" />
                   <Parent isRef="40" />
+                  <ParentJoin>0</ParentJoin>
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
                   <Text>Detalles de Factura</Text>
                   <TextBrush>Black</TextBrush>
@@ -647,6 +650,7 @@ Jean Basantes</Text>
                   <Brush>[127:127:127]</Brush>
                   <ClientRectangle>13,0,3,0.6</ClientRectangle>
                   <Conditions isList="true" count="0" />
+                  <Enabled>False</Enabled>
                   <Expressions isList="true" count="0" />
                   <Font>Arial,11,Bold</Font>
                   <HorAlignment>Center</HorAlignment>
@@ -655,8 +659,8 @@ Jean Basantes</Text>
                   <Name>Table2_Cell2</Name>
                   <Page isRef="5" />
                   <Parent isRef="40" />
+                  <ParentJoin>0</ParentJoin>
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
-                  <Text>Cantidad</Text>
                   <TextBrush>Black</TextBrush>
                   <Type>Expression</Type>
                   <VertAlignment>Center</VertAlignment>
@@ -664,18 +668,26 @@ Jean Basantes</Text>
                 <Table2_Cell3 Ref="43" type="TableCell" isKey="true">
                   <Border>All;Black;1;Solid;False;4;Black</Border>
                   <Brush>[127:127:127]</Brush>
-                  <ClientRectangle>16,0,3,0.6</ClientRectangle>
+                  <ClientRectangle>0,0,19,0.6</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,11,Bold</Font>
                   <HorAlignment>Center</HorAlignment>
                   <ID>0</ID>
-                  <JoinCells isList="true" count="0" />
+                  <Join>True</Join>
+                  <JoinCells isList="true" count="3">
+                    <value>55</value>
+                    <value>63</value>
+                    <value>0</value>
+                  </JoinCells>
+                  <JoinHeight>1</JoinHeight>
+                  <JoinWidth>3</JoinWidth>
                   <Name>Table2_Cell3</Name>
                   <Page isRef="5" />
                   <Parent isRef="40" />
+                  <ParentJoin>0</ParentJoin>
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
-                  <Text>Precio Unitario</Text>
+                  <Text>DETALLES</Text>
                   <TextBrush>Black</TextBrush>
                   <Type>Expression</Type>
                   <VertAlignment>Center</VertAlignment>
@@ -688,20 +700,25 @@ Jean Basantes</Text>
                   <Enabled>False</Enabled>
                   <Expressions isList="true" count="0" />
                   <Font>Arial,9</Font>
+                  <HorAlignment>Center</HorAlignment>
                   <ID>67</ID>
                   <JoinCells isList="true" count="0" />
                   <Name>Table2_Cell4</Name>
                   <Page isRef="5" />
                   <Parent isRef="40" />
-                  <ParentJoin>79</ParentJoin>
+                  <ParentJoin>69</ParentJoin>
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{datosfactura.detallestring}</Text>
                   <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
                 </Table2_Cell4>
                 <Table2_Cell5 Ref="45" type="TableCell" isKey="true">
                   <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
                   <Brush>White</Brush>
                   <ClientRectangle>13,0.6,3,1.8</ClientRectangle>
                   <Conditions isList="true" count="0" />
+                  <Enabled>False</Enabled>
                   <Expressions isList="true" count="0" />
                   <Font>Arial,9</Font>
                   <ID>68</ID>
@@ -709,22 +726,32 @@ Jean Basantes</Text>
                   <Name>Table2_Cell5</Name>
                   <Page isRef="5" />
                   <Parent isRef="40" />
+                  <ParentJoin>69</ParentJoin>
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
                   <TextBrush>Black</TextBrush>
                 </Table2_Cell5>
                 <Table2_Cell6 Ref="46" type="TableCell" isKey="true">
                   <Border>Right, Bottom;Black;1;Solid;False;4;Black</Border>
                   <Brush>White</Brush>
-                  <ClientRectangle>16,0.6,3,1.8</ClientRectangle>
+                  <ClientRectangle>0,0.6,19,1.8</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,9</Font>
                   <ID>69</ID>
-                  <JoinCells isList="true" count="0" />
+                  <Join>True</Join>
+                  <JoinCells isList="true" count="3">
+                    <value>67</value>
+                    <value>68</value>
+                    <value>69</value>
+                  </JoinCells>
+                  <JoinHeight>1</JoinHeight>
+                  <JoinWidth>3</JoinWidth>
                   <Name>Table2_Cell6</Name>
                   <Page isRef="5" />
                   <Parent isRef="40" />
+                  <ParentJoin>69</ParentJoin>
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{datosfactura.detallestring}</Text>
                   <TextBrush>Black</TextBrush>
                 </Table2_Cell6>
                 <Table2_Cell7 Ref="47" type="TableCell" isKey="true">
@@ -732,7 +759,6 @@ Jean Basantes</Text>
                   <Brush>White</Brush>
                   <ClientRectangle>0,2.4,13,0.8</ClientRectangle>
                   <Conditions isList="true" count="0" />
-                  <Enabled>False</Enabled>
                   <Expressions isList="true" count="0" />
                   <Font>Arial,9</Font>
                   <ID>73</ID>
@@ -740,7 +766,6 @@ Jean Basantes</Text>
                   <Name>Table2_Cell7</Name>
                   <Page isRef="5" />
                   <Parent isRef="40" />
-                  <ParentJoin>79</ParentJoin>
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
                   <TextBrush>Black</TextBrush>
                 </Table2_Cell7>
@@ -776,14 +801,15 @@ Jean Basantes</Text>
                   <Page isRef="5" />
                   <Parent isRef="40" />
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{Math.Round(datosfactura.TotalPagar - (datosfactura.TotalPagar*0.15),2)}</Text>
                   <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
                 </Table2_Cell9>
                 <Table2_Cell10 Ref="50" type="TableCell" isKey="true">
                   <Border>Left, Right;Black;1;Solid;False;4;Black</Border>
                   <Brush>White</Brush>
                   <ClientRectangle>0,3.2,13,0.8</ClientRectangle>
                   <Conditions isList="true" count="0" />
-                  <Enabled>False</Enabled>
                   <Expressions isList="true" count="0" />
                   <Font>Arial,9</Font>
                   <ID>76</ID>
@@ -791,7 +817,6 @@ Jean Basantes</Text>
                   <Name>Table2_Cell10</Name>
                   <Page isRef="5" />
                   <Parent isRef="40" />
-                  <ParentJoin>79</ParentJoin>
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
                   <TextBrush>Black</TextBrush>
                 </Table2_Cell10>
@@ -827,31 +852,25 @@ Jean Basantes</Text>
                   <Page isRef="5" />
                   <Parent isRef="40" />
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{Math.Round(((datosfactura.TotalPagar - (datosfactura.TotalPagar*0.15))*0.15),2)}</Text>
                   <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
                 </Table2_Cell12>
                 <Table2_Cell13 Ref="53" type="TableCell" isKey="true">
                   <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
                   <Brush>White</Brush>
-                  <ClientRectangle>0,0.6,13,4.2</ClientRectangle>
+                  <ClientRectangle>0,4,13,0.8</ClientRectangle>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,9</Font>
                   <ID>79</ID>
-                  <Join>True</Join>
-                  <JoinCells isList="true" count="4">
-                    <value>67</value>
-                    <value>73</value>
-                    <value>76</value>
-                    <value>79</value>
-                  </JoinCells>
-                  <JoinHeight>4</JoinHeight>
-                  <JoinWidth>1</JoinWidth>
+                  <JoinCells isList="true" count="0" />
                   <Name>Table2_Cell13</Name>
                   <Page isRef="5" />
                   <Parent isRef="40" />
-                  <ParentJoin>79</ParentJoin>
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
                   <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
                 </Table2_Cell13>
                 <Table2_Cell14 Ref="54" type="TableCell" isKey="true">
                   <Border>Bottom;Black;1;Solid;False;4;Black</Border>
@@ -885,7 +904,9 @@ Jean Basantes</Text>
                   <Page isRef="5" />
                   <Parent isRef="40" />
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{datosfactura.TotalPagar}</Text>
                   <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
                 </Table2_Cell15>
               </Components>
               <Conditions isList="true" count="0" />
@@ -893,6 +914,7 @@ Jean Basantes</Text>
               <DataSourceName>sp_consultar_empleados3</DataSourceName>
               <Expressions isList="true" count="0" />
               <Filters isList="true" count="0" />
+              <FooterRowsCount>3</FooterRowsCount>
               <HeaderRowsCount>1</HeaderRowsCount>
               <MinHeight>0.4</MinHeight>
               <Name>Table2</Name>
@@ -921,6 +943,11 @@ Jean Basantes</Text>
       <PageHeight>29.7</PageHeight>
       <PageWidth>21</PageWidth>
       <Report isRef="0" />
+      <Watermark Ref="56" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <Text>UTC</Text>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
     </Page1>
   </Pages>
   <ReferencedAssemblies isList="true" count="8">
@@ -935,9 +962,9 @@ Jean Basantes</Text>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
   <ReportAuthor>Henrry Barrionuevo</ReportAuthor>
-  <ReportChanged>8/7/2024 8:55:46 PM</ReportChanged>
+  <ReportChanged>8/7/2024 11:07:24 PM</ReportChanged>
   <ReportCreated>8/7/2024 1:43:29 PM</ReportCreated>
-  <ReportGuid>151688fa11434c50ab3cdde351eb2dd6</ReportGuid>
+  <ReportGuid>1fce147ec3a7481388aa1c670b80fe60</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2024.3.2.0</ReportVersion>
