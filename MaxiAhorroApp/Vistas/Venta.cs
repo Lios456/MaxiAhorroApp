@@ -275,9 +275,9 @@ namespace MaxiAhorroApp.Vistas
 
         private void apelcli_TextChanged(object sender, EventArgs e)
         {
-            int cursorPosition = nomcli.SelectionStart;
+            int cursorPosition = apelcli.SelectionStart;
 
-            string filteredText = new string(nomcli.Text
+            string filteredText = new string(apelcli.Text
                 .Where(c => char.IsLetter(c) || c == ' ')
                 .ToArray());
 
@@ -287,8 +287,8 @@ namespace MaxiAhorroApp.Vistas
             }
 
             filteredText = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(filteredText.ToLower());
-            nomcli.Text = filteredText;
-            nomcli.SelectionStart = Math.Min(cursorPosition, nomcli.Text.Length);
+            apelcli.Text = filteredText;
+            apelcli.SelectionStart = Math.Min(cursorPosition, apelcli.Text.Length);
         }
 
         private void label4_Click(object sender, EventArgs e)
