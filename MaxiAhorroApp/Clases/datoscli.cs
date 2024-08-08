@@ -20,7 +20,34 @@ namespace MaxiAhorroApp.Clases
 
         // Relación con los productos comprados (detalles de factura)
         public List<DetalleFactura> DetallesFactura { get; set; } = new List<DetalleFactura>();
+
+        public DatosCli() {
+            NumFactura = 0;
+            NombreCliente = "Juanito";
+            ApellidoCliente = "Pérez";
+            CedulaCliente = "0504760075";
+            DireccionCliente = "Latacunga";
+            TelefonoCliente = "0978700978";
+            FormaPago = "Efectivo";
+            FechaPago = DateTime.Now;
+            TotalPagar = 150;
+        }
+        public DatosCli(int numFactura, string nombreCliente, string apellidoCliente, string cedulaCliente, string direccionCliente, string telefonoCliente, string formaPago, DateTime fechaPago, float totalPagar, List<DetalleFactura> detallesFactura)
+        {
+            NumFactura = numFactura;
+            NombreCliente = nombreCliente;
+            ApellidoCliente = apellidoCliente;
+            CedulaCliente = cedulaCliente;
+            DireccionCliente = direccionCliente;
+            TelefonoCliente = telefonoCliente;
+            FormaPago = formaPago;
+            FechaPago = fechaPago;
+            TotalPagar = totalPagar;
+            DetallesFactura = detallesFactura;
+        }
     }
+
+
 
     public class DetalleFactura
     {

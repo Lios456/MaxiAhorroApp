@@ -1,4 +1,6 @@
-﻿using Stimulsoft.Report;
+﻿using MaxiAhorroApp.Clases;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dictionary;
 using System;
 using System.Windows.Forms;
 
@@ -6,27 +8,22 @@ namespace MaxiAhorroApp.Vistas
 {
     public partial class facturavista : Form
     {
+        public DatosCli datosfactura = new DatosCli();
+
         public facturavista()
         {
             InitializeComponent();
 
             try
             {
-                // Combinar el directorio base con la ruta del archivo
+                this.factura_Ttal.RegReportDataSources();
                 string reportPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Reportes", "factura.mrt");
 
-                // Verificar si el archivo existe en la ruta especificada
                 if (System.IO.File.Exists(reportPath))
                 {
-                    MessageBox.Show("Archivo encontrado: " + reportPath);
-
-                    // Cargar el archivo del reporte
                     this.factura_Ttal.Load(reportPath);
-
-                    // Asignar el reporte al control de visualización
                     this.vista.Report = this.factura_Ttal;
-
-                    // Renderizar y actualizar el reporte
+                    factura_Ttal.RegData("datosfactura", "Table1", datosfactura);
                     this.factura_Ttal.Render();
                     this.vista.Refresh();
                 }
@@ -37,15 +34,42 @@ namespace MaxiAhorroApp.Vistas
             }
             catch (Exception ex)
             {
-                // Mostrar cualquier excepción que ocurra
                 MessageBox.Show("Error al cargar el reporte: " + ex.Message);
             }
         }
 
-        // Asegúrate de que este método tiene la firma correcta para el evento Load
+        public facturavista(DatosCli datos)
+        {
+            InitializeComponent();
+            this.datosfactura = datos;
+
+            try
+            {
+                string reportPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Reportes", "factura.mrt");
+
+                if (System.IO.File.Exists(reportPath))
+                {
+                    this.factura_Ttal.Load(reportPath);
+                    this.vista.Report = this.factura_Ttal;
+                    factura_Ttal.RegData("datosfactura", "Table1", datosfactura);
+                    this.factura_Ttal.Render();
+                    this.vista.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("El archivo no se encuentra en la ruta: " + reportPath);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar el reporte: " + ex.Message);
+            }
+        }
+
         private void facturavista_Load(object sender, EventArgs e)
         {
-            // Puedes agregar lógica adicional aquí si es necesario
+            // Lógica adicional si es necesario
         }
     }
+
 }

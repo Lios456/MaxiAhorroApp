@@ -289,7 +289,7 @@ CREATE TABLE IF NOT EXISTS minimarket.detalle_factura (
 
 
 -- Eliminar el procedimiento si ya existe
-DROP PROCEDURE IF  not EXISTS sp_insertar_factura;
+DROP PROCEDURE IF EXISTS sp_insertar_factura;
 
 -- Crear el nuevo procedimiento
 CREATE PROCEDURE sp_insertar_factura(
@@ -305,9 +305,7 @@ CREATE PROCEDURE sp_insertar_factura(
 )
 BEGIN
     -- Verificar si el cliente ya existe
-    IF NOT EXISTS (
-        SELECT 1 FROM minimarket.clientes WHERE cedulacliente = CedulaCliente
-    ) THEN
+    IF (SELECT COUNT(*) FROM minimarket.clientes WHERE cedulacliente = CedulaCliente) < 1 THEN
         -- Si el cliente no existe, insertar los datos del cliente
         INSERT INTO minimarket.clientes (
             nombrecliente,

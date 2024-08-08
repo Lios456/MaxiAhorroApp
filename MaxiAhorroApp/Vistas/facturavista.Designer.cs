@@ -53,7 +53,7 @@
         "Stimulsoft.Report.Dll"};
             this.factura_Ttal.ReportAlias = "Report";
             this.factura_Ttal.ReportAuthor = "Henrry Barrionuevo";
-            this.factura_Ttal.ReportGuid = "f6ba860fccc24834aa0d63dae492d61b";
+            this.factura_Ttal.ReportGuid = "5e5fff10aa5a48c9b7bf95ec5c8c1cf3";
             this.factura_Ttal.ReportName = "Report";
             this.factura_Ttal.ReportSource = resources.GetString("factura_Ttal.ReportSource");
             this.factura_Ttal.ReportUnit = Stimulsoft.Report.StiReportUnitType.Centimeters;
@@ -64,28 +64,31 @@
             // 
             this.panel1.Controls.Add(this.vista);
             this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1099, 777);
+            this.panel1.Size = new System.Drawing.Size(824, 631);
             this.panel1.TabIndex = 0;
             // 
             // vista
             // 
             this.vista.AllowDrop = true;
-            this.vista.Location = new System.Drawing.Point(-6, -5);
-            this.vista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.vista.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vista.Location = new System.Drawing.Point(0, 0);
             this.vista.Name = "vista";
+            this.vista.PageViewMode = Stimulsoft.Report.Viewer.StiPageViewMode.SinglePage;
             this.vista.Report = null;
             this.vista.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.vista.ShowZoom = true;
-            this.vista.Size = new System.Drawing.Size(1101, 782);
+            this.vista.Size = new System.Drawing.Size(824, 631);
             this.vista.TabIndex = 1;
             // 
             // facturavista
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 779);
+            this.ClientSize = new System.Drawing.Size(825, 633);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "facturavista";
             this.Text = "facturavista";
             this.Load += new System.EventHandler(this.facturavista_Load);

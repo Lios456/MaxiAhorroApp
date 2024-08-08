@@ -1170,3 +1170,6 @@ C:\Users\User\Desktop\maxiahrro\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\zh-Hant\Mi
 C:\Users\User\Desktop\maxiahrro\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhor.95E7CF48.Up2Date
 C:\Users\User\Desktop\maxiahrro\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.Vistas.facturavista.resources
 C:\Users\User\Desktop\maxiahrro\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\Reportes\factura.mrt
+C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\bin\Debug\Reportes\factura.mrt
+C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.Reportes.ReporteFactura.resources
+C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\obj\Debug\MaxiAhorroApp.Vistas.facturavista.resources

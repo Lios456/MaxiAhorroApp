@@ -1,50 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\",
+  "WorkspaceRootPath": "C:\\Users\\Ferlu\\Downloads\\SEXTO\\Estudio Complexivo\\MaxiAhorroApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\maxiahorroapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|solutionrelative:maxiahorroapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|c:\\users\\user\\desktop\\maxiahrro\\maxiahorroapp\\maxiahorroapp\\scriptbdd.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|solutionrelative:maxiahorroapp\\scriptbdd.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\maxiahorroapp\\vistas\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|solutionrelative:maxiahorroapp\\vistas\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\maxiahorroapp\\vistas\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|solutionrelative:maxiahorroapp\\vistas\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\maxiahorroapp\\vistas\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|solutionrelative:maxiahorroapp\\vistas\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\maxiahorroapp\\vistas\\facturavista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|solutionrelative:maxiahorroapp\\vistas\\facturavista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\maxiahorroapp\\vistas\\facturavista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|c:\\users\\ferlu\\downloads\\sexto\\estudio complexivo\\maxiahorroapp\\maxiahorroapp\\vistas\\facturavista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|solutionrelative:maxiahorroapp\\vistas\\facturavista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\maxiahorroapp\\reportes\\reporteproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|solutionrelative:maxiahorroapp\\reportes\\reporteproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|c:\\users\\ferlu\\downloads\\sexto\\estudio complexivo\\maxiahorroapp\\maxiahorroapp\\vistas\\facturavista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|solutionrelative:maxiahorroapp\\vistas\\facturavista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\maxiahorroapp\\controladores\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|solutionrelative:maxiahorroapp\\controladores\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|c:\\users\\ferlu\\downloads\\sexto\\estudio complexivo\\maxiahorroapp\\maxiahorroapp\\clases\\datoscli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|solutionrelative:maxiahorroapp\\clases\\datoscli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\maxiahorroapp\\clases\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|solutionrelative:maxiahorroapp\\clases\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|C:\\Users\\Ferlu\\Downloads\\SEXTO\\Estudio Complexivo\\MaxiAhorroApp\\maxiahorroapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|solutionrelative:maxiahorroapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|c:\\users\\user\\desktop\\maxiahrro\\maxiahorroapp\\maxiahorroapp\\scriptbdd.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|solutionrelative:maxiahorroapp\\scriptbdd.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|c:\\users\\ferlu\\downloads\\sexto\\estudio complexivo\\maxiahorroapp\\maxiahorroapp\\reportes\\reportefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|solutionrelative:maxiahorroapp\\reportes\\reportefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|C:\\Users\\Ferlu\\Downloads\\SEXTO\\Estudio Complexivo\\MaxiAhorroApp\\maxiahorroapp\\vistas\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C23A935D-AAEB-4394-B54A-0D3D47004B87}|MaxiAhorroApp\\MaxiAhorroApp.csproj|solutionrelative:maxiahorroapp\\vistas\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,17 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 46,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Ferlu\\Downloads\\SEXTO\\Estudio Complexivo\\MaxiAhorroApp\\MaxiAhorroApp\\Program.cs",
               "RelativeDocumentMoniker": "MaxiAhorroApp\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\Program.cs*",
-              "RelativeToolTip": "MaxiAhorroApp\\Program.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAsAAAA",
+              "ToolTip": "C:\\Users\\Ferlu\\Downloads\\SEXTO\\Estudio Complexivo\\MaxiAhorroApp\\MaxiAhorroApp\\Program.cs",
+              "RelativeToolTip": "MaxiAhorroApp\\Program.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBUAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-12T21:41:08.173Z",
               "IsPinned": true,
@@ -72,113 +52,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "scriptbdd.sql ",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\scriptbdd.sql",
-              "RelativeDocumentMoniker": "MaxiAhorroApp\\scriptbdd.sql",
-              "ToolTip": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\scriptbdd.sql",
-              "RelativeToolTip": "MaxiAhorroApp\\scriptbdd.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-07-29T03:04:56.285Z",
-              "IsPinned": true,
+              "DocumentIndex": 2,
+              "Title": "DatosCli.cs",
+              "DocumentMoniker": "C:\\Users\\Ferlu\\Downloads\\SEXTO\\Estudio Complexivo\\MaxiAhorroApp\\MaxiAhorroApp\\Clases\\datoscli.cs",
+              "RelativeDocumentMoniker": "MaxiAhorroApp\\Clases\\datoscli.cs",
+              "ToolTip": "C:\\Users\\Ferlu\\Downloads\\SEXTO\\Estudio Complexivo\\MaxiAhorroApp\\MaxiAhorroApp\\Clases\\datoscli.cs",
+              "RelativeToolTip": "MaxiAhorroApp\\Clases\\datoscli.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAIwBcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T00:55:23.247Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "facturavista.cs",
+              "DocumentMoniker": "C:\\Users\\Ferlu\\Downloads\\SEXTO\\Estudio Complexivo\\MaxiAhorroApp\\MaxiAhorroApp\\Vistas\\facturavista.cs",
+              "RelativeDocumentMoniker": "MaxiAhorroApp\\Vistas\\facturavista.cs",
+              "ToolTip": "C:\\Users\\Ferlu\\Downloads\\SEXTO\\Estudio Complexivo\\MaxiAhorroApp\\MaxiAhorroApp\\Vistas\\facturavista.cs",
+              "RelativeToolTip": "MaxiAhorroApp\\Vistas\\facturavista.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBkAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T00:51:05.108Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Venta.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\Vistas\\Venta.cs",
-              "RelativeDocumentMoniker": "MaxiAhorroApp\\Vistas\\Venta.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\Vistas\\Venta.cs",
-              "RelativeToolTip": "MaxiAhorroApp\\Vistas\\Venta.cs",
-              "ViewState": "AQIAANAAAAAAAAAAAAAiwOEAAAAbAAAA",
+              "DocumentIndex": 1,
+              "Title": "facturavista.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Ferlu\\Downloads\\SEXTO\\Estudio Complexivo\\MaxiAhorroApp\\MaxiAhorroApp\\Vistas\\facturavista.cs",
+              "RelativeDocumentMoniker": "MaxiAhorroApp\\Vistas\\facturavista.cs",
+              "ToolTip": "C:\\Users\\Ferlu\\Downloads\\SEXTO\\Estudio Complexivo\\MaxiAhorroApp\\MaxiAhorroApp\\Vistas\\facturavista.cs [Dise\u00F1o]",
+              "RelativeToolTip": "MaxiAhorroApp\\Vistas\\facturavista.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T21:53:10.985Z"
+              "WhenOpened": "2024-08-08T00:50:52.635Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Dashboard.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\Vistas\\Dashboard.cs",
-              "RelativeDocumentMoniker": "MaxiAhorroApp\\Vistas\\Dashboard.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\Vistas\\Dashboard.cs [Dise\u00F1o]",
-              "RelativeToolTip": "MaxiAhorroApp\\Vistas\\Dashboard.cs [Dise\u00F1o]",
+              "Title": "ReporteFactura.cs",
+              "DocumentMoniker": "C:\\Users\\Ferlu\\Downloads\\SEXTO\\Estudio Complexivo\\MaxiAhorroApp\\MaxiAhorroApp\\Reportes\\ReporteFactura.cs",
+              "RelativeDocumentMoniker": "MaxiAhorroApp\\Reportes\\ReporteFactura.cs",
+              "ToolTip": "C:\\Users\\Ferlu\\Downloads\\SEXTO\\Estudio Complexivo\\MaxiAhorroApp\\MaxiAhorroApp\\Reportes\\ReporteFactura.cs",
+              "RelativeToolTip": "MaxiAhorroApp\\Reportes\\ReporteFactura.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T21:52:46.446Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "facturavista.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\Vistas\\facturavista.cs",
-              "RelativeDocumentMoniker": "MaxiAhorroApp\\Vistas\\facturavista.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\Vistas\\facturavista.cs",
-              "RelativeToolTip": "MaxiAhorroApp\\Vistas\\facturavista.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAQwAkAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T21:03:10.5Z"
+              "WhenOpened": "2024-08-07T15:08:51.4Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "facturavista.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\Vistas\\facturavista.cs",
-              "RelativeDocumentMoniker": "MaxiAhorroApp\\Vistas\\facturavista.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\Vistas\\facturavista.cs [Dise\u00F1o]",
-              "RelativeToolTip": "MaxiAhorroApp\\Vistas\\facturavista.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T21:00:26.954Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Venta.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\Vistas\\Venta.cs",
+              "DocumentMoniker": "C:\\Users\\Ferlu\\Downloads\\SEXTO\\Estudio Complexivo\\MaxiAhorroApp\\MaxiAhorroApp\\Vistas\\Venta.cs",
               "RelativeDocumentMoniker": "MaxiAhorroApp\\Vistas\\Venta.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\Vistas\\Venta.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Ferlu\\Downloads\\SEXTO\\Estudio Complexivo\\MaxiAhorroApp\\MaxiAhorroApp\\Vistas\\Venta.cs [Dise\u00F1o]",
               "RelativeToolTip": "MaxiAhorroApp\\Vistas\\Venta.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T20:12:52.785Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ReporteProductos.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\Reportes\\ReporteProductos.cs",
-              "RelativeDocumentMoniker": "MaxiAhorroApp\\Reportes\\ReporteProductos.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\Reportes\\ReporteProductos.cs",
-              "RelativeToolTip": "MaxiAhorroApp\\Reportes\\ReporteProductos.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAUwCoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T21:04:54.718Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Connection.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\Controladores\\Connection.cs",
-              "RelativeDocumentMoniker": "MaxiAhorroApp\\Controladores\\Connection.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\Controladores\\Connection.cs",
-              "RelativeToolTip": "MaxiAhorroApp\\Controladores\\Connection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T20:56:41.506Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Producto.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\Clases\\Producto.cs",
-              "RelativeDocumentMoniker": "MaxiAhorroApp\\Clases\\Producto.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\maxiahrro\\MaxiAhorroApp\\MaxiAhorroApp\\Clases\\Producto.cs",
-              "RelativeToolTip": "MaxiAhorroApp\\Clases\\Producto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T23:13:37.349Z"
+              "WhenOpened": "2024-08-07T14:41:54.135Z"
             }
           ]
         },
