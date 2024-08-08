@@ -35,8 +35,9 @@ namespace MaxiAhorroApp.Vistas
             emanterior.Apellido = emp.Apellido;
             emanterior.Nombre = emp.Nombre;
             emanterior.Email = emp.Email;
-
+            
             InitializeComponent();
+            this.txfechacontratacioin.MinDate = emp.FechaContratacion;
             this.txfechacontratacioin.MaxDate= DateTime.Today;
             em = emp;
             this.txestado.Text = em.Estado;

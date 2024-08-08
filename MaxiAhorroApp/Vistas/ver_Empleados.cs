@@ -44,20 +44,29 @@ namespace MaxiAhorroApp.Vistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if(empleadoseleccionado != null)
+            if(empleadoseleccionado != null && empleadoseleccionado.IDEmpleado != 0)
             {
                 new Agregar_Empleado(empleadoseleccionado).ShowDialog();
                 button4_Click(this, EventArgs.Empty);
-            } 
+            }
+            else
+            {
+                MessageBox.Show("No se seleccionó un elemento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             // Eliminar Empleados
-            if(empleadoseleccionado != null)
+            if(empleadoseleccionado != null && empleadoseleccionado.IDEmpleado != 0)
             {
                 new ServicioEmpleado().Eliminar(empleadoseleccionado);
                 button4_Click(this, EventArgs.Empty);
+            }
+            else
+            {
+                MessageBox.Show("No se seleccionó un elemento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

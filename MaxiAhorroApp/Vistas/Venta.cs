@@ -10,6 +10,7 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Stimulsoft.Base.Dashboard.StiElementConsts.Table;
@@ -209,40 +210,57 @@ namespace MaxiAhorroApp.Vistas
             dircli.SelectionStart = Math.Min(cursorPosition, dircli.Text.Length);
         }
 
+        private bool validarsololetras(string texto)
+        {
+            string pattern = @"^[A-Z][a-z]+$";
+            bool isValid = false;
+            isValid = Regex.IsMatch(texto, pattern);
+            return isValid;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                DatosCli DatosCli = new DatosCli
-                {
-                    NumFactura = Convert.ToInt32(numfactu.Text),
-                    NombreCliente = nomcli.Text,
-                    ApellidoCliente = apelcli.Text,
-                    CedulaCliente = cedcli.Text,
-                    DireccionCliente = dircli.Text,
-                    TelefonoCliente = telcli.Text,
-                    FormaPago = tipopago.Text,
-                    FechaPago = DateTime.Now
-                };
 
-                float total = 0;
-
-                foreach(DataGridViewRow fila in productos_agregados.Rows)
+                if (validarsololetras(nomcli.Text) && validarsololetras(apelcli.Text))
                 {
-                    DetalleFactura det = new DetalleFactura();
-                    det.ProductoId = (int)fila.Cells[0].Value;
-                    det.NombreProducto = fila.Cells[1].Value.ToString();
-                    det.Cantidad = (int)Convert.ToInt64(fila.Cells[2].Value);
-                    det.PrecioUnitario = (float)fila.Cells[3].Value;
-                    total += det.PrecioUnitario * (float)det.Cantidad;
-                    DatosCli.DetallesFactura.Add(det);
-                    Console.WriteLine(det);
+                    DatosCli DatosCli = new DatosCli
+                    {
+                        NumFactura = Convert.ToInt32(numfactu.Text),
+                        NombreCliente = nomcli.Text,
+                        ApellidoCliente = apelcli.Text,
+                        CedulaCliente = cedcli.Text,
+                        DireccionCliente = dircli.Text,
+                        TelefonoCliente = telcli.Text,
+                        FormaPago = tipopago.Text,
+                        FechaPago = DateTime.Now
+                    };
+                    float total = 0;
+
+                    foreach (DataGridViewRow fila in productos_agregados.Rows)
+                    {
+                        DetalleFactura det = new DetalleFactura();
+                        det.ProductoId = (int)fila.Cells[0].Value;
+                        det.NombreProducto = fila.Cells[1].Value.ToString();
+                        det.Cantidad = (int)Convert.ToInt64(fila.Cells[2].Value);
+                        det.PrecioUnitario = (float)fila.Cells[3].Value;
+                        total += det.PrecioUnitario * (float)det.Cantidad;
+                        DatosCli.DetallesFactura.Add(det);
+                        Console.WriteLine(det);
+                    }
+                    DatosCli.TotalPagar = (float)Math.Round(total, 2);
+                    DatosCli.detallestring = DatosCli.obtenerdetalles();
+
+                    // Llamada al método para insertar la venta
+                    new facturavista(DatosCli).ShowDialog();
                 }
-                DatosCli.TotalPagar = (float)Math.Round(total,2);
-                DatosCli.detallestring = DatosCli.obtenerdetalles();
+                else
+                {
+                    MessageBox.Show("Datos no válidos, por favor, revíselos","Error", MessageBoxButtons.OK);
+                }
 
-                // Llamada al método para insertar la venta
-                new facturavista(DatosCli).ShowDialog();
+                
 
             }
             catch (Exception ex)
@@ -299,6 +317,46 @@ namespace MaxiAhorroApp.Vistas
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                var sql = @"
+            SELECT 
+                p.Id, p.nombre, p.descripcion, p.precio, p.cantidad, p.fecha_ingreso, 
+                p.codigo_barra, p.fecha_vencimiento,
+                c.Id as Id, c.Nombre as Nombre,
+                pr.Id as Id, pr.Nombre as Nombre,
+                m.Id as Id, m.Nombre as Nombre,
+                u.Id as Id, u.Nombre as Nombre
+            FROM minimarket.productos p
+            INNER JOIN minimarket.categorias c ON p.categoria_id = c.Id
+            INNER JOIN minimarket.proveedores pr ON p.proveedor_id = pr.Id
+            INNER JOIN minimarket.marcas m ON p.marca_id = m.Id
+            INNER JOIN minimarket.ubicaciones u ON p.ubicacion_id = u.Id
+            WHERE estado = 'Activo'" + $"AND p.nombre LIKE '{productobusqueda.Text}%';";
+
+                tbproductos.DataSource = new Connection().cn.Query<Producto, Category, Proveedor, Marca, Ubicacion, Producto>(sql,
+                    (producto, categoria, proveedor, marca, ubicacion) =>
+                    {
+                        producto.categoria_id = categoria;
+                        producto.proveedor_id = proveedor;
+                        producto.marca_id = marca;
+                        producto.ubicacion_id = ubicacion;
+                        return producto;
+                    },
+                    splitOn: "Id,Id,Id,Id"
+                    );
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            
         }
     }
 }
