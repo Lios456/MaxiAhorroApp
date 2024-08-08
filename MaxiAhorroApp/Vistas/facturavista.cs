@@ -80,6 +80,10 @@ namespace MaxiAhorroApp.Vistas
         private void button1_Click(object sender, EventArgs e)
         {
             //Ingresar factura a la base de datos
+
+            ///
+            /// USAR datosfactura
+            ///
         }
     }
 
