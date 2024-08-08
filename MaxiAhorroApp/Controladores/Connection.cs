@@ -11,9 +11,9 @@ namespace MaxiAhorroApp.Controladores
 {
     public class Connection
     {
-        private static String cns = "server=localhost;user=root;password=globalstrike";
+        private static String cns = "server=localhost;user=root;password=root";
         private string sqlFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "scriptbdd.sql");
-        protected MySql.Data.MySqlClient.MySqlConnection cn = new MySql.Data.MySqlClient.MySqlConnection(cns);
+        public MySql.Data.MySqlClient.MySqlConnection cn = new MySql.Data.MySqlClient.MySqlConnection(cns);
         public Connection()
         { 
             try

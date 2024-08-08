@@ -524,6 +524,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.totalpag.Location = new System.Drawing.Point(203, 189);
             this.totalpag.Name = "totalpag";
+            this.totalpag.ReadOnly = true;
             this.totalpag.Size = new System.Drawing.Size(194, 25);
             this.totalpag.TabIndex = 13;
             this.totalpag.TextChanged += new System.EventHandler(this.totalpag_TextChanged);
