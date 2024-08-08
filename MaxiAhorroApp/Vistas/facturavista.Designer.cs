@@ -55,7 +55,7 @@
             this.factura_Ttal.ReportAlias = "Report";
             this.factura_Ttal.ReportAuthor = "Henrry Barrionuevo";
             this.factura_Ttal.ReportDataSources.Add(this.stiReportDataSource1);
-            this.factura_Ttal.ReportGuid = "0234de92a87347929681ca082ce1f2e9";
+            this.factura_Ttal.ReportGuid = "151688fa11434c50ab3cdde351eb2dd6";
             this.factura_Ttal.ReportName = "Report";
             this.factura_Ttal.ReportSource = resources.GetString("factura_Ttal.ReportSource");
             this.factura_Ttal.ReportUnit = Stimulsoft.Report.StiReportUnitType.Centimeters;
@@ -65,10 +65,11 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.vista);
-            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(824, 631);
+            this.panel1.Size = new System.Drawing.Size(628, 588);
             this.panel1.TabIndex = 0;
             // 
             // vista
@@ -81,7 +82,7 @@
             this.vista.Report = null;
             this.vista.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.vista.ShowZoom = true;
-            this.vista.Size = new System.Drawing.Size(824, 631);
+            this.vista.Size = new System.Drawing.Size(628, 588);
             this.vista.TabIndex = 1;
             // 
             // stiReportDataSource1
@@ -93,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(825, 633);
+            this.ClientSize = new System.Drawing.Size(628, 588);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "facturavista";

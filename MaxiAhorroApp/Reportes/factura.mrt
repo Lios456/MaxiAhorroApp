@@ -396,6 +396,7 @@ Jean Basantes</Text>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,9</Font>
+                  <HorAlignment>Center</HorAlignment>
                   <ID>56</ID>
                   <JoinCells isList="true" count="0" />
                   <Name>Table1_Cell6</Name>
@@ -404,6 +405,7 @@ Jean Basantes</Text>
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
                   <Text>{datosfactura.NombreCliente}</Text>
                   <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
                 </Table1_Cell6>
                 <Table1_Cell7 Ref="29" type="TableCell" isKey="true">
                   <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
@@ -469,6 +471,7 @@ Jean Basantes</Text>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,9</Font>
+                  <HorAlignment>Center</HorAlignment>
                   <ID>57</ID>
                   <JoinCells isList="true" count="0" />
                   <Name>Table1_Cell10</Name>
@@ -477,6 +480,7 @@ Jean Basantes</Text>
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
                   <Text>{datosfactura.ApellidoCliente}</Text>
                   <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
                 </Table1_Cell10>
                 <Table1_Cell11 Ref="33" type="TableCell" isKey="true">
                   <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
@@ -504,6 +508,7 @@ Jean Basantes</Text>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,9</Font>
+                  <HorAlignment>Center</HorAlignment>
                   <ID>40</ID>
                   <JoinCells isList="true" count="0" />
                   <Name>Table1_Cell12</Name>
@@ -512,6 +517,7 @@ Jean Basantes</Text>
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
                   <Text>{datosfactura.TelefonoCliente}</Text>
                   <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
                 </Table1_Cell12>
                 <Table1_Cell13 Ref="35" type="TableCell" isKey="true">
                   <Border>Left, Right, Bottom;Black;1;Solid;False;4;Black</Border>
@@ -539,6 +545,7 @@ Jean Basantes</Text>
                   <Conditions isList="true" count="0" />
                   <Expressions isList="true" count="0" />
                   <Font>Arial,9</Font>
+                  <HorAlignment>Center</HorAlignment>
                   <ID>58</ID>
                   <JoinCells isList="true" count="0" />
                   <Name>Table1_Cell14</Name>
@@ -547,6 +554,7 @@ Jean Basantes</Text>
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
                   <Text>{datosfactura.DireccionCliente}</Text>
                   <TextBrush>Black</TextBrush>
+                  <VertAlignment>Center</VertAlignment>
                 </Table1_Cell14>
                 <Table1_Cell15 Ref="37" type="TableCell" isKey="true">
                   <Border>Bottom;Black;1;Solid;False;4;Black</Border>
@@ -629,7 +637,7 @@ Jean Basantes</Text>
                   <Page isRef="5" />
                   <Parent isRef="40" />
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
-                  <Text>Datos del cliente</Text>
+                  <Text>Detalles de Factura</Text>
                   <TextBrush>Black</TextBrush>
                   <Type>Expression</Type>
                   <VertAlignment>Center</VertAlignment>
@@ -927,9 +935,9 @@ Jean Basantes</Text>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
   <ReportAuthor>Henrry Barrionuevo</ReportAuthor>
-  <ReportChanged>8/7/2024 8:50:08 PM</ReportChanged>
+  <ReportChanged>8/7/2024 8:55:46 PM</ReportChanged>
   <ReportCreated>8/7/2024 1:43:29 PM</ReportCreated>
-  <ReportGuid>0234de92a87347929681ca082ce1f2e9</ReportGuid>
+  <ReportGuid>151688fa11434c50ab3cdde351eb2dd6</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2024.3.2.0</ReportVersion>
