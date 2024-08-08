@@ -1,4 +1,6 @@
-﻿using MaxiAhorroApp.Clases;
+﻿using Dapper;
+using MaxiAhorroApp.Clases;
+using MaxiAhorroApp.Controladores;
 using Stimulsoft.Report;
 using Stimulsoft.Report.Dictionary;
 using System;
@@ -84,6 +86,32 @@ namespace MaxiAhorroApp.Vistas
             ///
             /// USAR datosfactura
             ///
+
+            Connection connection = new Connection();
+            connection.cn.Execute("sp_insertar_factura", new {
+                NumFactura = datosfactura.NumFactura,
+                NombreCliente = datosfactura.NombreCliente,
+                ApellidoCliente = datosfactura.ApellidoCliente,
+                CedulaCliente = datosfactura.CedulaCliente,
+                DireccionCliente = datosfactura.DireccionCliente,
+                TelefonoCliente = datosfactura.TelefonoCliente,
+                TotalPagar = datosfactura.TotalPagar,
+                FormaPago = datosfactura.FormaPago,
+                FechaPago = datosfactura.FechaPago,
+            }, commandType:System.Data.CommandType.StoredProcedure);
+
+            foreach (DetalleFactura item in datosfactura.DetallesFactura)
+            {
+                connection.cn.Execute("sp_agregar_detalles", new { 
+                    NumFactura = datosfactura.NumFactura,
+                    ProductoId = item.ProductoId,
+                    NombreProducto = item.NombreProducto,
+                    Cantidad = item.Cantidad,
+                    PrecioUnitario = item.PrecioUnitario,
+                    Subtotal = item.Subtotal,
+                }, commandType: System.Data.CommandType.StoredProcedure);
+            }
+            
         }
     }
 

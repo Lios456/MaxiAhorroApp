@@ -290,7 +290,6 @@ CREATE TABLE IF NOT EXISTS minimarket.detalle_factura (
 
 -- Eliminar el procedimiento si ya existe
 DROP PROCEDURE IF EXISTS sp_insertar_factura;
-
 -- Crear el nuevo procedimiento
 CREATE PROCEDURE sp_insertar_factura(
     IN NumFactura INT,
@@ -307,7 +306,7 @@ BEGIN
     -- Verificar si el cliente ya existe
     IF (SELECT COUNT(*) FROM minimarket.clientes WHERE cedulacliente = CedulaCliente) < 1 THEN
         -- Si el cliente no existe, insertar los datos del cliente
-        INSERT INTO minimarket.clientes (
+        INSERT IGNORE INTO minimarket.clientes (
             nombrecliente,
             apellidoCliente,
             cedulacliente,
@@ -323,7 +322,7 @@ BEGIN
     END IF;
 
     -- Insertar la factura asociada a la cédula del cliente
-    INSERT INTO minimarket.facturas (
+    INSERT IGNORE INTO minimarket.facturas (
         numfactura,
         cedulacliente,
         formapago,
@@ -338,5 +337,20 @@ BEGIN
     );
     
 END;
+select * from facturas;
+DROP PROCEDURE IF EXISTS sp_agregar_detalles;
+CREATE PROCEDURE sp_agregar_detalles(
+IN NumFactura INT,
+IN ProductoId INT,
+IN NombreProducto VARCHAR(150),
+IN Cantidad INT,
+IN PrecioUnitario FLOAT,
+IN Subtotal FLOAT
+)
+BEGIN
+	INSERT INTO minimarket.detalle_factura(factura_id,producto_id,cantidad,precio_unitario,subtotal)
+    VALUES
+    (NumFactura,ProductoId,Cantidad,PrecioUnitario,Subtotal);
+END;
 
-
+select * from minimarket.detalle_factura;

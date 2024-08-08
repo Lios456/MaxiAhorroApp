@@ -26,6 +26,7 @@ namespace MaxiAhorroApp.Vistas
             this.productos_agregados.AutoGenerateColumns = false;
             this.tbproductos.DataSource = new ServicioProducto().Consultar();
             this.productos_agregados.DataSource = productos;
+            this.tipopago.SelectedIndex = 0;
 
             this.numfactu.Text = "1";
             this.nomcli.Text = "Luis";
