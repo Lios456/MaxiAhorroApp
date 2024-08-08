@@ -233,7 +233,7 @@ BEGIN
     set new.Apellido = upper(new.Apellido);
 END;
 
-drop procedure sp_total_productos;
+drop procedure if exists sp_total_productos;
 create procedure sp_total_productos()
 begin
 SELECT COUNT(*) FROM minimarket.productos;
@@ -287,7 +287,11 @@ CREATE TABLE IF NOT EXISTS minimarket.detalle_factura (
     FOREIGN KEY (producto_id) REFERENCES minimarket.productos(id)
 );
 
-drop procedure sp_insertar_factura;
+
+-- Eliminar el procedimiento si ya existe
+DROP PROCEDURE IF EXISTS sp_insertar_factura;
+
+-- Crear el nuevo procedimiento
 CREATE PROCEDURE sp_insertar_factura(
     IN NumFactura INT,
     IN NombreCliente VARCHAR(100),
@@ -301,9 +305,7 @@ CREATE PROCEDURE sp_insertar_factura(
 )
 BEGIN
     -- Verificar si el cliente ya existe
-    IF NOT EXISTS (
-        SELECT 1 FROM minimarket.clientes WHERE cedulacliente = p_CedulaCliente
-    ) THEN
+    IF (SELECT COUNT(*) FROM minimarket.clientes WHERE cedulacliente = CedulaCliente) < 1 THEN
         -- Si el cliente no existe, insertar los datos del cliente
         INSERT INTO minimarket.clientes (
             nombrecliente,
@@ -336,3 +338,5 @@ BEGIN
     );
     
 END;
+
+
