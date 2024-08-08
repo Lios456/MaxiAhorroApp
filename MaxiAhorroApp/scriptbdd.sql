@@ -84,10 +84,10 @@ INSERT IGNORE INTO minimarket.productos (id, nombre, descripcion, categoria_id, 
 (2, 'Pan Integral', 'Pan integral sin azúcar', 1, 1.50, 50, '2024-06-23', 2, '1234567890124', '2024-07-18', 2, 2),
 (3, 'Jugo de Naranja', 'Jugo natural sin conservantes', 2, 1.00, 1000, '2024-06-23', 1, '1234567890125', '2024-09-18', 3, 3),
 (4, 'Pera', 'Pera Ecuatoriana', 1, 0.50, 50, '2024-06-23', 1, '1234567898541', '2024-08-18', 4, 2),
-(5, 'Manzanas', 'Manzana Ecuatoriana', 1, 1.00, 500, '2024-06-23', 1, 'Manz21-', '2024-07-21', 5, 4),
-(6, 'Jugo', 'Jugo de Manzana', 2, 1.00, 1000, '2024-06-23', 2, 'JUGMAN', '2024-09-29', 6, 7),
-(7, 'Leche', 'Leche Chocolatada', 7, 0.75, 150, '2024-06-23', 1, 'LECHECHOC', '2024-10-25', 7, 6),
-(8, 'Aceite', 'Aceite Vegetal 1 litro', 9, 3.00, 1000, '2024-06-23', 1, 'ACEIGIRA1LT', '2025-08-08', 8, 5);
+(5, 'Manzanas', 'Manzana Ecuatoriana', 1, 1.00, 500, '2024-06-23', 1, '111111111111', '2024-07-21', 5, 4),
+(6, 'Jugo', 'Jugo de Manzana', 2, 1.00, 1000, '2024-06-23', 2, '1111111111112', '2024-09-29', 6, 7),
+(7, 'Leche', 'Leche Chocolatada', 7, 0.75, 150, '2024-06-23', 1, '1111111111113', '2024-10-25', 7, 6),
+(8, 'Aceite', 'Aceite Vegetal 1 litro', 9, 3.00, 1000, '2024-06-23', 1, '1111111111114', '2025-08-08', 8, 5);
 
 CREATE TABLE IF NOT EXISTS minimarket.usuarios (
     IDUsuario INT AUTO_INCREMENT PRIMARY KEY,
@@ -367,3 +367,7 @@ call sp_listar_facturas;
 select count(*) from facturas f 
 inner join detalle_factura df
 ON f.numfactura = df.factura_id WHERE f.numfactura = '2';
+
+select * from empleados e
+inner join usuarios u
+ON e.IDUsuario = u.IDUsuario;
