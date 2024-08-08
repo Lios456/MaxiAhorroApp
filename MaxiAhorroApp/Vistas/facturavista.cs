@@ -16,14 +16,14 @@ namespace MaxiAhorroApp.Vistas
 
             try
             {
-                this.factura_Ttal.RegReportDataSources();
                 string reportPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Reportes", "factura.mrt");
 
                 if (System.IO.File.Exists(reportPath))
                 {
                     this.factura_Ttal.Load(reportPath);
                     this.vista.Report = this.factura_Ttal;
-                    factura_Ttal.RegData("datosfactura", "Table1", datosfactura);
+                    factura_Ttal.RegData("datosfactura", datosfactura);
+                    this.factura_Ttal.Dictionary.Synchronize();
                     this.factura_Ttal.Render();
                     this.vista.Refresh();
                 }

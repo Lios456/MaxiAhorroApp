@@ -32,6 +32,7 @@
             this.factura_Ttal = new Stimulsoft.Report.StiReport();
             this.panel1 = new System.Windows.Forms.Panel();
             this.vista = new Stimulsoft.Report.Viewer.StiViewerControl();
+            this.stiReportDataSource1 = new Stimulsoft.Report.Design.StiReportDataSource("facturavista", this);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +54,8 @@
         "Stimulsoft.Report.Dll"};
             this.factura_Ttal.ReportAlias = "Report";
             this.factura_Ttal.ReportAuthor = "Henrry Barrionuevo";
-            this.factura_Ttal.ReportGuid = "5e5fff10aa5a48c9b7bf95ec5c8c1cf3";
+            this.factura_Ttal.ReportDataSources.Add(this.stiReportDataSource1);
+            this.factura_Ttal.ReportGuid = "0234de92a87347929681ca082ce1f2e9";
             this.factura_Ttal.ReportName = "Report";
             this.factura_Ttal.ReportSource = resources.GetString("factura_Ttal.ReportSource");
             this.factura_Ttal.ReportUnit = Stimulsoft.Report.StiReportUnitType.Centimeters;
@@ -82,6 +84,11 @@
             this.vista.Size = new System.Drawing.Size(824, 631);
             this.vista.TabIndex = 1;
             // 
+            // stiReportDataSource1
+            // 
+            this.stiReportDataSource1.Item = this;
+            this.stiReportDataSource1.Name = "facturavista";
+            // 
             // facturavista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,5 +108,6 @@
         private Stimulsoft.Report.StiReport factura_Ttal;
         private System.Windows.Forms.Panel panel1;
         private Stimulsoft.Report.Viewer.StiViewerControl vista;
+        private Stimulsoft.Report.Design.StiReportDataSource stiReportDataSource1;
     }
 }

@@ -474,6 +474,7 @@ Jean Basantes</Text>
                   <Page isRef="5" />
                   <Parent isRef="22" />
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>Pedro</Text>
                   <TextBrush>Black</TextBrush>
                 </Table1_Cell10>
                 <Table1_Cell11 Ref="33" type="TableCell" isKey="true">
@@ -923,10 +924,9 @@ Jean Basantes</Text>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
   <ReportAuthor>Henrry Barrionuevo</ReportAuthor>
-  <ReportChanged>8/7/2024 7:58:34 PM</ReportChanged>
+  <ReportChanged>8/7/2024 8:31:02 PM</ReportChanged>
   <ReportCreated>8/7/2024 1:43:29 PM</ReportCreated>
-  <ReportFile>C:\Users\Ferlu\Downloads\SEXTO\Estudio Complexivo\MaxiAhorroApp\MaxiAhorroApp\Reportes\factura_Ttal.mrt</ReportFile>
-  <ReportGuid>a784ece640ff419aa68ac33267f64b89</ReportGuid>
+  <ReportGuid>b6f87d230ab546938aa89d6e4fcb9145</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2024.3.2.0</ReportVersion>

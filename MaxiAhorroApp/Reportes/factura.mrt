@@ -402,6 +402,7 @@ Jean Basantes</Text>
                   <Page isRef="5" />
                   <Parent isRef="22" />
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{datosfactura.NombreCliente}</Text>
                   <TextBrush>Black</TextBrush>
                 </Table1_Cell6>
                 <Table1_Cell7 Ref="29" type="TableCell" isKey="true">
@@ -437,6 +438,7 @@ Jean Basantes</Text>
                   <Page isRef="5" />
                   <Parent isRef="22" />
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{datosfactura.CedulaCliente}</Text>
                   <TextBrush>Black</TextBrush>
                   <Type>Expression</Type>
                   <VertAlignment>Center</VertAlignment>
@@ -473,6 +475,7 @@ Jean Basantes</Text>
                   <Page isRef="5" />
                   <Parent isRef="22" />
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{datosfactura.ApellidoCliente}</Text>
                   <TextBrush>Black</TextBrush>
                 </Table1_Cell10>
                 <Table1_Cell11 Ref="33" type="TableCell" isKey="true">
@@ -507,6 +510,7 @@ Jean Basantes</Text>
                   <Page isRef="5" />
                   <Parent isRef="22" />
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{datosfactura.TelefonoCliente}</Text>
                   <TextBrush>Black</TextBrush>
                 </Table1_Cell12>
                 <Table1_Cell13 Ref="35" type="TableCell" isKey="true">
@@ -541,6 +545,7 @@ Jean Basantes</Text>
                   <Page isRef="5" />
                   <Parent isRef="22" />
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+                  <Text>{datosfactura.DireccionCliente}</Text>
                   <TextBrush>Black</TextBrush>
                 </Table1_Cell14>
                 <Table1_Cell15 Ref="37" type="TableCell" isKey="true">
@@ -624,7 +629,7 @@ Jean Basantes</Text>
                   <Page isRef="5" />
                   <Parent isRef="40" />
                   <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
-                  <Text>Descripción</Text>
+                  <Text>Datos del cliente</Text>
                   <TextBrush>Black</TextBrush>
                   <Type>Expression</Type>
                   <VertAlignment>Center</VertAlignment>
@@ -922,13 +927,12 @@ Jean Basantes</Text>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
   <ReportAuthor>Henrry Barrionuevo</ReportAuthor>
-  <ReportChanged>8/7/2024 5:08:06 PM</ReportChanged>
+  <ReportChanged>8/7/2024 8:50:08 PM</ReportChanged>
   <ReportCreated>8/7/2024 1:43:29 PM</ReportCreated>
-  <ReportFile>C:\Users\User\Desktop\maxiahrro\MaxiAhorroApp\MaxiAhorroApp\Reportes\factura.mrt</ReportFile>
-  <ReportGuid>85071bc03f76497287cb1affd5b40643</ReportGuid>
+  <ReportGuid>0234de92a87347929681ca082ce1f2e9</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
-  <ReportVersion>2024.3.3.0</ReportVersion>
+  <ReportVersion>2024.3.2.0</ReportVersion>
   <Script>using System;
 using System.Drawing;
 using System.Windows.Forms;
