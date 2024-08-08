@@ -15,7 +15,6 @@ namespace MaxiAhorroApp.Vistas
         public facturavista()
         {
             InitializeComponent();
-
             try
             {
                 string reportPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Reportes", "factura.mrt");
@@ -86,30 +85,44 @@ namespace MaxiAhorroApp.Vistas
             ///
             /// USAR datosfactura
             ///
-
             Connection connection = new Connection();
-            connection.cn.Execute("sp_insertar_factura", new {
-                NumFactura = datosfactura.NumFactura,
-                NombreCliente = datosfactura.NombreCliente,
-                ApellidoCliente = datosfactura.ApellidoCliente,
-                CedulaCliente = datosfactura.CedulaCliente,
-                DireccionCliente = datosfactura.DireccionCliente,
-                TelefonoCliente = datosfactura.TelefonoCliente,
-                TotalPagar = datosfactura.TotalPagar,
-                FormaPago = datosfactura.FormaPago,
-                FechaPago = datosfactura.FechaPago,
-            }, commandType:System.Data.CommandType.StoredProcedure);
-
-            foreach (DetalleFactura item in datosfactura.DetallesFactura)
+            try
             {
-                connection.cn.Execute("sp_agregar_detalles", new { 
+                
+                connection.cn.Execute("sp_insertar_factura", new
+                {
                     NumFactura = datosfactura.NumFactura,
-                    ProductoId = item.ProductoId,
-                    NombreProducto = item.NombreProducto,
-                    Cantidad = item.Cantidad,
-                    PrecioUnitario = item.PrecioUnitario,
-                    Subtotal = item.Subtotal,
+                    NombreCliente = datosfactura.NombreCliente,
+                    ApellidoCliente = datosfactura.ApellidoCliente,
+                    CedulaCliente = datosfactura.CedulaCliente,
+                    DireccionCliente = datosfactura.DireccionCliente,
+                    TelefonoCliente = datosfactura.TelefonoCliente,
+                    TotalPagar = datosfactura.TotalPagar,
+                    FormaPago = datosfactura.FormaPago,
+                    FechaPago = datosfactura.FechaPago,
                 }, commandType: System.Data.CommandType.StoredProcedure);
+
+                foreach (DetalleFactura item in datosfactura.DetallesFactura)
+                {
+                    connection.cn.Execute("sp_agregar_detalles", new
+                    {
+                        NumFactura = datosfactura.NumFactura,
+                        ProductoId = item.ProductoId,
+                        NombreProducto = item.NombreProducto,
+                        Cantidad = item.Cantidad,
+                        PrecioUnitario = item.PrecioUnitario,
+                        Subtotal = item.Subtotal,
+                    }, commandType: System.Data.CommandType.StoredProcedure);
+                }
+                MessageBox.Show("Registro existoso de la factura","Éxito", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.cn.Close();
             }
             
         }

@@ -354,3 +354,16 @@ BEGIN
 END;
 
 select * from minimarket.detalle_factura;
+
+SELECT max(id) from facturas;
+
+DROP PROCEDURE IF EXISTS sp_listar_facturas;
+CREATE PROCEDURE sp_listar_facturas()
+BEGIN
+	SELECT * FROM facturas;
+END;
+call sp_listar_facturas;
+
+select count(*) from facturas f 
+inner join detalle_factura df
+ON f.numfactura = df.factura_id WHERE f.numfactura = '2';

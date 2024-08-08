@@ -1,4 +1,5 @@
-﻿using MaxiAhorroApp.Clases;
+﻿using Dapper;
+using MaxiAhorroApp.Clases;
 using MaxiAhorroApp.Controladores;
 using Stimulsoft.Data.Functions;
 using System;
@@ -17,8 +18,8 @@ namespace MaxiAhorroApp.Vistas
 {
     public partial class Venta : Form
     {
-        private BindingList<Producto> productos = new BindingList<Producto>();        
-
+        private BindingList<Producto> productos = new BindingList<Producto>();
+        private Connection con = new Connection();
         public Venta()
         {
             InitializeComponent();            
@@ -27,8 +28,7 @@ namespace MaxiAhorroApp.Vistas
             this.tbproductos.DataSource = new ServicioProducto().Consultar();
             this.productos_agregados.DataSource = productos;
             this.tipopago.SelectedIndex = 0;
-
-            this.numfactu.Text = "1";
+            this.numfactu.Text = (con.cn.Query<int>("SELECT COALESCE((SELECT max(id) from facturas),0)").FirstOrDefault() + 1).ToString();
             this.nomcli.Text = "Luis";
             apelcli.Text = "Jerez";
             cedcli.Text = "0504760075";
@@ -40,7 +40,7 @@ namespace MaxiAhorroApp.Vistas
         private void bt_agregar_producto_Click(object sender, EventArgs e)
         {
             List<Producto> productosParaEliminar = new List<Producto>();
-
+            decimal total = 0;
             foreach (DataGridViewRow fila in tbproductos.Rows)
             {
                 var select = fila.Cells[0] as DataGridViewCheckBoxCell;
@@ -65,6 +65,7 @@ namespace MaxiAhorroApp.Vistas
                                     {
                                         f.Cells[2].Value = this.cantidad.Value;
                                         f.Cells[4].Value = this.cantidad.Value * (decimal)produ.precio;
+                                        total += this.cantidad.Value * (decimal)produ.precio;
                                     }
                                 }
                             }
@@ -92,6 +93,7 @@ namespace MaxiAhorroApp.Vistas
             }
 
             this.productos_agregados.Refresh();
+            this.totalpag.Text = total.ToString();
         }
 
         private void numfactura_TextChanged(object sender, EventArgs e)

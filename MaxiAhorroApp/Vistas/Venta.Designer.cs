@@ -397,7 +397,7 @@
             this.tipopago.Items.AddRange(new object[] {
             "EFECTIVO",
             "TRANSFERENCIA"});
-            this.tipopago.Location = new System.Drawing.Point(203, 153);
+            this.tipopago.Location = new System.Drawing.Point(203, 149);
             this.tipopago.Name = "tipopago";
             this.tipopago.Size = new System.Drawing.Size(194, 28);
             this.tipopago.TabIndex = 3;
@@ -495,6 +495,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.numfactu.Location = new System.Drawing.Point(203, 3);
             this.numfactu.Name = "numfactu";
+            this.numfactu.ReadOnly = true;
             this.numfactu.Size = new System.Drawing.Size(194, 25);
             this.numfactu.TabIndex = 1;
             this.numfactu.TextChanged += new System.EventHandler(this.numfactura_TextChanged);
