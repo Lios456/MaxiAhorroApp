@@ -87,8 +87,7 @@ namespace MaxiAhorroApp.Controladores
             {
                 var sql = @"SELECT * FROM minimarket.usuarios u 
                         INNER JOIN minimarket.empleados e 
-                        ON e.IDUsuario = u.IDUsuario
-                        WHERE e.Estado = 'Activo'";
+                        ON e.IDUsuario = u.IDUsuario";
                 return base.cn.Query<Empleado>(sql).ToList();
             }
             catch (Exception ex)
@@ -98,13 +97,13 @@ namespace MaxiAhorroApp.Controladores
             }
         }
 
-        public void Modificar(Empleado em)
+        public void Modificar(Empleado em, Empleado emanterior)
         {
             try
             {
                 var sql = @"SELECT IDUsuario FROM minimarket.usuarios
             WHERE Nombre = @Nombre AND Apellido = @Apellido AND Email = @Email";
-                var usuario = base.cn.Query<int>(sql, em).First();
+                var usuario = base.cn.Query<int>(sql, emanterior).First();
                 em.IDUsuario = usuario;
 
                 var sql1 = @"UPDATE minimarket.usuarios

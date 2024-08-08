@@ -105,7 +105,7 @@ namespace MaxiAhorroApp.Tests
             e.Salario = 100;
             e.Estado = "Activo";
             // Act
-            _servicioempleado.Object.Modificar(e);
+            _servicioempleado.Object.Modificar(e, e);
             // Assert
             //_servicioempleado.Verify(mock => mock.Agregar(It.IsAny<Empleado>()), Times.Once);
         }
@@ -124,7 +124,7 @@ namespace MaxiAhorroApp.Tests
             e.Salario = 100;
             e.Estado = "Activo";
             // Act
-            _servicioempleado.Object.Modificar(e);
+            _servicioempleado.Object.Modificar(e, e);
             // Assert
             //_servicioempleado.Verify(mock => mock.Agregar(It.IsAny<Empleado>()), Times.Once);
         }
@@ -143,7 +143,7 @@ namespace MaxiAhorroApp.Tests
             e.Salario = -100;
             e.Estado = "Activo";
             // Act
-            _servicioempleado.Object.Modificar(e);
+            _servicioempleado.Object.Modificar(e, e);
             // Assert
             //_servicioempleado.Verify(mock => mock.Agregar(It.IsAny<Empleado>()), Times.Once);
         }
@@ -162,7 +162,7 @@ namespace MaxiAhorroApp.Tests
             e.Salario = -100;
             e.Estado = "Activo";
             // Act
-            _servicioempleado.Object.Modificar(e);
+            _servicioempleado.Object.Modificar(e, e);
             // Assert
             //_servicioempleado.Verify(mock => mock.Agregar(It.IsAny<Empleado>()), Times.Once);
         }

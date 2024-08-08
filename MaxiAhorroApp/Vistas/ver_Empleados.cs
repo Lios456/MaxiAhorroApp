@@ -54,7 +54,7 @@ namespace MaxiAhorroApp.Vistas
         private void button2_Click(object sender, EventArgs e)
         {
             // Eliminar Empleados
-            if(empleadoseleccionado == null)
+            if(empleadoseleccionado != null)
             {
                 new ServicioEmpleado().Eliminar(empleadoseleccionado);
                 button4_Click(this, EventArgs.Empty);

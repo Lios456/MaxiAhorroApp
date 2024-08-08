@@ -16,6 +16,7 @@ namespace MaxiAhorroApp.Vistas
     public partial class Agregar_Empleado : Form
     {
         public Empleado em = new Empleado();
+        public Empleado emanterior = new Empleado();
         public Agregar_Empleado()
         {
             InitializeComponent();
@@ -25,6 +26,16 @@ namespace MaxiAhorroApp.Vistas
 
         public Agregar_Empleado(Empleado emp)
         {
+            //Inicializo el empleado anterior
+            emanterior.IDEmpleado = emp.IDEmpleado;
+            emanterior.Estado = emp.Estado;
+            emanterior.Salario = emp.Salario;
+            emanterior.FechaContratacion = emp.FechaContratacion;
+            emanterior.Rol = emp.Rol;
+            emanterior.Apellido = emp.Apellido;
+            emanterior.Nombre = emp.Nombre;
+            emanterior.Email = emp.Email;
+
             InitializeComponent();
             this.txfechacontratacioin.MaxDate= DateTime.Today;
             em = emp;
@@ -56,23 +67,25 @@ namespace MaxiAhorroApp.Vistas
             em.Email = this.txemail.Text;
             if (ValidarEmail(em.Email))
             {
-                if (Regex.IsMatch(this.txnombre.Text, @"^[A-Z][a-z]+$"))
+                string pattern = @"^[A-Z]+$";
+                Regex regex = new Regex(pattern);
+                if (regex.IsMatch(this.txnombre.Text))
                 {
                     em.Nombre = this.txnombre.Text;
                 }
                 else
                 {
-                    MessageBox.Show("El nombre debe comenzar con mayúscula y contener solo letras.");
+                    MessageBox.Show("El nombre debe estar en mayúsculas y contener solo letras.");
                     return;
                 }
 
-                if (Regex.IsMatch(this.txapellido.Text, @"^[A-Z][a-z]+$"))
+                if (regex.IsMatch(this.txapellido.Text))
                 {
                     em.Apellido = this.txapellido.Text;
                 }
                 else
                 {
-                    MessageBox.Show("El apellido debe comenzar con mayúscula y contener solo letras.");
+                    MessageBox.Show("El apellido debe estar en mayúsculas y contener solo letras.");
                     return;
                 }
 
@@ -82,12 +95,9 @@ namespace MaxiAhorroApp.Vistas
                 em.Puesto = this.txrol.Text;
                 em.Salario = this.txsalario.Value;
                 em.Estado = this.txestado.Text;
+
             }
-            else
-            {
-                em = new Empleado(); // Reinicia el objeto si el email no es válido
-                return;
-            }
+            
         }
 
 
@@ -110,7 +120,7 @@ namespace MaxiAhorroApp.Vistas
                 }
                 else
                 {
-                    new ServicioEmpleado().Modificar(em);
+                    new ServicioEmpleado().Modificar(em, emanterior);
                 }
             }
             catch (Exception ex) 
