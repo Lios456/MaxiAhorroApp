@@ -61,7 +61,7 @@
             this.factura_Ttal.ReportAlias = "Report";
             this.factura_Ttal.ReportAuthor = "Henrry Barrionuevo";
             this.factura_Ttal.ReportDataSources.Add(this.stiReportDataSource1);
-            this.factura_Ttal.ReportGuid = "d9fd0957c82249f1b0e9ea775835206b";
+            this.factura_Ttal.ReportGuid = "9b2e9ef644da4f73b551dc6eeb3436a3";
             this.factura_Ttal.ReportName = "Report";
             this.factura_Ttal.ReportSource = resources.GetString("factura_Ttal.ReportSource");
             this.factura_Ttal.ReportUnit = Stimulsoft.Report.StiReportUnitType.Centimeters;

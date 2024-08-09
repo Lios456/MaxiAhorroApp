@@ -320,9 +320,8 @@ BEGIN
             TelefonoCliente
         );
     END IF;
-
     -- Insertar la factura asociada a la cédula del cliente
-    INSERT IGNORE INTO minimarket.facturas (
+    INSERT IGNORE INTO minimarket.facturas(
         numfactura,
         cedulacliente,
         formapago,
@@ -349,8 +348,9 @@ IN Subtotal FLOAT
 )
 BEGIN
 	INSERT INTO minimarket.detalle_factura(factura_id,producto_id,cantidad,precio_unitario,subtotal)
-    VALUES
-    (NumFactura,ProductoId,Cantidad,PrecioUnitario,Subtotal);
+    VALUES(NumFactura,ProductoId,Cantidad,PrecioUnitario,Subtotal);
+	UPDATE productos p SET p.cantidad = (p.cantidad - Cantidad) 
+    WHERE p.id = ProductoId;
 END;
 
 select * from minimarket.detalle_factura;

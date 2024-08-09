@@ -30,12 +30,12 @@ namespace MaxiAhorroApp.Vistas
             this.productos_agregados.DataSource = productos;
             this.tipopago.SelectedIndex = 0;
             this.numfactu.Text = (con.cn.Query<int>("SELECT COALESCE((SELECT max(id) from facturas),0)").FirstOrDefault() + 1).ToString();
-            this.nomcli.Text = "Luis";
-            apelcli.Text = "Jerez";
-            cedcli.Text = "0504760075";
-            dircli.Text = "Latacunga";
-            telcli.Text = "0978700978";
-            totalpag.Text = "1500";
+            this.nomcli.Text = "Consumidor";
+            apelcli.Text = "Final";
+            cedcli.Text = "9999999999";
+            dircli.Text = "Ecuador";
+            telcli.Text = "0999999999";
+            totalpag.Text = "0";
         }
 
         private void bt_agregar_producto_Click(object sender, EventArgs e)
@@ -139,30 +139,41 @@ namespace MaxiAhorroApp.Vistas
 
         private bool EsCedulaEcuatorianaValida(string cedula)
         {
-            int total = 0;
-            int tamanoLongitudCedula = 10;
-            int[] coeficientes = { 2, 1, 2, 1, 2, 1, 2, 1, 2 };
-            int provincia = int.Parse(cedula.Substring(0, 2));
-            int tercerDigito = int.Parse(cedula.Substring(2, 1));
+            if(cedula != "9999999999")
+            {
+                int total = 0;
+                int tamanoLongitudCedula = 10;
+                int[] coeficientes = { 2, 1, 2, 1, 2, 1, 2, 1, 2 };
+                int provincia = int.Parse(cedula.Substring(0, 2));
+                int tercerDigito = int.Parse(cedula.Substring(2, 1));
 
-            if (provincia < 1 || provincia > 24)
+                if (provincia < 1 || provincia > 24)
+                {
+                    return false;
+                }
+
+                if (tercerDigito >= 6)
+                {
+                    return false;
+                }
+
+                for (int i = 0; i < coeficientes.Length; i++)
+                {
+                    int valor = coeficientes[i] * int.Parse(cedula[i].ToString());
+                    total += valor > 9 ? valor - 9 : valor;
+                }
+
+                int digitoVerificador = (total % 10) == 0 ? 0 : 10 - (total % 10);
+                return digitoVerificador == int.Parse(cedula[9].ToString());
+            }
+            else if(cedula == "9999999999")
+            {
+                return true;
+            }
+            else
             {
                 return false;
             }
-
-            if (tercerDigito >= 6)
-            {
-                return false;
-            }
-
-            for (int i = 0; i < coeficientes.Length; i++)
-            {
-                int valor = coeficientes[i] * int.Parse(cedula[i].ToString());
-                total += valor > 9 ? valor - 9 : valor;
-            }
-
-            int digitoVerificador = (total % 10) == 0 ? 0 : 10 - (total % 10);
-            return digitoVerificador == int.Parse(cedula[9].ToString());
         }
 
         private void telcli_TextChanged(object sender, EventArgs e)
@@ -223,19 +234,21 @@ namespace MaxiAhorroApp.Vistas
             try
             {
 
-                if (validarsololetras(nomcli.Text) && validarsololetras(apelcli.Text))
+                if (validarsololetras(nomcli.Text) && 
+                    validarsololetras(apelcli.Text) && 
+                    cedcli.Text.Length == 10 && 
+                    telcli.Text.Length == 10 
+                    )
                 {
-                    DatosCli DatosCli = new DatosCli
-                    {
-                        NumFactura = Convert.ToInt32(numfactu.Text),
-                        NombreCliente = nomcli.Text,
-                        ApellidoCliente = apelcli.Text,
-                        CedulaCliente = cedcli.Text,
-                        DireccionCliente = dircli.Text,
-                        TelefonoCliente = telcli.Text,
-                        FormaPago = tipopago.Text,
-                        FechaPago = DateTime.Now
-                    };
+                    DatosCli DatosCli = new DatosCli();
+                    DatosCli.NumFactura = Convert.ToInt32(numfactu.Text);
+                    DatosCli.NombreCliente = nomcli.Text;
+                    DatosCli.ApellidoCliente = apelcli.Text;
+                    DatosCli.CedulaCliente = cedcli.Text;
+                    DatosCli.DireccionCliente = dircli.Text;
+                    DatosCli.TelefonoCliente = telcli.Text;
+                    DatosCli.FormaPago = tipopago.Text;
+                    DatosCli.FechaPago = DateTime.Now;
                     float total = 0;
 
                     foreach (DataGridViewRow fila in productos_agregados.Rows)

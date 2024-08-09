@@ -142,7 +142,7 @@ namespace MaxiAhorroApp.Controladores
             var sql = @"Update minimarket.empleados
             SET Estado = 'Inactivo' WHERE IdEmpleado = @IDEmpleado";
             base.cn.Execute(sql, em);
-            MessageBox.Show("El empleado ha sido eliminado exitosamente", "Eliminación de Empleados", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show("El empleado ha sido puesto como inactivo exitosamente", "Desactivar Empleados", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         

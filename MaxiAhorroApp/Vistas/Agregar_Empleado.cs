@@ -63,8 +63,9 @@ namespace MaxiAhorroApp.Vistas
             this.txestado.SelectedIndex = 0;
         }
 
-        public void setEmpleado()
+        public bool setEmpleado()
         {
+            bool valido = false;
             em.Email = this.txemail.Text;
             if (ValidarEmail(em.Email))
             {
@@ -77,7 +78,6 @@ namespace MaxiAhorroApp.Vistas
                 else
                 {
                     MessageBox.Show("El nombre debe estar en mayúsculas y contener solo letras.");
-                    return;
                 }
 
                 if (regex.IsMatch(this.txapellido.Text))
@@ -87,7 +87,6 @@ namespace MaxiAhorroApp.Vistas
                 else
                 {
                     MessageBox.Show("El apellido debe estar en mayúsculas y contener solo letras.");
-                    return;
                 }
 
                 em.Contraseña = this.txcontrasenia.Text;
@@ -97,7 +96,10 @@ namespace MaxiAhorroApp.Vistas
                 em.Salario = this.txsalario.Value;
                 em.Estado = this.txestado.Text;
 
+                valido = true;
+
             }
+            return valido;
             
         }
 
@@ -107,21 +109,38 @@ namespace MaxiAhorroApp.Vistas
             
             string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
             Regex regex = new Regex(pattern);
-            return regex.IsMatch(email);
+            bool valido = regex.IsMatch(email);
+            return valido;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                setEmpleado();
+                
                 if(em.IDEmpleado == 0)
                 {
-                    new ServicioEmpleado().Agregar(em);
+                    if (setEmpleado())
+                    {
+                        new ServicioEmpleado().Agregar(em);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Los datos ingresados son erroneos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 else
                 {
-                    new ServicioEmpleado().Modificar(em, emanterior);
+                    if (setEmpleado())
+                    {
+                        new ServicioEmpleado().Modificar(em, emanterior);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Los datos ingresados son erroneos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
             }
             catch (Exception ex) 
